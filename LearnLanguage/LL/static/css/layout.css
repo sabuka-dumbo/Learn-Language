@@ -44,13 +44,13 @@ body {
 
 .navbar-title {
     position: relative;
-    top: -10%;
+    top: -15%;
     left: 0.25%;
     width: max-content;
     display: inline-block;
     margin: 0px;
     padding: 0px;
-    font-size: 2vw;
+    font-size: 350%;
     font-family: "Kdam Thmor Pro";
     font-weight: normal;
     color: black;
