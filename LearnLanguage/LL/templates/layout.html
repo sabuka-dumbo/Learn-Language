@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+
+        {% block header %}{% endblock %}
+        <link href="{% static 'css/layout.css' %}" rel="stylesheet">        
+        <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'> 
+        <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar-back" id="navbar-back">
+            <div class="navbar-padding">
+                <div class="navbar-brand">
+                    <img src="{% static 'images/Logo.png' %}" class="navbar-logo">
+
+                    <h1 class="navbar-title">Learn Language</h1>
+                </div>
+
+                <div class="navbar-navs">
+
+                </div>
+
+                <div class="navbar-profile-div">
+                    <div class="navbar-profile-divs">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
