@@ -105,7 +105,7 @@ body {
 }
 
 .navbar-nav {
-    position: relative;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: max-content;
@@ -115,4 +115,5 @@ body {
     font-weight: bolder;
     color: black;
     display: inline-block;
+    justify-content: space-between;
 }
