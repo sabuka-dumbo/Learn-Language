@@ -44,8 +44,8 @@ body {
 
 .navbar-title {
     position: relative;
-    top: -1vw;
-    left: 0.25vw;
+    top: -10%;
+    left: 0.25%;
     width: max-content;
     display: inline-block;
     margin: 0px;
