@@ -7,7 +7,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 6vw;
+    height: 8%;
     background-color: #D2E3C8;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -52,6 +52,7 @@ body {
     padding: 0px;
     font-size: 2vw;
     font-family: "Kdam Thmor Pro";
+    font-weight: normal;
     color: black;
     cursor: pointer;
 }
@@ -82,7 +83,7 @@ body {
     transform: translate(-50%, -50%);
     width: max-content;
     height: max-content;
-    font-size: 2vw;
+    font-size: 1.7vw;
     font-family: "Itim";
     font-weight: bolder;
     color: black;
@@ -116,7 +117,7 @@ body {
     height: max-content;
     font-size: 1.5vw;
     font-family: "Kdam Thmor Pro";
-    font-weight: bolder;
+    font-weight: normal;
     color: black;
     display: inline-block;
     margin-right: 1vw;
