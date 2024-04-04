@@ -67,7 +67,7 @@ body {
     position: absolute;
     top: 17.5%;
     right: 0px;
-    width: 5vw;
+    width: 8.5vw;
     height: 65%;
     border: 0.2vw solid black;
 }
@@ -83,4 +83,36 @@ body {
     font-family: "Itim";
     font-weight: bolder;
     color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-profile-divs2 {
+    position: absolute;
+    top: 17.5%;
+    right: 9.5vw;
+    width: 8.5vw;
+    height: 65%;
+}
+
+.navbar-navs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 65%;
+}
+
+.navbar-nav {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: max-content;
+    height: max-content;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bolder;
+    color: black;
+    display: inline-block;
 }
