@@ -150,6 +150,10 @@ body {
     border-radius: 0.5vw;
 }
 
+#navbar-menu1 {
+    animation: open-menu-first 1s infinite;
+}
+
 @media screen and (max-width: 725px) {
     .navbar-navs {
         width: 40%;
@@ -167,5 +171,16 @@ body {
 
     .navbar-device {
         display: block;
+    }
+}
+
+@keyframes open-menu-first {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        top: -40%;
+        rotate: 45deg;
     }
 }
