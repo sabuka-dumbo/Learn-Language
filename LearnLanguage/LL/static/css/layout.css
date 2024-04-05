@@ -111,7 +111,6 @@ body {
     height: 65%;
     display: inline-flex;
     justify-content: center;
-    background-color: aqua;
     align-items: center; 
 }
 
@@ -126,4 +125,13 @@ body {
     display: inline-block;
     margin-right: 1vw;
     cursor: pointer;
+}
+
+@media screen and (max-width: 725px) {
+    .navbar-navs {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 548px) {
 }
