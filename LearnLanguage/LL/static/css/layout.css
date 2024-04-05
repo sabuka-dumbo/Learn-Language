@@ -225,6 +225,17 @@ body {
     padding: 0px;
 }
 
+.navbar-device-profile-div2 {
+    position: absolute;
+    top: -17vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45vw;
+    height: 10vw;
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (max-width: 725px) {
     .navbar-navs {
         width: 40%;
