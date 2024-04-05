@@ -150,10 +150,6 @@ body {
     border-radius: 0.5vw;
 }
 
-#navbar-menu1 {
-    animation: open-menu-first 1s infinite;
-}
-
 @media screen and (max-width: 725px) {
     .navbar-navs {
         width: 40%;
@@ -180,7 +176,62 @@ body {
     }
 
     100% {
-        top: -40%;
+        top: 10px;
         rotate: 45deg;
+    }
+}
+
+@keyframes open-menu-first-2 {
+    0% {
+        top: 10px;
+        rotate: 45deg;
+    }
+
+    100% {
+        top: 0px;
+        rotate: 0deg;
+    }
+}
+
+@keyframes open-menu-second {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes open-menu-second-2 {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes open-menu-third {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        top: -10px;
+        rotate: -45deg;
+    }
+}
+
+@keyframes open-menu-third-2 {
+    0% {
+        top: -10px;
+        rotate: -45deg;
+    }
+
+    100% {
+        top: 0px;
+        rotate: 0deg;
     }
 }
