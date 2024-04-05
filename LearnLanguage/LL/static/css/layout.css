@@ -70,10 +70,10 @@ body {
 
 .navbar-profile-divs {
     position: absolute;
-    top: 17.5%;
+    top: 25%;
     right: 0px;
-    width: 8.5vw;
-    height: 65%;
+    width: 9.5vw;
+    height: 50%;
     border: 0.2vw solid black;
     cursor: pointer;
 }
@@ -85,9 +85,9 @@ body {
     transform: translate(-50%, -50%);
     width: max-content;
     height: max-content;
-    font-size: 2vw;
+    font-size: 120%;
     font-family: "Itim";
-    font-weight: bolder;
+    font-weight: bold;
     color: black;
     margin: 0px;
     padding: 0px;
@@ -95,10 +95,10 @@ body {
 
 .navbar-profile-divs2 {
     position: absolute;
-    top: 17.5%;
-    right: 9.5vw;
-    width: 8.5vw;
-    height: 65%;
+    top: 25%;
+    right: 10.5vw;
+    width: 9.5vw;
+    height: 50%;
     cursor: pointer;
 }
 
@@ -133,5 +133,5 @@ body {
     }
 }
 
-@media screen and (max-width: 548px) {
+@media screen and (max-width: 570px) {
 }
