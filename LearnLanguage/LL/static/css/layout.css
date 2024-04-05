@@ -192,21 +192,7 @@ body {
     bottom: 2vw;
     left: 0px;
     width: 100%;
-    height: max-content;
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-device-profile-div {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: max-content;
+    height: 20px;
     margin: 0;
     padding: 0;
     background-color: aqua;
