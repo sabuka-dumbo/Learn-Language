@@ -9,12 +9,13 @@ body {
     width: 50%;
     height: 100%;
     background-color: #CDF5FD;
+    box-shadow: #CDF5FD 0px 2px 8px 0px;
 }
 
 .login-page-part2 {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 50%;
     width: 50%;
     height: 100%;
     background-color: #EFF2EC;
