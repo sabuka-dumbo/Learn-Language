@@ -22,7 +22,6 @@ body {
     transform: translateY(-50%);
     width: 95%;
     height: 100%;
-    background-color: aliceblue;
 }
 
 .navbar-brand {
@@ -32,7 +31,6 @@ body {
     width: max-content;
     height: 100%;
     display: inline-block;
-    background-color: aqua;
 }
 
 .navbar-logo {
@@ -110,11 +108,15 @@ body {
     transform: translate(-50%, -50%);
     width: max-content;
     height: 65%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-nav {
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 0%;
     left: 0px;
     width: max-content;
     height: max-content;
