@@ -134,4 +134,11 @@ body {
 }
 
 @media screen and (max-width: 570px) {
+    .navbar-navs {
+        display: none;
+    }
+
+    .navbar-profile-div {
+        display: none;
+    }
 }
