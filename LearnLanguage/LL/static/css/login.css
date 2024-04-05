@@ -1,0 +1,21 @@
+body {
+    overflow: hidden;
+}
+
+.login-page-part1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #CDF5FD;
+}
+
+.login-page-part2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #EFF2EC;
+}
