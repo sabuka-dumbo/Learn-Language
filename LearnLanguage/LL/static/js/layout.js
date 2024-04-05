@@ -2,22 +2,70 @@ const bmenu1 = document.getElementById("navbar-menu1");
 const bmenu2 = document.getElementById("navbar-menu2");
 const bmenu3 = document.getElementById("navbar-menu3");
 const menu_div = document.getElementById("navbar-device");
-const navbar_for_device = document.getElementById("");
+const navbar_for_device = document.getElementById("navbar-device-menu");
+
+let cooldown = 0;
+let menu = 0;
 
 menu_div.addEventListener("click", function() {
-    bmenu1.style.animation = "open-menu-first 1s ease";
-    bmenu2.style.animation = "open-menu-second 1s ease";
-    bmenu3.style.animation = "open-menu-third 1s ease";
+    if (menu == 0) {
+        if (cooldown == 0) {
+            bmenu1.style.animation = "open-menu-first 0.6s ease";
+            bmenu2.style.animation = "open-menu-second 0.6s ease";
+            bmenu3.style.animation = "open-menu-third 0.6s ease";
 
-    bmenu1.addEventListener("animationend", function() {
-        bmenu1.style.animation = '';
-        bmenu1.style.top = "10px";
-        bmenu1.style.rotate = "45deg";
-    })
+            bmenu1.addEventListener("animationend", function() {
+                bmenu1.style.animation = '';
+                bmenu1.style.top = "10px";
+                bmenu1.style.rotate = "45deg";
+            })
 
-    bmenu1.addEventListener("animationend", function() {
-        bmenu1.style.animation = '';
-        bmenu1.style.top = "10px";
-        bmenu1.style.rotate = "45deg";
-    })
+            bmenu2.addEventListener("animationend", function() {
+                bmenu2.style.animation = '';
+                bmenu2.style.opacity = "0%";
+            })
+            
+            bmenu3.addEventListener("animationend", function() {
+                bmenu3.style.animation = '';
+                bmenu3.style.top = "-10px";
+                bmenu3.style.rotate = "-45deg";
+            })
+
+            cooldown_def();
+            menu = 1;
+        }
+    } else {
+        if (cooldown == 0) {
+            bmenu1.style.animation = "open-menu-first-2 0.6s ease";
+            bmenu2.style.animation = "open-menu-second-2 0.6s ease";
+            bmenu3.style.animation = "open-menu-third-2 0.6s ease";
+
+            bmenu1.addEventListener("animationend", function() {
+                bmenu1.style.animation = '';
+                bmenu1.style.top = "0px";
+                bmenu1.style.rotate = "0deg";
+            })
+
+            bmenu2.addEventListener("animationend", function() {
+                bmenu2.style.animation = '';
+                bmenu2.style.opacity = "100%";
+            })
+            
+            bmenu3.addEventListener("animationend", function() {
+                bmenu3.style.animation = '';
+                bmenu3.style.top = "0px";
+                bmenu3.style.rotate = "0deg";
+            })
+
+            cooldown_def();
+            menu = 0;
+        }
+    }
 })
+
+function cooldown_def() {
+    cooldown = 1;
+    setTimeout(function() {
+        cooldown = 0;
+    }, 1000);
+}
