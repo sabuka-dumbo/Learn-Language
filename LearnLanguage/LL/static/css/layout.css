@@ -28,7 +28,7 @@ body {
     position: relative;
     top: 0px;
     left: 0px;
-    width: max-content;
+    width: 20%;
     height: 100%;
     display: inline-block;
 }
@@ -63,7 +63,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 0px;
-    width: max-content;
+    width: 30%;
     height: 100%;
 }
 
