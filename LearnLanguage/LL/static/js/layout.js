@@ -13,6 +13,9 @@ menu_div.addEventListener("click", function() {
             bmenu1.style.animation = "open-menu-first 0.6s ease";
             bmenu2.style.animation = "open-menu-second 0.6s ease";
             bmenu3.style.animation = "open-menu-third 0.6s ease";
+
+            navbar_for_device.style.display = "block";
+
             navbar_for_device.style.animation = "open-menu 1s ease";
 
             bmenu1.addEventListener("animationend", function() {
@@ -47,6 +50,8 @@ menu_div.addEventListener("click", function() {
             bmenu2.style.animation = "open-menu-second-2 0.6s ease";
             bmenu3.style.animation = "open-menu-third-2 0.6s ease";
 
+            navbar_for_device.style.animation = "close-menu 1s ease"
+
             bmenu1.addEventListener("animationend", function() {
                 bmenu1.style.animation = '';
                 bmenu1.style.top = "0px";
@@ -62,6 +67,11 @@ menu_div.addEventListener("click", function() {
                 bmenu3.style.animation = '';
                 bmenu3.style.top = "0px";
                 bmenu3.style.rotate = "0deg";
+            })
+
+            navbar_for_device.addEventListener("animationend", function() {
+                navbar_for_device.style.animation = '';
+                navbar_for_device.style.display = "none";
             })
 
             cooldown_def();
