@@ -160,6 +160,7 @@ body {
     height: 100%;
     background-color: #d2e3c8;
     z-index: 499;
+    display: none;
 }
 
 @media screen and (max-width: 725px) {
@@ -245,5 +246,15 @@ body {
     100% {
         top: 0px;
         rotate: 0deg;
+    }
+}
+
+@keyframes open-menu {
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 100%;
     }
 }
