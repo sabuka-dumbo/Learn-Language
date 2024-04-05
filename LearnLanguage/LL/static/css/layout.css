@@ -129,12 +129,11 @@ body {
 
 .navbar-device {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 60%;
+    transform: translateY(-60%);
     right: 0px;
     width: max-content;
     height: max-content;
-    background-color: aliceblue;
     display: none;
 }
 
@@ -146,6 +145,9 @@ body {
     width: 4vw;
     height: 1vw;
     background-color: black;
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 0.5vw;
 }
 
 @media screen and (max-width: 725px) {
