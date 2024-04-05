@@ -196,6 +196,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-device-profile-div {
