@@ -79,15 +79,16 @@ body {
     top: 0%;
     left: 0%;
     width: 100%;
-    height: auto;
+    height: 10%;
     font-size: 250%;
     font-family: "Kdam Thmor Pro";
     font-weight: normal;
     color: #6C63FF;
     text-align: center;
     margin: 0;
-    margin-top: 10%;
+    margin-top: 0;
     padding: 0;
+    text-align: end;
 }
 
 .login-form {
