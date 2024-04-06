@@ -132,7 +132,7 @@ body {
 
 .email-placeholder2 {
     position: absolute;
-    top: -2vw;
+    top: -2.5vw;
     left: 20%;
     width: max-content;
     height: max-content;
@@ -140,4 +140,6 @@ body {
     font-family: "Kdam Thmor Pro";
     font-weight: normal;
     z-index: 4;
+    margin: 0;
+    padding: 0;
 }
