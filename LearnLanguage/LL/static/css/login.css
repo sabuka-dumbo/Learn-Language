@@ -132,8 +132,7 @@ body {
 
 .email-placeholder2 {
     position: absolute;
-    top: -100%;
-    transform: translateY(100%);
+    top: -2vw;
     left: 20%;
     width: max-content;
     height: max-content;
