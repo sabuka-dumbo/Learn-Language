@@ -7,7 +7,7 @@ email_input.addEventListener("focus", function() {
 
     email_placeholder.addEventListener("animationend", function() {
         email_placeholder.style.animation = '';
-        email_placeholder.style.top = "-1.2vw";
+        email_placeholder.style.top = "-47%";
         email_placeholder.style.left = "20%";
         email_placeholder.style.fontSize = "1.5vw";
     })
