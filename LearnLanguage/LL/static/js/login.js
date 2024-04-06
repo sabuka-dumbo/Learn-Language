@@ -2,7 +2,6 @@ const email_input = document.getElementById("email");
 const email_placeholder = document.getElementById("email-placeholder");
 
 email_input.addEventListener("focus", function() {
-    if (email_input.value >= 1)
     email_placeholder.style.animation = "email-animation 0.4s ease";
     email_input.style.outline = "black 1px solid";
 
@@ -15,13 +14,15 @@ email_input.addEventListener("focus", function() {
 })
 
 email_input.addEventListener("focusout", function() {
-    email_placeholder.style.animation = "email-animation-2 0.4s ease";
-    email_input.style.outline = '';
+    if (email_input.value.length >= 1) {
+        email_placeholder.style.animation = "email-animation-2 0.4s ease";
+        email_input.style.outline = '';
 
-    email_placeholder.addEventListener("animationend", function() {
-        email_placeholder.style.animation = '';
-        email_placeholder.style.top = '';
-        email_placeholder.style.left = '';
-        email_placeholder.style.fontSize = '';
-    })
+        email_placeholder.addEventListener("animationend", function() {
+            email_placeholder.style.animation = '';
+            email_placeholder.style.top = '';
+            email_placeholder.style.left = '';
+            email_placeholder.style.fontSize = '';
+        })
+    }
 })
