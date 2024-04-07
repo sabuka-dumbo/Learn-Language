@@ -190,6 +190,45 @@ body {
     margin-right: 20%;
 }
 
+.google {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: black;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.google-icon {
+    position: relative;
+    top: 0;
+    left: 0px;
+    width: 2vw;
+    height: 2vw;
+    display: inline-block;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+
+.google-text {
+    position: relative;
+    top: 0;
+    left: 0px;
+    width: max-content;
+    height: max-content;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+
 @keyframes input-placeholder-animation {
     0% {}
 
