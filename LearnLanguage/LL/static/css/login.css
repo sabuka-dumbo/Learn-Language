@@ -137,6 +137,24 @@ body {
     z-index: 5;
 }
 
+.login-register {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 70%;
+    height: max-content;
+    margin: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 0px;
+    font-size: 1.2vw;
+    font-family: "Itim";
+    font-weight: bold;
+    color: #6C63FF;
+    text-align: end;
+    z-index: 7;
+}
+
 @keyframes input-placeholder-animation {
     0% {}
 
