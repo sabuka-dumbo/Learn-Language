@@ -10,6 +10,7 @@ body {
     height: 100%;
     background-color: #CDF5FD;
     box-shadow: #CDF5FD 0px 2px 8px 0px;
+    overflow-y: auto;
 }
 
 .login-page-part2 {
@@ -19,6 +20,7 @@ body {
     width: 50%;
     height: 100%;
     background-color: #EFF2EC;
+    overflow-y: auto;
 }
 
 .login-main-logo-part {
@@ -299,6 +301,66 @@ body {
     .submit {
         height: 10vw;
         font-size: 5vw;
+    }
+
+    .google-icon {
+        top: 2vw;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .google-text {
+        font-size: 4vw;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .login-page-part1 {
+        display: none;
+    }
+
+    .login-page-part2 {
+        width: 100%;
+        left: 0%;
+        overflow-y: auto;
+    }
+
+    .login-title {
+        font-size: 12vw;
+    }
+
+    .input {
+        height: 12vw;
+        font-size: 5vw;
+        width: 85%;
+        left: 7.5%;
+    }
+
+    .input-placeholder {
+        font-size: 5vw;
+        left: 8.5%;
+    }
+
+    .login-register {
+        font-size: 4vw;
+        width: 85%;
+        margin: auto;
+    }
+
+    .submit {
+        height: 14vw;
+        width: 85%;
+        font-size: 8vw;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+
+    .line {
+        width: 75%;
+        height: 0.8vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .google-icon {
