@@ -14,7 +14,7 @@ email.addEventListener("focus", function() {
 })
 
 email.addEventListener("focusout", function() {
-    if (email.value.lenght === 0) {
+    if (email.value.length == 0) {
         email_placeholder.style.animation = "input-placeholder-animation-2 0.4s ease";
 
         email_placeholder.addEventListener("animationend", function() {
