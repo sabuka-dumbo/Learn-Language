@@ -99,6 +99,7 @@ function svg_1() {
 
         svg_text.addEventListener("animationend", function() {
             svg_text.style.animation = '';
+            svg_text.style.opacity = "100%";
         })
     })
 }
@@ -123,6 +124,7 @@ function svg_2() {
 
         svg_text.addEventListener("animationend", function() {
             svg_text.style.animation = '';
+            svg_text.style.opacity = "100%";
         })
     })
 }
@@ -147,6 +149,7 @@ function svg_3() {
 
         svg_text.addEventListener("animationend", function() {
             svg_text.style.animation = '';
+            svg_text.style.opacity = "100%";
         })
     })
 }
