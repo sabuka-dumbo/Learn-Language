@@ -98,8 +98,8 @@ function svg_1() {
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.addEventListener("animationend", function() {
-            svg_text.style.animation = '';
             svg_text.style.opacity = "100%";
+            svg_text.style.animation = '';
         })
     })
 }
@@ -123,8 +123,8 @@ function svg_2() {
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.addEventListener("animationend", function() {
-            svg_text.style.animation = '';
             svg_text.style.opacity = "100%";
+            svg_text.style.animation = '';
         })
     })
 }
@@ -148,8 +148,8 @@ function svg_3() {
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.addEventListener("animationend", function() {
-            svg_text.style.animation = '';
             svg_text.style.opacity = "100%";
+            svg_text.style.animation = '';
         })
     })
 }
