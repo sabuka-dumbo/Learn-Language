@@ -61,17 +61,58 @@ const svg_next1 = document.getElementById("login-svg-next1");
 const svg_next2 = document.getElementById("login-svg-next2");
 const svg_next3 = document.getElementById("login-svg-next3");
 
+let count = 1;
+
 addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
-        svg_image.style.animation = "fade_out 1s ease";
-
-        svg_image.addEventListener("animationend", function() {
-            svg_image.src = "/static/images/designer.svg"
-            svg_image.style.animation = "fade_in 1s ease";
-
-            svg_image.addEventListener("animationend", function() {
-                svg_image.animation = '';
-            })
-        })
+        if (count === 1) {
+            svg_2();
+            count = 2;
+        } else if (count == 2) {
+            svg_3();
+            count = 3;
+        } else if (count = 3) {
+            svg_1();
+            count = 1;
+        }
     }, 5000)
 })
+
+function svg_1() {
+    svg_image.style.animation = "fade_out 1s ease";
+
+    svg_image.addEventListener("animationend", function() {
+        svg_image.src = "/static/images/worktime.svg"
+        svg_image.style.animation = "fade_in 1s ease";
+
+        svg_image.addEventListener("animationend", function() {
+            svg_image.animation = '';
+        })
+    })
+}
+
+function svg_2() {
+    svg_image.style.animation = "fade_out 1s ease";
+
+    svg_image.addEventListener("animationend", function() {
+        svg_image.src = "/static/images/designer.svg"
+        svg_image.style.animation = "fade_in 1s ease";
+
+        svg_image.addEventListener("animationend", function() {
+            svg_image.animation = '';
+        })
+    })
+}
+
+function svg_3() {
+    svg_image.style.animation = "fade_out 1s ease";
+
+    svg_image.addEventListener("animationend", function() {
+        svg_image.src = "/static/images/teachers.svg"
+        svg_image.style.animation = "fade_in 1s ease";
+
+        svg_image.addEventListener("animationend", function() {
+            svg_image.animation = '';
+        })
+    })
+}
