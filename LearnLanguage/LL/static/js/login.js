@@ -63,6 +63,15 @@ const svg_next3 = document.getElementById("login-svg-next3");
 
 addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
-        svg_image.src = "/static/images/designer.svg"
+        svg_image.style.animation = "fade_out 1s ease";
+
+        svg_image.addEventListener("animationend", function() {
+            svg_image.src = "/static/images/designer.svg"
+            svg_image.style.animation = "fade_in 1s ease";
+
+            svg_image.addEventListener("animationend", function() {
+                svg_image.animation = '';
+            })
+        })
     }, 5000)
 })
