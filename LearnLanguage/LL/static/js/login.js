@@ -57,6 +57,7 @@ password.addEventListener("focusout", function() {
 })
 
 const svg_image = document.getElementById("login-svg");
+const svg_text = document.getElementById("login-svg-text");
 const svg_next1 = document.getElementById("login-svg-next1");
 const svg_next2 = document.getElementById("login-svg-next2");
 const svg_next3 = document.getElementById("login-svg-next3");
@@ -88,6 +89,12 @@ function svg_1() {
         svg_image.addEventListener("animationend", function() {
             svg_image.animation = '';
         })
+    })
+
+    svg_text.style.animation = "fade_out 1s ease";
+
+    svg_image.addEventListener("animationend", function() {
+        svg_text.innerText = "Learn new words, and get "
     })
 }
 
