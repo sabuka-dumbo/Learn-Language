@@ -55,3 +55,8 @@ password.addEventListener("focusout", function() {
         })
     }
 })
+
+const svg_image = document.getElementById("login-svg");
+const svg_next1 = document.getElementById("login-svg-next1");
+const svg_next2 = document.getElementById("login-svg-next2");
+const svg_next3 = document.getElementById("login-svg-next3");
