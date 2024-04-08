@@ -94,6 +94,7 @@ function svg_1() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
+        svg_text.style.animation = '';
         svg_text.innerText = "Learn new words, and become a person with high English level."
         svg_text.style.animation = "fade_in 1s ease";
 
@@ -119,6 +120,7 @@ function svg_2() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
+        svg_text.style.animation = '';
         svg_text.innerText = "Learn new words, and with high English level."
         svg_text.style.animation = "fade_in 1s ease";
 
@@ -144,6 +146,7 @@ function svg_3() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
+        svg_text.style.animation = '';
         svg_text.innerText = "Learn new words, level."
         svg_text.style.animation = "fade_in 1s ease";
 
