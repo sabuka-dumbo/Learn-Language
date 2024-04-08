@@ -61,3 +61,8 @@ const svg_next1 = document.getElementById("login-svg-next1");
 const svg_next2 = document.getElementById("login-svg-next2");
 const svg_next3 = document.getElementById("login-svg-next3");
 
+addEventListener("DOMContentLoaded", function() {
+    setInterval(function() {
+        svg_image.src = "/static/images/designer.svg"
+    }, 5000)
+})
