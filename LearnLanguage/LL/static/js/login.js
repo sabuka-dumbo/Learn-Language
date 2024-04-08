@@ -111,10 +111,6 @@ function svg_2() {
     svg_image.addEventListener("animationend", function() {
         svg_image.src = "/static/images/designer.svg"
         svg_image.style.animation = "fade_in 1s ease";
-
-        svg_image.addEventListener("animationend", function() {
-            svg_image.animation = '';
-        })
     })
 
     svg_text.style.animation = "fade_out 1s ease";
@@ -123,11 +119,6 @@ function svg_2() {
         svg_text.style.animation = '';
         svg_text.innerText = "Learn new words, and with high English level."
         svg_text.style.animation = "fade_in 1s ease";
-
-        svg_text.addEventListener("animationend", function() {
-            svg_text.style.opacity = "100%";
-            svg_text.style.animation = '';
-        })
     })
 }
 
@@ -149,10 +140,5 @@ function svg_3() {
         svg_text.style.animation = '';
         svg_text.innerText = "Learn new words, level."
         svg_text.style.animation = "fade_in 1s ease";
-
-        svg_text.addEventListener("animationend", function() {
-            svg_text.style.opacity = "100%";
-            svg_text.style.animation = '';
-        })
     })
 }
