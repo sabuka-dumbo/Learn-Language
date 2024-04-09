@@ -64,7 +64,7 @@ if (window.innerWidth > 680) {
             password_placeholder.style.animation = '';
             password_placeholder.style.top = "-100%";
             password_placeholder.style.zIndex = "6";
-            password_placeholder.style.fontSize = "3vw";
+            password_placeholder.style.fontSize = "23vw";
             password_placeholder.style.transform = "translateY(100%)";
         })
     })
@@ -77,7 +77,7 @@ if (window.innerWidth > 680) {
                 password_placeholder.style.animation = '';
                 password_placeholder.style.top = "50%";
                 password_placeholder.style.zIndex = "5";
-                password_placeholder.style.fontSize = "5vw";
+                password_placeholder.style.fontSize = "53vw";
                 password_placeholder.style.transform = "translateY(-50%)";
             })
         }
