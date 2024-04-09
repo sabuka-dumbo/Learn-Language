@@ -108,6 +108,10 @@ function svg_1() {
         svg_next3.style.backgroundColor = "#D9D9D9";
         svg_next2.style.backgroundColor = "#D9D9D9";
         svg_next1.style.backgroundColor = "#6C63FF";
+        
+        svg_next3.style.animation = '';
+        svg_next2.style.animation = '';
+        svg_next1.style.animation = '';
     })
 }
 
@@ -134,6 +138,10 @@ function svg_2() {
         svg_next1.style.backgroundColor = "#D9D9D9";
         svg_next2.style.backgroundColor = "#6C63FF";
         svg_next3.style.backgroundColor = "#D9D9D9";
+
+        svg_next3.style.animation = '';
+        svg_next2.style.animation = '';
+        svg_next1.style.animation = '';
     })
 }
 
@@ -164,5 +172,9 @@ function svg_3() {
         svg_next1.style.backgroundColor = "#D9D9D9";
         svg_next2.style.backgroundColor = "#D9D9D9";
         svg_next3.style.backgroundColor = "#6C63FF";
+
+        svg_next3.style.animation = '';
+        svg_next2.style.animation = '';
+        svg_next1.style.animation = '';
     })
 }
