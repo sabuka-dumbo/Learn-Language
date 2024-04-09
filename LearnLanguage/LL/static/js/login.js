@@ -30,8 +30,7 @@ email.addEventListener("focusout", function() {
 const password = document.getElementById("password");
 const password_placeholder = document.getElementById("password-placeholder");
 
-if (window.innerWidth < 680) {
-    console.log('1')
+if (window.innerWidth > 680) {
     password.addEventListener("focus", function() {
         password_placeholder.style.animation = "input-placeholder-animation 0.4s ease";
 
@@ -58,7 +57,6 @@ if (window.innerWidth < 680) {
         }
     })
 } else {
-    console.log('2')
     password.addEventListener("focus", function() {
         password_placeholder.style.animation = "input-placeholder-animation 0.4s ease";
 
