@@ -30,16 +30,6 @@ email.addEventListener("focusout", function() {
 const password = document.getElementById("password");
 const password_placeholder = document.getElementById("password-placeholder");
 
-let passwordInput = document.getElementById("password");
-
-// Retrieve the font size of the placeholder in viewport width units (vw)
-let fontSizeForPlaceholder = parseFloat(window.getComputedStyle(passwordInput, '::placeholder').fontSize);
-
-// Convert font size from pixels to viewport width units (vw)
-let fontSizeInVw = (fontSizeForPlaceholder / window.innerWidth) * 100;
-
-console.log(fontSizeInVw + 'vw');
-
 password.addEventListener("focus", function() {
     password_placeholder.style.animation = "input-placeholder-animation 0.4s ease";
 
