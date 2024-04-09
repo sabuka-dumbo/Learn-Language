@@ -69,15 +69,12 @@ addEventListener("DOMContentLoaded", function() {
 
     setInterval(function() {
         if (count == 1) {
-            console.log("1")
             svg_2();
             count = 2;
         } else if (count == 2) {
-            console.log("2")
             svg_3();
             count = 3;
         } else if (count == 3) {
-            console.log("3")
             svg_1();
             count = 1;
         }
@@ -87,97 +84,104 @@ addEventListener("DOMContentLoaded", function() {
 function svg_1() {
     svg_image.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
+    svg_image.addEventListener("animationend", function handler() {
         svg_image.src = "/static/images/worktime.svg"
         svg_image.style.animation = "fade_in 1s ease";
 
-        svg_image.addEventListener("animationend", function() {
-            svg_image.animation = '';
-        })
+        svg_image.removeEventListener("animationend", handler);
     })
 
     svg_text.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
-        svg_text.style.animation = '';
+    svg_text.addEventListener("animationend", function handler() {
         svg_text.innerText = "Learn new words, and become a person with high English level."
         svg_text.style.animation = "fade_in 1s ease";
+
+        svg_text.removeEventListener("animationend", handler);
     })
 
     svg_next3.style.animation = "fade_out_button 1s ease";
     svg_next1.style.animation = "fade_in_button 1s ease";
 
-    svg_next3.addEventListener("animationend", function() {
+    svg_next3.addEventListener("animationend", function handler() {
         svg_next3.style.animation = '';
-        svg_next3.style.animation = '';
+        svg_next3.style.backgroundColor = '';
+        svg_next3.removeEventListener("animationend", handler);
     })
 
-    svg_next1.addEventListener("animationend", function() {
+    svg_next1.addEventListener("animationend", function handler() {
         svg_next1.style.animation = '';
-        svg_next1.style.animation = "#6C63FF";
+        svg_next1.style.backgroundColor = "#6C63FF";
+        svg_next1.removeEventListener("animationend", handler);
     })
 }
 
 function svg_2() {
     svg_image.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
+    svg_image.addEventListener("animationend", function handler() {
         svg_image.src = "/static/images/designer.svg"
         svg_image.style.animation = "fade_in 1s ease";
+
+        svg_image.removeEventListener("animationend", handler);
     })
 
     svg_text.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
-        svg_text.style.animation = '';
+    svg_text.addEventListener("animationend", function handler() {
         svg_text.innerText = "Learn new words, and with high English level."
         svg_text.style.animation = "fade_in 1s ease";
+
+        svg_text.removeEventListener("animationend", handler);
     })
 
     svg_next1.style.animation = "fade_out_button 1s ease";
     svg_next2.style.animation = "fade_in_button 1s ease";
 
-    svg_next1.addEventListener("animationend", function() {
+    svg_next1.addEventListener("animationend", function handler() {
         svg_next1.style.animation = '';
         svg_next1.style.backgroundColor = '';
+        svg_next1.removeEventListener("animationend", handler);
     })
 
-    svg_next2.addEventListener("animationend", function() {
+    svg_next2.addEventListener("animationend", function handler() {
         svg_next2.style.animation = '';
         svg_next2.style.backgroundColor = "#6C63FF";
+        svg_next2.removeEventListener("animationend", handler);
     })
 }
 
 function svg_3() {
     svg_image.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
+    svg_image.addEventListener("animationend", function handler() {
         svg_image.src = "/static/images/teachers.svg"
         svg_image.style.animation = "fade_in 1s ease";
 
-        svg_image.addEventListener("animationend", function() {
-            svg_image.animation = '';
-        })
+        svg_image.removeEventListener("animationend", handler);
     })
 
     svg_text.style.animation = "fade_out 1s ease";
 
-    svg_image.addEventListener("animationend", function() {
-        svg_text.style.animation = '';
+    svg_text.addEventListener("animationend", function handler() {
         svg_text.innerText = "Learn new words, level."
         svg_text.style.animation = "fade_in 1s ease";
+
+        svg_text.removeEventListener("animationend", handler);
     })
 
     svg_next2.style.animation = "fade_out_button 1s ease";
     svg_next3.style.animation = "fade_in_button 1s ease";
 
-    svg_next2.addEventListener("animationend", function() {
+    svg_next2.addEventListener("animationend", function handler() {
         svg_next2.style.animation = '';
         svg_next2.style.backgroundColor = '';
+        svg_next2.removeEventListener("animationend", handler);
     })
 
-    svg_next3.addEventListener("animationend", function() {
+    svg_next3.addEventListener("animationend", function handler() {
         svg_next3.style.animation = '';
         svg_next3.style.backgroundColor = "#6C63FF";
+        svg_next3.removeEventListener("animationend", handler);
     })
 }
