@@ -58,13 +58,15 @@ password.addEventListener("focusout", function() {
 
 const svg_image = document.getElementById("login-svg");
 const svg_text = document.getElementById("login-svg-text");
-const svg_next1 = document.getElementById("login-svg-next1");
-const svg_next2 = document.getElementById("login-svg-next2");
-const svg_next3 = document.getElementById("login-svg-next3");
+const svg_next1 = document.getElementById("logo-svg-next1");
+const svg_next2 = document.getElementById("logo-svg-next2");
+const svg_next3 = document.getElementById("logo-svg-next1");
 
 let count = 1;
 
 addEventListener("DOMContentLoaded", function() {
+    svg_next1.style.backgroundColor = "#6C63FF";
+
     setInterval(function() {
         if (count === 1) {
             svg_2();
