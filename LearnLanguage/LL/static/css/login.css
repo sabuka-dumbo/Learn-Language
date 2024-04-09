@@ -139,6 +139,21 @@ body {
     z-index: 5;
 }
 
+.input-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transform: translateY(-50%);
+    width: max-content;
+    height: max-content;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+    display: inline;
+    z-index: 5;
+}
+
 .login-register {
     position: relative;
     top: 0px;
