@@ -129,7 +129,7 @@ function svg_2() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_text.addEventListener("animationend", function handler() {
-        svg_text.innerText = "Learn new words, and with high English level."
+        svg_text.innerText = "Unlock a world of new vocabulary and elevate your English proficiency."
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.removeEventListener("animationend", handler);
