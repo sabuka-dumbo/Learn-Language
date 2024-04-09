@@ -238,8 +238,21 @@ body {
     width: 100%;
     min-height: 60px;
     height: 3vw;
-    background-color: #E5D4FF;
+    background-color: #ff92a8;
     z-index: 1000;
+    border-bottom-left-radius: 0.8vw;
+    border-bottom-right-radius: 0.8vw;
+    animation: error-animation 1.2s ease;
+}
+
+@keyframes error-animation {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0%;
+    }
 }
 
 @keyframes input-placeholder-animation {
