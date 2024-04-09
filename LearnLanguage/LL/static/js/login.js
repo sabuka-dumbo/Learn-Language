@@ -30,6 +30,11 @@ email.addEventListener("focusout", function() {
 const password = document.getElementById("password");
 const password_placeholder = document.getElementById("password-placeholder");
 
+let fontsize_for_placeholder = 0;
+
+fontsize_for_placeholder = password_placeholder.fontSize;
+console.log(fontsize_for_placeholder)
+
 password.addEventListener("focus", function() {
     password_placeholder.style.animation = "input-placeholder-animation 0.4s ease";
 
