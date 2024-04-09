@@ -9,3 +9,9 @@ def login(request):
 
 def register(request):
     return render(request, "register.html")
+
+def learn(request):
+    return render(request, "register.html")
+
+def goals(request):
+    return render(request, "register.html")

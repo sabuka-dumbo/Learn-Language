@@ -15,9 +15,9 @@
     <body>
         <div class="navbar-device-menu" id="navbar-device-menu">
             <div class="navbar-device-menu2" id="navbar-device-menu2">
-                <h1 class="navbar-device-hyperlinks">Home</h1>
-                <h1 class="navbar-device-hyperlinks">Learn</h1>
-                <h1 class="navbar-device-hyperlinks">Goals</h1>
+                <h1 class="navbar-device-hyperlinks"><a href="{% url 'index' %}" style="text-decoration: none; color: black;">Home</a></h1>
+                <h1 class="navbar-device-hyperlinks"><a href="{% url 'learn' %}" style="text-decoration: none; color: black;">Learn</a></h1>
+                <h1 class="navbar-device-hyperlinks"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
 
                 <div class="navbar-device-profile">
                     <a href="{% url 'login' %}" style="text-decoration: none;">
@@ -44,19 +44,23 @@
                 </div>
 
                 <div class="navbar-navs">
-                    <h1 class="navbar-nav">Home</h1>
-                    <h1 class="navbar-nav">Learn</h1>
-                    <h1 class="navbar-nav">Goals</h1>
+                    <h1 class="navbar-nav"><a href="{% url 'index' %}" style="text-decoration: none; color: black;">Home</a></h1>
+                    <h1 class="navbar-nav"><a href="{% url 'learn' %}" style="text-decoration: none; color: black;">Learn</a></h1>
+                    <h1 class="navbar-nav"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
                 </div>
 
                 <div class="navbar-profile-div">
-                    <div class="navbar-profile-divs">
-                        <h1 class="navbar-profile-divs-text">Log In</h1>
-                    </div>
+                    <a href="{% url 'login' %}" style="text-decoration: none;">
+                        <div class="navbar-profile-divs">
+                            <h1 class="navbar-profile-divs-text">Log In</h1>
+                        </div>
+                    </a>
 
-                    <div class="navbar-profile-divs2">
-                        <h1 class="navbar-profile-divs-text">Sign In</h1>
-                    </div>
+                    <a href="{% url 'login' %}" style="text-decoration: none;">
+                        <div class="navbar-profile-divs2">
+                            <h1 class="navbar-profile-divs-text">Sign In</h1>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="navbar-device" id="navbar-device">
