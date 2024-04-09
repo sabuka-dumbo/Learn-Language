@@ -166,5 +166,6 @@ function svg_3() {
         svg_next2.style.backgroundColor = "#D9D9D9"
 
         svg_next3.style.backgroundColor = "#6C63FF";
+        svg_next3.style.animation = "fade_in_button 1s ease";
     })
 }
