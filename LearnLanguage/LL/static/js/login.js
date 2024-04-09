@@ -68,15 +68,15 @@ addEventListener("DOMContentLoaded", function() {
     svg_next1.style.backgroundColor = "#6C63FF";
 
     setInterval(function() {
-        if (count === 1) {
+        if (count == 1) {
             console.log("1")
             svg_2();
             count = 2;
-        } else if (count === 2) {
+        } else if (count == 2) {
             console.log("2")
             svg_3();
             count = 3;
-        } else if (count === 3) {
+        } else if (count == 3) {
             console.log("3")
             svg_1();
             count = 1;
