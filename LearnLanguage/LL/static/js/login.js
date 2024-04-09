@@ -100,6 +100,14 @@ function svg_1() {
         svg_text.innerText = "Learn new words, and become a person with high English level."
         svg_text.style.animation = "fade_in 1s ease";
     })
+
+    svg_next3.style.animation = "fade_out_button 1s ease";
+    svg_next1.style.animation = "fade_in_button 1s ease";
+
+    svg_next1.addEventListener("animationend", function() {
+        svg_next3.style.animation = "#D9D9D9";
+        svg_next1.style.animation = "#6C63FF";
+    })
 }
 
 function svg_2() {
@@ -151,7 +159,7 @@ function svg_3() {
     svg_next3.style.animation = "fade_in_button 1s ease";
 
     svg_next3.addEventListener("animationend", function() {
-        svg_next2.style.backgroundColor = "";
+        svg_next2.style.backgroundColor = "#D9D9D9";
         svg_next3.style.backgroundColor = "#6C63FF";
     })
 }
