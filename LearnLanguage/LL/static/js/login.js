@@ -120,7 +120,7 @@ function svg_2() {
     svg_image.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function handler() {
-        svg_image.src = "/static/images/designer.svg"
+        svg_image.src = "/static/images/designer.svg";
         svg_image.style.animation = "fade_in 1s ease";
 
         svg_image.removeEventListener("animationend", handler);
@@ -129,7 +129,7 @@ function svg_2() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_text.addEventListener("animationend", function handler() {
-        svg_text.innerText = "Unlock a world of new vocabulary and elevate your English proficiency."
+        svg_text.innerText = "Unlock a world of new vocabulary and elevate your English proficiency.";
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.removeEventListener("animationend", handler);
@@ -155,7 +155,7 @@ function svg_3() {
     svg_image.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function handler() {
-        svg_image.src = "/static/images/teachers.svg"
+        svg_image.src = "/static/images/teachers.svg";
         svg_image.style.animation = "fade_in 1s ease";
 
         svg_image.removeEventListener("animationend", handler);
@@ -164,7 +164,7 @@ function svg_3() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_text.addEventListener("animationend", function handler() {
-        svg_text.innerText = "Type words faster without any"
+        svg_text.innerText = "Master typing with precision, eliminating errors and boosting your speed.";
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.removeEventListener("animationend", handler);
