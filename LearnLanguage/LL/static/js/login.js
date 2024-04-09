@@ -71,10 +71,10 @@ addEventListener("DOMContentLoaded", function() {
         if (count === 1) {
             svg_2();
             count = 2;
-        } else if (count == 2) {
+        } else if (count === 2) {
             svg_3();
             count = 3;
-        } else if (count = 3) {
+        } else if (count === 3) {
             svg_1();
             count = 1;
         }
