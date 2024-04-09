@@ -20,13 +20,17 @@
                 <h1 class="navbar-device-hyperlinks">Goals</h1>
 
                 <div class="navbar-device-profile">
-                    <div class="navbar-device-profile-div">
-                        <h1 class="navbar-device-profile-div-text">Login</h1>
-                    </div>
+                    <a href="{% url 'login' %}" style="text-decoration: none;">
+                        <div class="navbar-device-profile-div">
+                            <h1 class="navbar-device-profile-div-text">Login</h1>
+                        </div>
+                    </a>
 
-                    <div class="navbar-device-profile-div2">
-                        <h1 class="navbar-device-profile-div-text" style="font-size: 110%;">Sign in</h1>
-                    </div>
+                    <a href="{% url 'register' %}" style="text-decoration: none;">
+                        <div class="navbar-device-profile-div2">
+                            <h1 class="navbar-device-profile-div-text" style="font-size: 110%;">Sign in</h1>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
