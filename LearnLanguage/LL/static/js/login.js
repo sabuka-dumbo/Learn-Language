@@ -106,7 +106,7 @@ function svg_1() {
 
     svg_next1.addEventListener("animationend", function() {
         svg_next3.style.backgroundColor = "#D9D9D9";
-        svg_next1.style.animation = "#6C63FF";
+        svg_next1.style.backgroundColor = "#6C63FF";
     })
 }
 
