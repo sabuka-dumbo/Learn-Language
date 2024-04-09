@@ -109,7 +109,7 @@ function svg_1() {
 
     svg_next3.addEventListener("animationend", function() {
         svg_next3.style.animation = '';
-        svg_next3.style.animation = "#D9D9D9";
+        svg_next3.style.animation = '';
     })
 
     svg_next1.addEventListener("animationend", function() {
@@ -139,7 +139,7 @@ function svg_2() {
 
     svg_next1.addEventListener("animationend", function() {
         svg_next1.style.animation = '';
-        svg_next1.style.backgroundColor = "#D9D9D9";
+        svg_next1.style.backgroundColor = '';
     })
 
     svg_next2.addEventListener("animationend", function() {
@@ -173,7 +173,7 @@ function svg_3() {
 
     svg_next2.addEventListener("animationend", function() {
         svg_next2.style.animation = '';
-        svg_next2.style.backgroundColor = "#D9D9D9";
+        svg_next2.style.backgroundColor = '';
     })
 
     svg_next3.addEventListener("animationend", function() {
