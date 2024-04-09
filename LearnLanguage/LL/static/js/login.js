@@ -164,7 +164,7 @@ function svg_3() {
     svg_text.style.animation = "fade_out 1s ease";
 
     svg_text.addEventListener("animationend", function handler() {
-        svg_text.innerText = "Learn new words, level."
+        svg_text.innerText = "Type words faster without any"
         svg_text.style.animation = "fade_in 1s ease";
 
         svg_text.removeEventListener("animationend", handler);
