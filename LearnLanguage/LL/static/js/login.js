@@ -105,7 +105,7 @@ function svg_1() {
     svg_next1.style.animation = "fade_in_button 1s ease";
 
     svg_next1.addEventListener("animationend", function() {
-        svg_next3.style.animation = "#D9D9D9";
+        svg_next3.style.backgroundColor = "#D9D9D9";
         svg_next1.style.animation = "#6C63FF";
     })
 }
