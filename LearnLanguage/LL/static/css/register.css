@@ -233,7 +233,7 @@ body {
 
 .error {
     position: fixed;
-    top: 0px;
+    top: -120%;
     left: 0px;
     width: 100%;
     min-height: 60px;
@@ -242,7 +242,21 @@ body {
     z-index: 1000;
     border-bottom-left-radius: 0.8vw;
     border-bottom-right-radius: 0.8vw;
-    animation: error-animation 1.2s ease;
+}
+
+.error-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: max-content;
+    text-align: center;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
 }
 
 @keyframes error-animation {

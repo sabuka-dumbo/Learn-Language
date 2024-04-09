@@ -12,6 +12,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="error" id="error">
+            <h1 class="error-text" id="error-text"></h1>
+        </div>
+        
         <div class="login-page-part1">
             <div class="login-main-logo-part">
                 <img src="{% static 'images/worktime.svg' %}" class="login-svg" id="login-svg">
@@ -40,7 +44,7 @@
                     <label class="input-placeholder" id="password-placeholder">Password</label>
                 </div>
 
-                <h1 class="login-register"><a href="" style="text-decoration: none;">New here? register now</a></h1>
+                <h1 class="login-register"><a href="{% url 'register' %}" style="text-decoration: none;">New here? register now</a></h1>
 
                 <input type="submit" class="submit" value="LOGIN">
 

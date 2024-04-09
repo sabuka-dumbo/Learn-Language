@@ -12,8 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="error">
-            <h1 class="error-text"></h1>
+        <div class="error" id="error">
+            <h1 class="error-text" id="error-text"></h1>
         </div>
         
         <div class="login-page-part1">
@@ -44,7 +44,7 @@
                     <label class="input-placeholder" id="password-placeholder">Password</label>
                 </div>
 
-                <h1 class="login-register"><a href="" style="text-decoration: none;">Already have account? login here</a></h1>
+                <h1 class="login-register"><a href="{% url 'login' %}" style="text-decoration: none;">Already have account? login here</a></h1>
 
                 <input type="submit" class="submit" value="REGISTER">
 

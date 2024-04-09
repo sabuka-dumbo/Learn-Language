@@ -185,3 +185,17 @@ function svg_3() {
         svg_next3.removeEventListener("animationend", handler);
     })
 }
+
+const error_bar = document.getElementById("error");
+const error_text = document.getElementById("error-text");
+
+addEventListener("DOMContentLoaded", function() {
+    if (error_text.innerText != '') {
+        error_bar.style.animation = "error-animation 1.2s ease";
+
+        error_bar.addEventListener("animationend", function() {
+            error_bar.style.animation = '';
+            error_bar.style.top = "0%";
+        })
+    }
+})
