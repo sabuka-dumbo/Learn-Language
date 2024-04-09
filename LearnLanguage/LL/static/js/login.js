@@ -60,7 +60,7 @@ const svg_image = document.getElementById("login-svg");
 const svg_text = document.getElementById("login-svg-text");
 const svg_next1 = document.getElementById("logo-svg-next1");
 const svg_next2 = document.getElementById("logo-svg-next2");
-const svg_next3 = document.getElementById("logo-svg-next1");
+const svg_next3 = document.getElementById("logo-svg-next3");
 
 let count = 1;
 
@@ -82,6 +82,7 @@ addEventListener("DOMContentLoaded", function() {
 })
 
 function svg_1() {
+    console.log("s")
     svg_image.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
@@ -108,11 +109,11 @@ function svg_1() {
         svg_next3.style.backgroundColor = "#D9D9D9"
 
         svg_next1.style.backgroundColor = "#6C63FF";
-        svg_next1.style.animation = "fade_in_button 1s ease";
     })
 }
 
 function svg_2() {
+    console.log("ds")
     svg_image.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
@@ -135,11 +136,11 @@ function svg_2() {
         svg_next1.style.backgroundColor = "#D9D9D9"
 
         svg_next2.style.backgroundColor = "#6C63FF";
-        svg_next2.style.animation = "fade_in_button 1s ease";
     })
 }
 
 function svg_3() {
+    console.log("sgg")
     svg_image.style.animation = "fade_out 1s ease";
 
     svg_image.addEventListener("animationend", function() {
@@ -166,6 +167,5 @@ function svg_3() {
         svg_next2.style.backgroundColor = "#D9D9D9"
 
         svg_next3.style.backgroundColor = "#6C63FF";
-        svg_next3.style.animation = "fade_in_button 1s ease";
     })
 }
