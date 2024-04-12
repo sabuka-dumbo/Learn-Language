@@ -30,7 +30,7 @@ email.addEventListener("focusout", function() {
 const password = document.getElementById("password");
 const password_placeholder = document.getElementById("password-placeholder");
 
-if (window.innerWidth > 680) {
+if (window.innerWidth < 680) {
     password.addEventListener("focus", function() {
         password_placeholder.style.animation = "input-placeholder-animation-device 0.4s ease";
 
@@ -77,7 +77,7 @@ if (window.innerWidth > 680) {
                 password_placeholder.style.animation = '';
                 password_placeholder.style.top = "50%";
                 password_placeholder.style.zIndex = "5";
-                password_placeholder.style.fontSize = "3.5vw";
+                password_placeholder.style.fontSize = "2.5vw";
                 password_placeholder.style.transform = "translateY(-50%)";
             })
         }
