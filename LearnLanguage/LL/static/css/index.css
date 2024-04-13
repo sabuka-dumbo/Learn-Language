@@ -34,3 +34,37 @@
     text-align: center;
 }
 
+.day-stike {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: max-content;
+    display: inline-block;
+    margin-top: 1.2vw;
+}
+
+.strike-check {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 2vw;
+    height: 2vw;
+    background-color: #E5D4FF;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.strike-text {
+    position: relative;
+    top: -0.5vw;
+    left: 5%;
+    width: calc(100% - 4vw);
+    height: max-content;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
