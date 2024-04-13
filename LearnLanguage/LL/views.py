@@ -25,7 +25,18 @@ def login(request):
         return render(request, "login.html")
 
 def register(request):
-    return render(request, "register.html")
+    if request.method == "POST":
+        email = request.POST["email"]
+        password = request.POST["password"]
+        new_user = User.objects.create(request, username=email, email=email, password=password)
+
+        if new_user is not None:
+            login(request, new_user)
+            return HttpResponseRedirect(reverse("index"))
+        else:
+            return HttpResponseRedirect(reverse("register"))
+    else:
+        return render(request, "register.html")
 
 def learn(request):
     return render(request, "register.html")
