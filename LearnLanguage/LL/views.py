@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
 from .models import *
@@ -18,7 +18,7 @@ def login(request):
             login(request, user)
             return HttpResponseRedirect(reverse('index'))
         else:
-            return HttpResponseRedirect(reverse('login') + '?error=Invalid email or password')
+            return redirect('login', kwargs={'error': "Invalid email or password"})
     else:
         return render(request, "login.html")
 
