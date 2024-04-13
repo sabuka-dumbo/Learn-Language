@@ -373,10 +373,6 @@ body {
         width: 22vw;
         height: 22vw;
     }
-
-    .input-div {
-        margin-top: 8%;
-    }
 }
 
 @media screen and (max-width: 680px) {
@@ -455,6 +451,10 @@ body {
         font-size: 4vw;
         width: 85%;
         margin: auto;
+    }
+
+    .input-div {
+        margin-top: 8%;
     }
 
     .submit {
