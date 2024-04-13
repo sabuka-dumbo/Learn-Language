@@ -9,8 +9,8 @@ def index(request):
 
 def login(request):
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
+        email = request.POST.get("email")
+        password = request.POST.get("password")
         user = authenticate(request, email=email, password=password)
 
         if user is not None:
