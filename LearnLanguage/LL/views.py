@@ -14,9 +14,11 @@ def login(request):
 
         user = authenticate(request, email=email, password=password)
 
-        login(user)
-
-        return HttpResponseRedirect(reverse('index'))
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            return render(request, "login.html", {'error': 'Invalid email or password'})
     else:
         return render(request, "login.html")
 
