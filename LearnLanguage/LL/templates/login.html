@@ -33,7 +33,7 @@
         <div class="login-page-part2">
             <h1 class="login-title"><a href="{% url 'index' %}" style="text-decoration: none; color: #6C63FF;">Learn Language</a></h1>
 
-            <form action="{% url 'login' %}" class="login-form" method="post">
+            <form action="{% url 'login' %}" class="login-form" method="get">
                 {% csrf_token %}
 
                 <div class="input-div">
