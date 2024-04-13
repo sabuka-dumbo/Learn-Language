@@ -16,13 +16,13 @@ if (window.innerWidth < 680) {
 
     email.addEventListener("focusout", function() {
         if (email.value.length == 0) {
-            email_placeholder.style.animation = "input-placeholder-animation-2 0.4s ease";
+            email_placeholder.style.animation = "input-placeholder-animation-device-2 0.4s ease";
 
             email_placeholder.addEventListener("animationend", function() {
                 email_placeholder.style.animation = '';
                 email_placeholder.style.top = "50%";
                 email_placeholder.style.zIndex = "5";
-                email_placeholder.style.fontSize = "2.5vw";
+                email_placeholder.style.fontSize = "5.5vw";
                 email_placeholder.style.transform = "translateY(-50%)";
             })
         }
@@ -79,7 +79,7 @@ if (window.innerWidth < 680) {
                 password_placeholder.style.animation = '';
                 password_placeholder.style.top = "50%";
                 password_placeholder.style.zIndex = "5";
-                password_placeholder.style.fontSize = "4vw";
+                password_placeholder.style.fontSize = "5.5vw";
                 password_placeholder.style.transform = "translateY(-50%)";
             })
         }
