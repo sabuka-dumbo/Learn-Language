@@ -3,13 +3,13 @@ const email_placeholder = document.getElementById("email-placeholder");
 
 if (window.innerWidth < 680) {
     email.addEventListener("focus", function() {
-        email_placeholder.style.animation = "input-placeholder-animation 0.4s ease";
+        email_placeholder.style.animation = "input-placeholder-animation-device 0.4s ease";
 
         email_placeholder.addEventListener("animationend", function() {
             email_placeholder.style.animation = '';
             email_placeholder.style.top = "-100%";
             email_placeholder.style.zIndex = "6";
-            email_placeholder.style.fontSize = "1.2vw";
+            email_placeholder.style.fontSize = "3vw";
             email_placeholder.style.transform = "translateY(100%)";
         })
     })
