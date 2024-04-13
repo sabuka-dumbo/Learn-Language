@@ -92,7 +92,7 @@ if (window.innerWidth < 680) {
             password_placeholder.style.animation = '';
             password_placeholder.style.top = "-100%";
             password_placeholder.style.zIndex = "6";
-            password_placeholder.style.fontSize = "2.5vw";
+            password_placeholder.style.fontSize = "1.2vw";
             password_placeholder.style.transform = "translateY(100%)";
         })
     })
