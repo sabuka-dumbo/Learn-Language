@@ -28,7 +28,8 @@ def register(request):
     if request.method == "POST":
         email = request.POST["email"]
         password = request.POST["password"]
-        new_user = User(request, username=email, email=email, password=password)
+        new_user = User(username=email, email=email, password=password)
+        new_user.save()
 
         if new_user is not None:
             auth_login(request, new_user)
