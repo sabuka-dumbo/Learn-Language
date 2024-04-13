@@ -28,10 +28,10 @@ def register(request):
     if request.method == "POST":
         email = request.POST["email"]
         password = request.POST["password"]
-        new_user = User.objects.create(request, username=email, email=email, password=password)
+        new_user = User(request, username=email, email=email, password=password)
 
         if new_user is not None:
-            login(request, new_user)
+            auth_login(request, new_user)
             return HttpResponseRedirect(reverse("index"))
         else:
             return HttpResponseRedirect(reverse("register"))
