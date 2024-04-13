@@ -19,19 +19,25 @@
                 <h1 class="navbar-device-hyperlinks"><a href="{% url 'learn' %}" style="text-decoration: none; color: black;">Learn</a></h1>
                 <h1 class="navbar-device-hyperlinks"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
 
-                <div class="navbar-device-profile">
-                    <a href="{% url 'login' %}" style="text-decoration: none;">
-                        <div class="navbar-device-profile-div">
-                            <h1 class="navbar-device-profile-div-text">Login</h1>
-                        </div>
-                    </a>
+                {% if request.user.is_authenticated %}
+                    <div class="navbar-device-profile">
 
-                    <a href="{% url 'register' %}" style="text-decoration: none;">
-                        <div class="navbar-device-profile-div2">
-                            <h1 class="navbar-device-profile-div-text" style="font-size: 110%;">Sign Up</h1>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                {% else %}
+                    <div class="navbar-device-profile">
+                        <a href="{% url 'login' %}" style="text-decoration: none;">
+                            <div class="navbar-device-profile-div">
+                                <h1 class="navbar-device-profile-div-text">Login</h1>
+                            </div>
+                        </a>
+
+                        <a href="{% url 'register' %}" style="text-decoration: none;">
+                            <div class="navbar-device-profile-div2">
+                                <h1 class="navbar-device-profile-div-text" style="font-size: 110%;">Sign Up</h1>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
             </div>
         </div>
 
@@ -49,19 +55,23 @@
                     <h1 class="navbar-nav"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
                 </div>
 
-                <div class="navbar-profile-div">
-                    <a href="{% url 'login' %}" style="text-decoration: none;">
-                        <div class="navbar-profile-divs">
-                            <h1 class="navbar-profile-divs-text">Log In</h1>
-                        </div>
-                    </a>
+                {% if request.user.is_authenticated %}
+                    
+                {% else %}
+                    <div class="navbar-profile-div">
+                        <a href="{% url 'login' %}" style="text-decoration: none;">
+                            <div class="navbar-profile-divs">
+                                <h1 class="navbar-profile-divs-text">Log In</h1>
+                            </div>
+                        </a>
 
-                    <a href="{% url 'register' %}" style="text-decoration: none;">
-                        <div class="navbar-profile-divs2">
-                            <h1 class="navbar-profile-divs-text">Sign Up</h1>
-                        </div>
-                    </a>
-                </div>
+                        <a href="{% url 'register' %}" style="text-decoration: none;">
+                            <div class="navbar-profile-divs2">
+                                <h1 class="navbar-profile-divs-text">Sign Up</h1>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
 
                 <div class="navbar-device" id="navbar-device">
                     <span class="navbar-menu" id="navbar-menu1"></span>
