@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
-from . import models
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -9,8 +9,12 @@ def index(request):
 
 def login(request):
     if request.method == "POST":
-        email = request.POST("email")
+        email = request.POST.get("email")
         password = request.POST.get("password")
+
+        user = authenticate(request, email=email, password=password)
+
+        login(user)
 
         return HttpResponseRedirect(reverse('index'))
     else:
