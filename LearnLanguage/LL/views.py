@@ -18,7 +18,7 @@ def login(request):
             login(request, user)
             return HttpResponseRedirect(reverse('index'))
         else:
-            return render(request, "login.html", {'error': 'Invalid email or password'})
+            return HttpResponseRedirect(reverse('login') + '?error=Invalid email or password')
     else:
         return render(request, "login.html")
 
