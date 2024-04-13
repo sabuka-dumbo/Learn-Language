@@ -9,16 +9,17 @@ def index(request):
 
 def login(request):
     if request.method == "POST":
-        email = request.POST.get("email")
-        password = request.POST.get("password")
-
-        user = authenticate(request, email=email, password=password)
+        email = request.POST["email"]
+        password = request.POST["password"]
+        user = authenticate(request, username=email, password=password)
 
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "login.html", {'error': 'Invalid email or password'})
+            return render(request, "login.html", {
+                "message": "Invalid username and/or password."
+            })
     else:
         return render(request, "login.html")
 
