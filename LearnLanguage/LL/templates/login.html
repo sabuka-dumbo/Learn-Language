@@ -33,7 +33,9 @@
         <div class="login-page-part2">
             <h1 class="login-title"><a href="{% url 'index' %}" style="text-decoration: none; color: #6C63FF;">Learn Language</a></h1>
 
-            <form action="" class="login-form">
+            <form action="{% url 'login' %}" class="login-form" method="post">
+                {% csrf_token %}
+
                 <div class="input-div">
                     <input type="email" class="input" id="email" name="email">
                     <label class="input-placeholder" id="email-placeholder">Email or username</label>

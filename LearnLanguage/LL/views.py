@@ -8,7 +8,13 @@ def index(request):
     return render(request, "index.html")
 
 def login(request):
-    return render(request, "login.html")
+    if request.method == "POST":
+        email = request.POST("email")
+        password = request.POST.get("password")
+
+        return HttpResponseRedirect(reverse('index'))
+    else:
+        return render(request, "login.html")
 
 def register(request):
     return render(request, "register.html")
