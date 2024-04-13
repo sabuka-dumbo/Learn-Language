@@ -21,7 +21,11 @@
 
                 {% if request.user.is_authenticated %}
                     <div class="navbar-device-profile">
-
+                        <a href="{% url 'profile' %}" style="text-decoration: none;">
+                            <div class="navbar-device-profile-div">
+                                <h1 class="navbar-device-profile-div-text">Profile</h1>
+                            </div>
+                        </a>
                     </div>
                 {% else %}
                     <div class="navbar-device-profile">
@@ -59,7 +63,7 @@
                     <div class="navbar-profile-div">
                         <a href="{% url 'profile' %}" style="text-decoration: none;">
                             <div class="navbar-profile-divs">
-                                <h1 class="navbar-profile-divs-text">{{ request.user.username }}</h1>
+                                <h1 class="navbar-profile-divs-text">Profile</h1>
                             </div>
                         </a>
                     </div>
