@@ -56,7 +56,13 @@
                 </div>
 
                 {% if request.user.is_authenticated %}
-                    
+                    <div class="navbar-profile-div">
+                        <a href="{% url 'profile' %}" style="text-decoration: none;">
+                            <div class="navbar-profile-divs">
+                                <h1 class="navbar-profile-divs-text">{{ request.user.username }}</h1>
+                            </div>
+                        </a>
+                    </div>
                 {% else %}
                     <div class="navbar-profile-div">
                         <a href="{% url 'login' %}" style="text-decoration: none;">
