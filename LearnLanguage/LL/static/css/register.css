@@ -269,6 +269,7 @@ body {
     }
 }
 
+
 @keyframes input-placeholder-animation {
     0% {}
 
@@ -290,9 +291,36 @@ body {
 
     100% {
         top: 50%;
-        z-index: 5;
-        font-size: 1.5vw;
+        z-index: 6;
+        font-size: 2.5vw;
         transform: translateY(-50%);
+    }
+}
+
+@keyframes input-placeholder-animation-device {
+    0% {}
+
+    100% {
+        top: -100%;
+        z-index: 6;
+        font-size: 3vw;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes input-placeholder-animation-device-2 {
+    0% {
+        top: -100%;
+        z-index: 6;
+        font-size: 3vw;
+        transform: translateY(100%);
+    }
+
+    100% {
+        top: -100%;
+        z-index: 6;
+        font-size: 5.5vw;
+        transform: translateY(100%);
     }
 }
 
@@ -424,6 +452,10 @@ body {
         font-size: 4vw;
         width: 85%;
         margin: auto;
+    }
+
+    .input-div {
+        margin-top: 8%;
     }
 
     .submit {
