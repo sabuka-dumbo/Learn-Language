@@ -554,26 +554,32 @@
         position: relative;
         top: 0px;
         left: 0px;
-        width: 30%;
-        height: calc(100vh - 80px - 2vw);
+        width: 40%;
+        height: max-content;
         margin-top: calc(85px + 2vw);
         display: block;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
     .index-part2 {
-        display: none;
+        position: absolute;
+        top: 0px;
+        left: 40%;
+        width: 58%;
+        height: calc(100vh - 85px - 2vw);
+        margin-top: calc(85px + 2vw);
+        display: inline-block;
     }
 
     .index-part3 {
         position: relative;
-        top: -12vw;
+        top: 2vw;
         right: 0px;
-        width: 30%;
-        height: calc(100vh - 80px - 2vw);
+        width: 40%;
+        height: max-content;
         margin-top: 0;
         display: block;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 }
 
