@@ -77,8 +77,11 @@
     height: max-content;
     padding-top: 2vw;
     padding-bottom: 2vw;
+    margin-top: 2vw;
     margin-left: 5%;
     background-color: #F7FBCA;
+    border-radius: 1.5vw;
+    box-shadow: 0px 25px 20px #f7fbca69;
 }
 
 .tip-text {
