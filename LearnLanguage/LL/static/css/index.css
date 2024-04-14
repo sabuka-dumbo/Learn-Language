@@ -538,4 +538,6 @@
     padding-left: 1.5vw;
     padding: 1.5vw;
     background-color: #D9E7D1;
+    border: none;
+    outline: none;
 }
