@@ -295,7 +295,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: max-content;
+    height: 8.5vw;
     border-radius: 1.5vw;
     background-color: #CDF5FD;
     margin-top: 2vw;
@@ -319,4 +319,12 @@
     width: 40%;
     height: 0px;
     display: inline-block;
+}
+
+.testL-image {
+    position: absolute;
+    top: 0px;
+    right: 2vw;
+    width: 8vw;
+    height: 8vw;
 }
