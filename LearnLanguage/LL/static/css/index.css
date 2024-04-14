@@ -527,8 +527,8 @@
 
 .random-input {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 1vw;
+    left: 5%;
     width: max-content;
     height: max-content;
     padding: 0;
