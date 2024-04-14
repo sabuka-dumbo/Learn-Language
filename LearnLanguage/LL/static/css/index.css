@@ -295,7 +295,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 8.5vw;
+    height: 10.5vw;
     border-radius: 1.5vw;
     background-color: #CDF5FD;
     margin-top: 2vw;
@@ -355,4 +355,19 @@
     font-family: "Kdam Thmor Pro";
     font-weight: normal;
     color: black;
+}
+
+.testL-button {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: max-content;
+    height: max-content;
+    padding: 0.5vw;
+    margin: 0;
+    font-size: 1.5vw;
+    font-family: "Itim";
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
 }
