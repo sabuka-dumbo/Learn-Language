@@ -16,7 +16,7 @@
     height: max-content;
     margin-top: 12vw;
     background-color: aqua;
-    display: inline-block;
+    display: inline-flexbox;
 }
 
 .day-strike-div {
