@@ -2,7 +2,7 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 30%;
+    width: 28%;
     height: calc(100vh - 80px - 2vw);
     margin-top: calc(85px + 2vw);
     display: inline-block;
@@ -585,6 +585,7 @@
 
 ::-webkit-scrollbar {
     width: 0.5vw;
+    margin-right: 0;
   }
   
   ::-webkit-scrollbar-track {
