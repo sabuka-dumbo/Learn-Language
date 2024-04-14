@@ -182,3 +182,19 @@
     font-weight: bolder;
     color: black;
 }
+
+.new-word-submit {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 5vw;
+    height: 80%;
+    background-color: #D9E7D1;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    font-family: "Itim";
+    font-weight: normal;
+    color: black;
+}
