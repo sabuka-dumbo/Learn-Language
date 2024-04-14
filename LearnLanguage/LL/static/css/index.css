@@ -567,11 +567,11 @@
 
     .index-part3 {
         position: relative;
-        top: 0px;
+        top: -12vw;
         right: 0px;
         width: 30%;
         height: calc(100vh - 80px - 2vw);
-        margin-top: calc(85px + 2vw);
+        margin-top: 0;
         display: block;
         overflow-y: auto;
     }
