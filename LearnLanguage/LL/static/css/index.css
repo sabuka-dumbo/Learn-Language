@@ -185,6 +185,13 @@
     color: black;
 }
 
+.radio-input {
+    position: relative;
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+}
+
 .new-word-submit {
     position: absolute;
     top: 0px;
@@ -584,6 +591,98 @@
 
     .day-strike-header {
         font-size: 3.5vw;
+    }
+
+    .strike-check {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .strike-text {
+        font-size: 2.5vw;
+    }
+
+    .tip-text {
+        font-size: 2.5vw;
+    }
+
+    .review-header {
+        font-size: 3vw;
+    }
+
+    .review-words-div {
+        height: 25vw;
+    }
+
+    .review-description {
+        font-size: 2.5vw;
+    }
+
+    .review-part2 {
+        left: 75%;
+        width: 25%;
+    }
+
+    .review-part1 {
+        left: 0;
+        width: 75%;
+    }
+
+    .review-image {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .review-button {
+        top: 3vw;
+        font-size: 3vw;
+    }
+
+    .random-header {
+        font-size: 3.5vw;
+    }
+
+    .random-question {
+        font-size: 2.5vw;
+    }
+
+    .random-textarea {
+        font-size: 3vw;
+        height: 15vw;
+    }
+
+    .random-input {
+        font-size: 3vw;
+    }
+
+    .new-word-header {
+        font-size: 3.5vw;
+    }
+
+    .new-word-textarea {
+        font-size: 3vw;
+    }
+
+    .new-word {
+        height: 25vw;
+    }
+
+    .new-word-submit {
+        font-size: 3vw;
+        width: 10vw;
+    }
+
+    .radio-text {
+        top: -1vw;
+        font-size: 2.5vw;
+    }
+
+    .radio-input {
+        position: relative;
+        display: inline-block;
+        top: -1vw;
+        width: 2vw;
+        height: 2vw;
     }
 }
 
