@@ -1,11 +1,12 @@
 .index-part1 {
-    position: relative;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 30%;
     height: max-content;
-    margin-top: 2vw;
+    margin-top: calc(85px + 2vw);
     display: inline-block;
+    overflow-y: auto;
 }
 
 .index-part2 {
@@ -19,13 +20,14 @@
 }
 
 .index-part3 {
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     width: 30%;
     height: max-content;
     margin-top: calc(85px + 2vw);
     display: inline-block;
+    overflow-y: auto;
 }
 
 .day-strike-div {
