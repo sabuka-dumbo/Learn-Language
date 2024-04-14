@@ -17,7 +17,6 @@
     height: calc(100vh - 85px - 2vw);
     margin-top: calc(85px + 2vw);
     display: inline-block;
-    overflow-y: auto;
 }
 
 .index-part3 {
