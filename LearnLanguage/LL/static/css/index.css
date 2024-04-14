@@ -4,7 +4,7 @@
     left: 0px;
     width: 30%;
     height: max-content;
-    margin-top: 12vw;
+    margin-top: 2vw;
     display: inline-block;
 }
 
@@ -14,7 +14,7 @@
     left: 30%;
     width: 40%;
     height: max-content;
-    margin-top: 12vw;
+    margin-top: calc(85px + 2vw);
     display: inline-block;
 }
 
