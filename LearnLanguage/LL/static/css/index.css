@@ -581,6 +581,10 @@
         display: block;
         overflow-y: hidden;
     }
+
+    .day-strike-header {
+        font-size: 3.5vw;
+    }
 }
 
 ::-webkit-scrollbar {
