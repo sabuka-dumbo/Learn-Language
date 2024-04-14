@@ -549,6 +549,10 @@
     color: black;
 }
 
+@media screen and (max-width: 720px) {
+    
+}
+
 ::-webkit-scrollbar {
     width: 0.5vw;
   }
