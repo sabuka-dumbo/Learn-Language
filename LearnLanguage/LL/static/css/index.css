@@ -328,3 +328,31 @@
     width: 8vw;
     height: 8vw;
 }
+
+.testL-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 95%;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+}
+
+.testL-description {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 95%;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    font-size: 1vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+}
