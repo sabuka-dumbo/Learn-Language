@@ -378,7 +378,7 @@
     top: 5px;
     left: 0px;
     width: 90%;
-    height: 9vw;
+    height: 10vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
     margin-left: 5%;
@@ -404,7 +404,7 @@
 
 .review-image {
     position: relative;
-    top: 0px;
+    top: 0.5vw;
     left: 0px;
     width: 9vw;
     height: 9vw;
@@ -442,7 +442,7 @@
 
 .review-button {
     position: relative;
-    top: 1.2vw;
+    top: 2vw;
     left: 5%;
     width: max-content;
     height: max-content;
