@@ -474,3 +474,34 @@
     background-color: #FFFFFF;
     border-radius: 1.5vw;
 }
+
+.random-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 95%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+}
+
+.random-question {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 90%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 1vw;
+    margin-left: 5%;
+    font-size: 1.2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+}
