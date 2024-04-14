@@ -289,3 +289,34 @@
     font-weight: normal;
     color: black;
 }
+
+.testL-div {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: max-content;
+    border-radius: 1.5vw;
+    background-color: #CDF5FD;
+    margin-top: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.testL-part1 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 60%;
+    height: max-content;
+    display: inline-block;
+}
+
+.testL-part2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40%;
+    height: max-content;
+    display: inline-block;
+}
