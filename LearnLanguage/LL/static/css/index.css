@@ -550,7 +550,31 @@
 }
 
 @media screen and (max-width: 720px) {
-    
+    .index-part1 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 30%;
+        height: calc(100vh - 80px - 2vw);
+        margin-top: calc(85px + 2vw);
+        display: block;
+        overflow-y: auto;
+    }
+
+    .index-part2 {
+        display: none;
+    }
+
+    .index-part3 {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 30%;
+        height: calc(100vh - 80px - 2vw);
+        margin-top: calc(85px + 2vw);
+        display: block;
+        overflow-y: auto;
+    }
 }
 
 ::-webkit-scrollbar {
