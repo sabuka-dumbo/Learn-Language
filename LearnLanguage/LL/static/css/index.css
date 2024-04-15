@@ -697,6 +697,23 @@
     .user-info-interested {
         font-size: 2.5vw;
     }
+
+    .testL-header {
+        font-size: 3vw;
+    }
+
+    .testL-description {
+        font-size: 2vw;
+    }
+
+    .testL-div {
+        height: 20vw;
+    }
+
+    .testL-button {
+        font-size: 2.5vw;
+        top: 2.5vw;
+    }
 }
 
 ::-webkit-scrollbar {
