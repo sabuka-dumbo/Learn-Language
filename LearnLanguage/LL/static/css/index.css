@@ -714,6 +714,12 @@
         font-size: 2.5vw;
         top: 2.5vw;
     }
+
+    .testL-image {
+        top: calc((100% - 14vw) / 2);
+        width: 14vw;
+        height: 14vw;
+    }
 }
 
 ::-webkit-scrollbar {
