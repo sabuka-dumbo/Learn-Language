@@ -35,7 +35,7 @@
     top: 0px;
     left: 0px;
     width: 90%;
-    height: 35vw;
+    height: max-content;
     background-color: #FFFFFF;
     margin-left: 5%;
     box-shadow: 0px 16px 25px #ffffff62;
@@ -740,14 +740,14 @@
         top: 0px;
         left: 5%;
         width: 90%;
-        height: calc(100vh - 85px - 2vw);
+        height: max-content;
         margin-top: 2vw;
         display: inline-block;
     }
 
     .index-part3 {
         position: relative;
-        top: -2vw;
+        top: 2vw;
         right: 0px;
         width: 100%;
         height: max-content;
