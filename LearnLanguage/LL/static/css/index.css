@@ -569,13 +569,14 @@
     }
 
     .index-part2 {
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 40%;
         width: 58%;
         height: calc(100vh - 85px - 2vw);
         margin-top: calc(85px + 2vw);
         display: inline-block;
+        overflow-y: auto;
     }
 
     .index-part3 {
@@ -753,7 +754,7 @@
         height: max-content;
         margin-top: 0;
         display: block;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .day-strike-header {
@@ -766,7 +767,7 @@
     }
 
     .strike-text {
-        font-size: 2.5vw;
+        font-size: 4vw;
         width: calc(100% - 5% - 6vw);
     }
 
@@ -806,6 +807,10 @@
     .review-button {
         top: 3vw;
         font-size: 4vw;
+    }
+
+    .random-div {
+        margin-top: 4vw;
     }
 
     .random-header {
@@ -874,27 +879,27 @@
     }
 
     .testL-header {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .testL-description {
-        font-size: 2vw;
+        font-size: 3.5vw;
     }
 
     .testL-div {
-        height: 20vw;
+        height: 48vw;
     }
 
     .testL-button {
-        font-size: 2.5vw;
+        font-size: 4vw;
         top: 2.5vw;
     }
 
     .testL-image {
-        top: -10%;
-        transform: translateY(10%);
-        width: 14vw;
-        height: 14vw;
+        top: -40%;
+        transform: translateY(40%);
+        width: 25vw;
+        height: 25vw;
     }
 }
 
