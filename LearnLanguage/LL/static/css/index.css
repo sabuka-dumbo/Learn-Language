@@ -716,7 +716,175 @@
     }
 
     .testL-image {
-        top: calc((100% - 14vw) / 2);
+        top: -10%;
+        transform: translateY(10%);
+        width: 14vw;
+        height: 14vw;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .index-part1 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: max-content;
+        margin-top: calc(85px + 2vw);
+        display: block;
+        overflow-y: hidden;
+    }
+
+    .index-part2 {
+        position: relative;
+        top: 0px;
+        left: 5%;
+        width: 90%;
+        height: calc(100vh - 85px - 2vw);
+        margin-top: 2vw;
+        display: inline-block;
+    }
+
+    .index-part3 {
+        position: relative;
+        top: -2vw;
+        right: 0px;
+        width: 100%;
+        height: max-content;
+        margin-top: 0;
+        display: block;
+        overflow-y: hidden;
+    }
+
+    .day-strike-header {
+        font-size: 3.5vw;
+    }
+
+    .strike-check {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .strike-text {
+        font-size: 2.5vw;
+    }
+
+    .tip-text {
+        font-size: 2.5vw;
+    }
+
+    .review-header {
+        font-size: 3vw;
+    }
+
+    .review-words-div {
+        height: 25vw;
+    }
+
+    .review-description {
+        font-size: 2.5vw;
+    }
+
+    .review-part2 {
+        left: 75%;
+        width: 25%;
+    }
+
+    .review-part1 {
+        left: 0;
+        width: 75%;
+    }
+
+    .review-image {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .review-button {
+        top: 3vw;
+        font-size: 3vw;
+    }
+
+    .random-header {
+        font-size: 3.5vw;
+    }
+
+    .random-question {
+        font-size: 2.5vw;
+    }
+
+    .random-textarea {
+        font-size: 3vw;
+        height: 15vw;
+    }
+
+    .random-input {
+        font-size: 3vw;
+    }
+
+    .new-word-header {
+        font-size: 3.5vw;
+    }
+
+    .new-word-textarea {
+        font-size: 3vw;
+    }
+
+    .new-word {
+        height: 25vw;
+    }
+
+    .new-word-submit {
+        font-size: 3vw;
+        width: 10vw;
+    }
+
+    .radio-text {
+        top: -1vw;
+        font-size: 2.5vw;
+    }
+
+    .radio-input {
+        position: relative;
+        display: inline-block;
+        top: -1vw;
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .user-info-username {
+        font-size: 3vw;
+    }
+
+    .user-info-level {
+        margin-top: 5.5vw;
+        font-size: 2.5vw;
+    }
+
+    .user-info-interested {
+        font-size: 2.5vw;
+    }
+
+    .testL-header {
+        font-size: 3vw;
+    }
+
+    .testL-description {
+        font-size: 2vw;
+    }
+
+    .testL-div {
+        height: 20vw;
+    }
+
+    .testL-button {
+        font-size: 2.5vw;
+        top: 2.5vw;
+    }
+
+    .testL-image {
+        top: -10%;
+        transform: translateY(10%);
         width: 14vw;
         height: 14vw;
     }
