@@ -771,24 +771,25 @@
     }
 
     .tip-text {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .review-header {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .review-words-div {
-        height: 25vw;
+        height: 30vw;
     }
 
     .review-description {
-        font-size: 2.5vw;
+        font-size: 4vw;
+        width: 65%;
     }
 
     .review-part2 {
         left: 75%;
-        width: 25%;
+        width: 35%;
     }
 
     .review-part1 {
@@ -797,60 +798,61 @@
     }
 
     .review-image {
-        width: 8vw;
-        height: 8vw;
+        top: 4vw;
+        width: 16vw;
+        height: 16vw;
     }
 
     .review-button {
         top: 3vw;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .random-header {
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
 
     .random-question {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 
     .random-textarea {
-        font-size: 3vw;
+        font-size: 4vw;
         height: 15vw;
     }
 
     .random-input {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .new-word-header {
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
 
     .new-word-textarea {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .new-word {
-        height: 25vw;
+        height: 34vw;
     }
 
     .new-word-submit {
-        font-size: 3vw;
+        font-size: 4vw;
         width: 10vw;
     }
 
     .radio-text {
-        top: -1vw;
-        font-size: 2.5vw;
+        top: -2.5vw;
+        font-size: 4vw;
     }
 
     .radio-input {
         position: relative;
         display: inline-block;
-        top: -1vw;
-        width: 2vw;
-        height: 2vw;
+        top: -2.5vw;
+        width: 2.5vw;
+        height: 2.5vw;
     }
 
     .user-info-username {
