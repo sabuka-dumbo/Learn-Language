@@ -757,20 +757,21 @@
     }
 
     .day-strike-header {
-        font-size: 3.5vw;
+        font-size: 6vw;
     }
 
     .strike-check {
-        width: 3vw;
-        height: 3vw;
+        width: 4vw;
+        height: 4vw;
     }
 
     .strike-text {
         font-size: 2.5vw;
+        width: calc(100% - 5% - 6vw);
     }
 
     .tip-text {
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 
     .review-header {
