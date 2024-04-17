@@ -855,13 +855,17 @@
         height: 2.5vw;
     }
 
+    .user-info {
+        margin-top: 5vw;
+    }
+
     .user-info-username {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .user-info-level {
-        margin-top: 5.5vw;
-        font-size: 2.5vw;
+        margin-top: 9vw;
+        font-size: 4vw;
     }
 
     .user-info-interested {
