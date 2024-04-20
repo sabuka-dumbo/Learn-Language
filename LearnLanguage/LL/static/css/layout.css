@@ -402,7 +402,7 @@ body {
     left: 5%;
     width: 90%;
     height: 9vw;
-    background-color: aquamarine;
+    overflow-y: auto;
 }
 
 /* profile css */
