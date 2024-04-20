@@ -281,8 +281,8 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 5vw;
-    height: 5vw;
+    width: 6.5vw;
+    height: 6.5vw;
     background-color: #B5B5B5;
     padding: 0;
     margin: 0;
@@ -296,11 +296,110 @@ body {
     position: relative;
     top: -2vw;
     left: 0;
-    width: 25vw;
-    height: 10vw;
+    width: 26vw;
+    height: max-content;
+    padding-top: 2.5vw;
+    padding-bottom: 1.5vw;
     background-color: #E6FBFF;
     border-radius: 1vw;
     z-index: 509;
+}
+
+.profile-username {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.profile-level {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    font-size: 1.25vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: #6C63FF;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.profile-email {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    font-size: 1vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.profile-number {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    font-size: 1vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.profile-card2 {
+    position: relative;
+    top: 30px;
+    left: 46px;
+    width: 26vw;
+    height: max-content;
+    padding-top: 1vw;
+    padding-bottom: 1.5vw;
+    background-color: #E6FBFF;
+    border-radius: 1vw;
+    z-index: 509;
+}
+
+.goals-header {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: max-content;
+    font-size: 1.75vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.goals {
+    position: relative;
+    top: 10px;
+    left: 5%;
+    width: 90%;
+    height: 9vw;
+    background-color: aquamarine;
 }
 
 /* profile css */
