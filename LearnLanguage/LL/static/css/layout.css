@@ -262,10 +262,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 75%;
+    height: 70%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     background-color: #FBFBFB;
     z-index: 503;
     border-radius: 2vw;
+    overflow: auto;
 }
 
 .profile-card1 {
