@@ -514,6 +514,23 @@ body {
     color: black;
 }
 
+.profile_submit {
+    position: relative;
+    top: 0;
+    left: calc(100% - 8% - 8vw);
+    width: 8vw;
+    height: 3.5vw;
+    background-color: #D9E7D1;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    border-radius: 0.8vw;
+    border: none;
+    outline: none;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
 /* profile css */
 
 @media screen and (max-width: 725px) {
