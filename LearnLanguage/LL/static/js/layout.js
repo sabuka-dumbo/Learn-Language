@@ -88,3 +88,10 @@ function cooldown_def() {
 }
 
 // function for profile div closing
+
+const profile_div = document.getElementById("profile-div");
+const profile_back = document.getElementById("profile-back");
+
+function close_profile_div() {
+    profile_div.style.display = "none";
+}
