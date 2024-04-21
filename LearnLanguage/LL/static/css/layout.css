@@ -440,6 +440,7 @@ body {
     height: max-content;
     background-color: #E6FBFF;
     border-radius: 1vw;
+    padding-bottom: 1vw;
     padding-top: 0.5vw;
 }
 
@@ -469,6 +470,7 @@ body {
     font-family: "Kdam Thmor Pro";
     font-weight: normal;
     color: black;
+    margin-top: 0.5vw;
 }
 
 /* profile css */
