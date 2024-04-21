@@ -475,7 +475,7 @@ body {
 
 .profile-card4 {
     position: absolute;
-    top: calc(35px + 15vw);
+    top: calc(35px + 13vw);
     right: 2vw;
     width: 45%;
     height: max-content;
