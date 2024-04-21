@@ -1,10 +1,27 @@
 .test-div {
     position: relative;
-    top: 80px;
+    top: calc(85px + 2vw);
     left: 5%;
     width: 90%;
     height: max-content;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
     background-color: #FFFFFF;
+    border-radius: 1vw;
+}
+
+.test-div-part1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: max-content;
+}
+
+.test-div-part2 {
+    position: relative;
+    top: 0;
+    left: 65%;
+    width: 45%;
+    height: max-content;
 }
