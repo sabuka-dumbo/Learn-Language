@@ -246,7 +246,7 @@ body {
 }
 
 .profile-back {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -432,6 +432,30 @@ body {
     text-align: center;
 }
 
+.profile-delete {
+    position: absolute;
+    top: calc(30px + 4.5vw);
+    right: 46px;
+    width: 40%;
+    height: max-content;
+    background-color: #E6FBFF;
+    border-radius: 1vw;
+    padding-top: 0.5vw;
+}
+
+.profile-delete-header {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+}
 
 /* profile css */
 
