@@ -40,7 +40,7 @@ def register(request):
         return render(request, "register.html")
 
 def learn(request):
-    return render(request, "register.html")
+    return render(request, "learn.html")
 
 def goals(request):
     return render(request, "register.html")
