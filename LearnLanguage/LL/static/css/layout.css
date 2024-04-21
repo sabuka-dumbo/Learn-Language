@@ -485,6 +485,22 @@ body {
     padding-top: 0.5vw;
 }
 
+.profile-card4-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    margin-top: 1vw;
+    padding: 0;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
 /* profile css */
 
 @media screen and (max-width: 725px) {
