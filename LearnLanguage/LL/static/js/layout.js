@@ -95,3 +95,7 @@ const profile_back = document.getElementById("profile-back");
 function close_profile_div() {
     profile_div.style.display = "none";
 }
+
+function open_profile_div() {
+    profile_div.style.display = "block";
+}
