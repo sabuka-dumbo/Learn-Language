@@ -432,11 +432,11 @@ body {
     text-align: center;
 }
 
-.profile-delete {
+.profile-card3 {
     position: absolute;
-    top: calc(30px + 4.5vw);
+    top: calc(35px + 4.5vw);
     right: 2vw;
-    width: 40%;
+    width: 45%;
     height: max-content;
     background-color: #E6FBFF;
     border-radius: 1vw;
@@ -471,6 +471,18 @@ body {
     font-weight: normal;
     color: black;
     margin-top: 0.5vw;
+}
+
+.profile-card4 {
+    position: absolute;
+    top: calc(35px + 10vw);
+    right: 2vw;
+    width: 45%;
+    height: max-content;
+    background-color: #E6FBFF;
+    border-radius: 1vw;
+    padding-bottom: 1vw;
+    padding-top: 0.5vw;
 }
 
 /* profile css */
