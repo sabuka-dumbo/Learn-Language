@@ -373,7 +373,7 @@ body {
     top: 30px;
     left: 46px;
     width: 26vw;
-    height: 43%;
+    height: max-content;
     padding-top: 1vw;
     padding-bottom: 1.5vw;
     background-color: #E6FBFF;
@@ -404,16 +404,18 @@ body {
     height: 9vw;
     overflow-y: auto;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .goal-card {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 40px;
-    background-color: #B5B5B5;
+    width: 50%;
+    height: 80%;
+    background-color: #6C63FF;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* profile css */
