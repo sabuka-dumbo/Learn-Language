@@ -274,7 +274,7 @@ body {
 .profile-card1 {
     position: relative;
     top: 30px;
-    left: 46px;
+    left: 2vw;
     width: max-content;
     height: max-content;
 }
@@ -371,7 +371,7 @@ body {
 .profile-card2 {
     position: relative;
     top: 30px;
-    left: 46px;
+    left: 2vw;
     width: 26vw;
     height: max-content;
     padding-top: 1vw;
@@ -435,7 +435,7 @@ body {
 .profile-delete {
     position: absolute;
     top: calc(30px + 4.5vw);
-    right: 46px;
+    right: 2vw;
     width: 40%;
     height: max-content;
     background-color: #E6FBFF;
