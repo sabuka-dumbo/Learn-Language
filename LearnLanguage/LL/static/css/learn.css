@@ -1,10 +1,10 @@
 .test-div {
     position: relative;
-    top: 0;
+    top: 20vw;
     left: 7.5%;
     width: 80%;
     margin-top: 5%;
-    background-color: #FFFFFF;
+    background-color: #903535;
 }
 
 .test-div-part1 {
