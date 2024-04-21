@@ -86,3 +86,5 @@ function cooldown_def() {
         cooldown = 0;
     }, 1000);
 }
+
+// function for profile div closing
