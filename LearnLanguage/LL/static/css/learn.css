@@ -6,3 +6,19 @@
     margin-top: 5%;
     background-color: #FFFFFF;
 }
+
+.test-div-part1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+}
+
+.test-div-part2 {
+    position: relative;
+    top: 0;
+    left: 65%;
+    width: 45%;
+    height: 100%;
+}
