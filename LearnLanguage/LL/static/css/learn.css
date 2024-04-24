@@ -16,6 +16,7 @@
     left: 0;
     width: 80%;
     height: max-content;
+    display: inline-block;
 }
 
 .test-div-part2 {
