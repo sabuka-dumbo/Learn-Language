@@ -107,3 +107,28 @@
         width: 40%;
     }
 }
+
+@media screen and (max-width: 380px) {
+    .test-div-header {
+        font-size: 7.5vw;
+    }
+
+    .test-div-description {
+        font-size: 5vw;
+    }
+
+    .test-div-button {
+        font-size: 5.5vw;
+    }
+
+    .test-div-part1 {
+        width: 60%;
+    }
+
+    .test-div-part2 {
+        top: 10%;
+        left: 60%;
+        width: 40%;
+        height: 60%;
+    }
+}
