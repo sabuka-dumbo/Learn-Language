@@ -87,6 +87,23 @@
 
 @media screen and (max-width: 720px) {
     .test-div-header {
-        font-size: 4vw;
+        font-size: 5vw;
+    }
+
+    .test-div-description {
+        font-size: 3.5vw;
+    }
+
+    .test-div-button {
+        font-size: 3.5vw;
+    }
+
+    .test-div-part1 {
+        width: 60%;
+    }
+
+    .test-div-part2 {
+        left: 60%;
+        width: 40%;
     }
 }
