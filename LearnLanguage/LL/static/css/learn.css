@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 80%;
-    height: 50px;
+    height: max-content;
 }
 
 .test-div-part2 {
@@ -55,11 +55,12 @@
     left: 0;
     width: 95%;
     height: max-content;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: "Kdam Thmor Pro";
     font-weight: bold;
     color: black;
     padding: 0;
     margin: 0;
     margin-left: 5%;
+    padding-bottom: 2vw;
 }
