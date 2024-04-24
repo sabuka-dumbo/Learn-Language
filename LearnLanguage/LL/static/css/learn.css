@@ -64,3 +64,23 @@
     margin-left: 5%;
     padding-bottom: 2vw;
 }
+
+.test-div-button {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: max-content;
+    background-color: #D9E7D1;
+    border: none;
+    outline: none;
+    box-shadow: 0 16px 25px #d9e7d192;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    border-radius: 1vw;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
