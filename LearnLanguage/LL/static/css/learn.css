@@ -23,7 +23,8 @@
     top: 0;
     left: 80%;
     width: 20%;
-    height: max-content;
+    height: 100%;
+    display: inline-block;
 }
 
 .test-div-image {
