@@ -14,9 +14,8 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 70%;
     height: max-content;
-    display: inline-block;
 }
 
 .test-div-part2 {
@@ -25,7 +24,6 @@
     left: 80%;
     width: 20%;
     height: 100%;
-    display: inline-block;
 }
 
 .test-div-image {
