@@ -8,6 +8,7 @@
     padding-bottom: 2vw;
     background-color: #FFFFFF;
     border-radius: 1vw;
+    margin-bottom: 2vw;
 }
 
 .test-div-part1 {
@@ -86,6 +87,10 @@
 }
 
 @media screen and (max-width: 720px) {
+    .test-div {
+        margin-bottom: 3vw;
+    }
+
     .test-div-header {
         font-size: 5vw;
     }
@@ -109,6 +114,12 @@
 }
 
 @media screen and (max-width: 380px) {
+    .test-div {
+        margin-bottom: 4vw;
+        padding-bottom: 6vw;
+        padding-top: 6vw;
+    }
+
     .test-div-header {
         font-size: 7.5vw;
     }
@@ -129,6 +140,6 @@
         top: 10%;
         left: 60%;
         width: 40%;
-        height: 60%;
+        height: 40%;
     }
 }
