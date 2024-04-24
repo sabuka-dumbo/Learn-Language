@@ -47,3 +47,6 @@ def goals(request):
 
 def profile(request):
     return render(request, "register.html")
+
+def listening_test(request):
+    return render(request, "listening_test.html")

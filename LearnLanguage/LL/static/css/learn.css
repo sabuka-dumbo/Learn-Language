@@ -84,6 +84,7 @@
     padding-bottom: 0.8vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 720px) {
