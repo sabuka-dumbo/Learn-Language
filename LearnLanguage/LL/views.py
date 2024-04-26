@@ -5,6 +5,7 @@ from django.contrib.auth import login as auth_login
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
+import json
 import random
 
 
@@ -77,8 +78,9 @@ def add_word(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            GID = data_from_js.get('GID')
-            user = request.user
+            word = data_from_js.get('word')
+            print(word)
+
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
         
