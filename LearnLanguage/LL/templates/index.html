@@ -22,26 +22,17 @@
         <div class="day-strike-div">
             <h1 class="day-strike-header">15 Days strike</h1>
 
-            <div class="day-stike">
-                <div class="strike-check" style="background-color: #8BFC56;"></div>
-                <h1 class="strike-text">Day 1: 85/100P</h1>
-            </div>
-
-            <div class="day-stike">
-                <div class="strike-check"></div>
-                <h1 class="strike-text">Day 2: 0/100P</h1>
-            </div>
-
-            <div class="day-stike">
-                <div class="strike-check"></div>
-                <h1 class="strike-text">Day 3: 0/100P</h1>
-            </div>
-
-            <div class="day-stike">
-                <div class="strike-check"></div>
-                <h1 class="strike-text">Day 4: 0/100P</h1>
-            </div>
-        </div>
+            {% for i in 15 %}
+                <div class="day-stike">
+                    {% if i < days_of_strike %}
+                    <div class="strike-check" style="background-color: #8BFC56;"></div>
+                    <h1 class="strike-text">Day 1: DONE</h1>
+                    {% else %}
+                    <div class="strike-check"></div>
+                    <h1 class="strike-text">Day 1: ...</h1>
+                    {% endif %}
+                </div>
+            {% endfor %}
 
         <div class="tip-div">
             <h1 class="tip-text">Tip of the day:  

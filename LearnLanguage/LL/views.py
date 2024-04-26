@@ -6,7 +6,17 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    strikes = 0
+    grades = 0
+
+    if Strike.objects.all().filter(user=request.user).exists():
+        strikes = Strike.objects.all().get(user=request.user).day_strike
+        grades = Grades.objects.all().get(user=request.user)
+
+    return render(request, "index.html", {
+        "days_of_strike": strikes,
+        "grades": grades,
+    })
 
 def login(request):
     if request.method == "POST":
