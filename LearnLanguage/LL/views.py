@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
 from .models import *
+import random
 
 # Create your views here.
 def index(request):
@@ -12,10 +13,14 @@ def index(request):
     if Strike.objects.all().filter(user=request.user).exists():
         strikes = Strike.objects.all().get(user=request.user).day_strike
         grades = Grades.objects.all().get(user=request.user)
+    
+    num_for_quote = random.randint(1, 10)
+    quote = Tips.objects.all().get(pk=num_for_quote).tip
 
     return render(request, "index.html", {
         "days_of_strike": strikes,
         "grades": grades,
+        "quote": quote,
     })
 
 def login(request):

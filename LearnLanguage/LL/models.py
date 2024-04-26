@@ -26,3 +26,10 @@ class Tips(models.Model):
     
     def __str__(self):
         return f"Tip {self.pk}"
+    
+class Word(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="word_for_user")
+    word = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.user} added {self.word} to their vocabulary"
