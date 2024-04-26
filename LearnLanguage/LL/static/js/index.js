@@ -10,3 +10,17 @@ if (radio1.checked) {
     word == false;
 }
 
+fetch("/add_word/", {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({  }),
+})
+.then(response => response.json())
+.then(data => {
+    
+})
+.catch(error => {
+    console.error('Error:', error);
+});

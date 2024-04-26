@@ -10,5 +10,7 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('listening_test/', views.listening_test, name="listening_test"),
     path('words/', views.words, name="words"),
-    
+
+    ## APIs for js
+    path('add_word/', views.add_word, name="add_word"),
 ]
