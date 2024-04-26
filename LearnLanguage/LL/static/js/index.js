@@ -21,7 +21,6 @@ function send_word() {
     })
     .then(response => response.json())
     .then(data => {
-
     })
     .catch(error => {
         console.error('Error:', error);
