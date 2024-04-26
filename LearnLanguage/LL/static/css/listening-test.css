@@ -3,6 +3,30 @@
     top: calc(85px + 2vw);
     left: 5%;
     width: 90%;
-    height: 80%;
-    background-color: aquamarine;
+    height: calc(100vh - (85px + 5vw));
+}
+
+.test-div-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: aqua;
+    outline: none;
+    border: none;
+    display: flex;
+}
+
+.test-div-question {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: max-content;
+    margin-top: 20px;
+    display: flex;
+    background-color: antiquewhite;
 }
