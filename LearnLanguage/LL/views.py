@@ -2,8 +2,10 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
+from django.http import JsonResponse
 from .models import *
 import random
+
 
 # Create your views here.
 def index(request):
@@ -70,29 +72,13 @@ def words(request):
     return render(request, "test.html")
 
 @csrf_exempt
-def info(request):
+def add_word(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
             GID = data_from_js.get('GID')
             user = request.user
-            user_info = Userinfo.objects.all().get(user=user)
-            gradebook = Gradebook.objects.all().get(id=GID)
-            student_info = Student.objects.all().get(user=user, gradebook=gradebook)
-
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
-    return JsonResponse({
-        "attended": student_info.attendance, 
-        "missed": student_info.missed, 
-        "one": student_info.one,
-        "two": student_info.two,
-        "three": student_info.three,
-        "four": student_info.four,
-        "five": student_info.five,
-        "six": student_info.six,
-        "seven": student_info.seven,
-        "eight": student_info.eight,
-        "nine": student_info.nine,
-        "ten": student_info.ten,
-        })
+        
+    return JsonResponse({})
