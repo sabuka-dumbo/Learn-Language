@@ -145,3 +145,81 @@
     border-radius: 0.8vw;
     cursor: pointer;
 }
+
+@media screen and (max-width: 720px) {
+    .test-div-img {
+        display: none;
+    }
+    .test-div-part2 {
+        width: 100%;
+        left: 0%;
+    }
+
+    .test-div-question {
+        font-size: 5vw;
+    }
+    
+    .test-div-soundwave {
+        width: 8vw;
+        top: -0.5vw;
+        height: 8vw;
+    }
+
+    .test-div-play {
+        width: 8vw;
+        top: -0.5vw;
+        height: 8vw;
+    }
+
+    .test-div-textarea {
+        height: calc(50% - 1vw);
+        font-size: 4vw;
+    }
+
+    .test-div-button1 {
+        font-size: 4vw;
+    }
+
+    .test-div-button2 {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .test-div-img {
+        display: none;
+    }
+    .test-div-part2 {
+        width: 100%;
+        left: 0%;
+    }
+
+    .test-div-question {
+        font-size: 8vw;
+    }
+    
+    .test-div-soundwave {
+        width: 12vw;
+        top: -1.2vw;
+        height: 12vw;
+    }
+
+    .test-div-play {
+        width: 12vw;
+        top: -1.2vw;
+        height: 12vw;
+    }
+
+    .test-div-textarea {
+        height: calc(50% - 1vw);
+        font-size: 7.5vw;
+    }
+
+    .test-div-button1 {
+        font-size: 6vw;
+    }
+
+    .test-div-button2 {
+        font-size: 5vw;
+    }
+}
