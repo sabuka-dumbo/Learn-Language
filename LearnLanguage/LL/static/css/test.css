@@ -239,7 +239,7 @@
     padding-right: 2.5vw;
     background-color: #D9E7D1;
     color: white;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-family: "Kdam Thmor Pro";
     font-weight: bold;
     border: none;
@@ -297,6 +297,16 @@
     .start-button {
         font-size: 6vw;
     }
+
+    .done-icon {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .done-icon2 {
+        width: 10vw;
+        height: 10vw;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -344,6 +354,16 @@
     .start-button {
         font-size: 9.5vw;
     }
+
+    .done-icon {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .done-icon2 {
+        width: 14vw;
+        height: 14vw;
+    }
 }
 
 @media screen and (max-height: 860px) {
@@ -360,6 +380,6 @@
 
 @media screen and (max-height: 420px) {
     .start-button {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 }

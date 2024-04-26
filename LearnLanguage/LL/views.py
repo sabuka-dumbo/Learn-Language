@@ -49,4 +49,7 @@ def profile(request):
     return render(request, "register.html")
 
 def listening_test(request):
-    return render(request, "listening_test.html")
+    return render(request, "test.html")
+
+def words(request):
+    return render(request, "test.html")
