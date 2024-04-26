@@ -3,14 +3,6 @@ from django.urls import reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
 from .models import *
-import requests
-category = 'happiness'
-api_url = 'https://api.api-ninjas.com/v1/quotes?category={}'.format(category)
-response = requests.get(api_url, headers={'X-Api-Key': 'YOUR_API_KEY'})
-if response.status_code == requests.codes.ok:
-    print(response.text)
-else:
-    print("Error:", response.status_code, response.text)
 
 # Create your views here.
 def index(request):
