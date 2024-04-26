@@ -9,5 +9,6 @@ urlpatterns = [
     path('vocabulary/', views.goals, name="vocabulary"),
     path('profile/', views.profile, name="profile"),
     path('listening_test/', views.listening_test, name="listening_test"),
-    path('words/', views.words, name="words")
+    path('words/', views.words, name="words"),
+    
 ]

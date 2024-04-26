@@ -33,3 +33,10 @@ class Word(models.Model):
 
     def __str__(self):
         return f"{self.user} added {self.word} to their vocabulary"
+    
+class Phrase(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="phrase_for_user")
+    phrase = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"{self.user} added {self.phrase} to their vocabulary"
