@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import *
 import random
 
