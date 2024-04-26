@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(User)
 admin.site.register(Strike)
 admin.site.register(Grades)
+admin.site.register(Tips)

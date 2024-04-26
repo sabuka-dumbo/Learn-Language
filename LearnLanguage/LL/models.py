@@ -20,3 +20,9 @@ class Grades(models.Model):
 
     def __str__(self):
         return f"{self.user} got {self.points} point on {self.date}"
+    
+class Tips(models.Model):
+    tip = models.CharField(max_length=1500)
+    
+    def __str__(self):
+        return f"Tip {self.pk}"
