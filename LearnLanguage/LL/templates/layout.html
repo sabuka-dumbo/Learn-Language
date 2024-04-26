@@ -22,7 +22,7 @@
             <div class="navbar-device-menu2" id="navbar-device-menu2">
                 <h1 class="navbar-device-hyperlinks"><a href="{% url 'index' %}" style="text-decoration: none; color: black;">Home</a></h1>
                 <h1 class="navbar-device-hyperlinks"><a href="{% url 'learn' %}" style="text-decoration: none; color: black;">Learn</a></h1>
-                <h1 class="navbar-device-hyperlinks"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
+                <h1 class="navbar-device-hyperlinks"><a href="{% url 'vocabulary' %}" style="text-decoration: none; color: black;">Vocabulary</a></h1>
 
                 {% if request.user.is_authenticated %}
                     <div class="navbar-device-profile">
@@ -59,7 +59,7 @@
                 <div class="navbar-navs">
                     <h1 class="navbar-nav"><a href="{% url 'index' %}" style="text-decoration: none; color: black;">Home</a></h1>
                     <h1 class="navbar-nav"><a href="{% url 'learn' %}" style="text-decoration: none; color: black;">Learn</a></h1>
-                    <h1 class="navbar-nav"><a href="{% url 'goals' %}" style="text-decoration: none; color: black;">Goals</a></h1>
+                    <h1 class="navbar-nav"><a href="{% url 'vocabulary' %}" style="text-decoration: none; color: black;">Vocabulary</a></h1>
                 </div>
 
                 {% if request.user.is_authenticated %}
@@ -113,9 +113,9 @@
                 </div>
 
                 <div class="profile-card2">
-                    <h1 class="goals-header">Goals</h1>
+                    <h1 class="vocabulary-header">vocabulary</h1>
 
-                    <div class="goals">
+                    <div class="vocabulary">
                         <div class="goal-card"><h1 class="goal-card-text">Learn 100 word</h1></div>
                         <div class="goal-card"><h1 class="goal-card-text">Learn 100 word</h1></div>
                         <div class="goal-card"><h1 class="goal-card-text">Learn 100 word</h1></div>
