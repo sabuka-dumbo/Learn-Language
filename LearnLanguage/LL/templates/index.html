@@ -22,17 +22,19 @@
         <div class="day-strike-div">
             <h1 class="day-strike-header">15 Days strike</h1>
 
-            {% for i in 15 %}
-                <div class="day-stike">
-                    {% if i < days_of_strike %}
+            {% for i in range(1, 16) %}
+            <div class="day-strike">
+                {% if i <= days_of_strike %}
                     <div class="strike-check" style="background-color: #8BFC56;"></div>
-                    <h1 class="strike-text">Day 1: DONE</h1>
-                    {% else %}
+                    <h1 class="strike-text">Day {{ i }}: DONE</h1>
+                {% else %}
                     <div class="strike-check"></div>
-                    <h1 class="strike-text">Day 1: ...</h1>
-                    {% endif %}
-                </div>
-            {% endfor %}
+                    <h1 class="strike-text">Day {{ i }}: ...</h1>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        
 
         <div class="tip-div">
             <h1 class="tip-text">Tip of the day:  
