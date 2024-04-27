@@ -3,7 +3,6 @@ const radio1 = document.getElementById("radio1");
 const radio2 = document.getElementById("radio2");
 
 function send_word() {
-    console.log(text)
     let word = false;
 
     if (radio1.checked) {
@@ -17,7 +16,7 @@ function send_word() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ word: text.ariaValueText }),
+        body: JSON.stringify({ word: text.value }),
     })
     .then(response => response.json())
     .then(data => {
