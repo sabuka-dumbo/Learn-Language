@@ -79,7 +79,6 @@ def add_word(request):
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
             word = data_from_js.get('word')
-            print(word)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
