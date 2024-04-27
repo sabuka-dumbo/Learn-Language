@@ -25,3 +25,23 @@ function send_word() {
         console.error('Error:', error);
     });
 }
+
+addEventListener("DOMContentLoaded", function() {
+    let question_1 = "Translate the word: ";
+    let question_2 = "What does this phrase means?:"
+
+    fetch("/get_word/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({  }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let word = data.word
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });  
+})

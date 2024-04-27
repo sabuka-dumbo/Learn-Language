@@ -13,4 +13,5 @@ urlpatterns = [
 
     ## APIs for js
     path('add_word/', views.add_word, name="add_word"),
+    path('get_word/', views.get_word, name="get_word"),
 ]

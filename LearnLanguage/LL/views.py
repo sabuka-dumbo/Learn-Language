@@ -92,3 +92,16 @@ def add_word(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({})
+
+@csrf_exempt
+def get_word(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            
+
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({})
