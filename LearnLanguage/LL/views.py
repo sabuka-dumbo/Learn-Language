@@ -79,9 +79,12 @@ def add_word(request):
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
             word = data_from_js.get('word')
-            is_work = data_from_js.get('is_word')
-            
-            
+            is_word = data_from_js.get('is_word')
+
+            if is_word == True:
+                new_data = Word.objects.create(user=request.user, word=word)
+            elif is_word == False:
+                new_data = Word.objects.create(user=request.user, word=word)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)

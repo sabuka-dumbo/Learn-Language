@@ -3,7 +3,7 @@ const radio1 = document.getElementById("radio1");
 const radio2 = document.getElementById("radio2");
 
 function send_word() {
-    let word = false;
+    let word = true;
 
     if (radio1.checked) {
         word == true;
