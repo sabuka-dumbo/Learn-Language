@@ -16,7 +16,7 @@ function send_word() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ word: text.value }),
+        body: JSON.stringify({ word: text.value,  }),
     })
     .then(response => response.json())
     .then(data => {
