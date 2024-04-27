@@ -6,9 +6,9 @@ function send_word() {
     let word = true;
 
     if (radio1.checked) {
-        word == true;
+        word = true;
     } else {
-        word == false;
+        word = false;
     }
 
     fetch("/add_word/", {

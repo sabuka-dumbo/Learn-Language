@@ -30,6 +30,7 @@ class Tips(models.Model):
 class Word(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="word_for_user")
     word = models.CharField(max_length=100)
+    learned = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.user} added {self.word} to their vocabulary"
@@ -37,6 +38,7 @@ class Word(models.Model):
 class Phrase(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="phrase_for_user")
     phrase = models.CharField(max_length=1000)
+    learned = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.user} added {self.phrase} to their vocabulary"

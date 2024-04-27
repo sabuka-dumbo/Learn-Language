@@ -83,7 +83,7 @@ def add_word(request):
 
             if is_word == True:
                 new_data = Word.objects.create(user=request.user, word=word)
-            elif is_word == False:
+            else:
                 new_data = Phrase.objects.create(user=request.user, phrase=word)
 
             new_data.save()
