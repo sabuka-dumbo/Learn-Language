@@ -101,9 +101,12 @@ def get_word(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            max_word = Word.objects.all().filter(user=request.user, learned=True)
-            random_word_id = random.randint(0, max_word.count())
-            print(max_word[random_word_id])
+            max_word_queryset = Word.objects.filter(user=request.user, learned=True)
+            max_word_count = max_word_queryset.count()
+
+            if max_word_count > 0:
+                random_word_id = random.randint(0, max_word_count - 1)
+                random_word = max_word_queryset[random_word_id]
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
