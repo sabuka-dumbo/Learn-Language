@@ -11,21 +11,24 @@ import random
 
 # Create your views here.
 def index(request):
-    strikes = 0
-    grades = 0
+    if request.user.is_authenticated:
+        strikes = 0
+        grades = 0
 
-    if Strike.objects.all().filter(user=request.user).exists():
-        strikes = Strike.objects.all().get(user=request.user).day_strike
-        grades = Grades.objects.all().get(user=request.user)
-    
-    num_for_quote = random.randint(1, 10)
-    quote = Tips.objects.all().get(pk=num_for_quote).tip
+        if Strike.objects.all().filter(user=request.user).exists():
+            strikes = Strike.objects.all().get(user=request.user).day_strike
+            grades = Grades.objects.all().get(user=request.user)
+        
+        num_for_quote = random.randint(1, 10)
+        quote = Tips.objects.all().get(pk=num_for_quote).tip
 
-    return render(request, "index.html", {
-        "days_of_strike": strikes,
-        "grades": grades,
-        "quote": quote,
-    })
+        return render(request, "index.html", {
+            "days_of_strike": strikes,
+            "grades": grades,
+            "quote": quote,
+        })
+    else:
+        return HttpResponseRedirect(reverse('login'))
 
 def login(request):
     if request.method == "POST":
@@ -98,7 +101,7 @@ def get_word(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            
+
 
 
         except json.JSONDecodeError as e:
