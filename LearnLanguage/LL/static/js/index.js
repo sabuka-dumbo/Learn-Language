@@ -28,7 +28,7 @@ function send_word() {
 
 addEventListener("DOMContentLoaded", function() {
     let question_1 = "Translate the word: ";
-    let question_2 = "What does this phrase means?:"
+    const question_h1 = document.getElementById("random-question");
 
     fetch("/get_word/", {
         method: "POST",
@@ -40,6 +40,8 @@ addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
         let word = data.word;
+
+        question_h1.innerText = question_1 + word + "?";
     })
     .catch(error => {
         console.error('Error:', error);
