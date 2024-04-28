@@ -101,8 +101,8 @@ def get_word(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-
-
+            max_word = Word.objects.all().filter(user=request.user, learned=True).count()
+            print(max_word)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
