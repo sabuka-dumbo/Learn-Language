@@ -40,7 +40,6 @@ addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
         let word = data.word;
-        console.log(word)
     })
     .catch(error => {
         console.error('Error:', error);
