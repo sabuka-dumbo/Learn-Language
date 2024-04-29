@@ -73,6 +73,9 @@ def profile(request):
 def listening_test(request):
     return render(request, "test.html")
 
+def word_test(request):
+    return render(request, "test.html")
+
 def words(request):
     return render(request, "test.html")
 
