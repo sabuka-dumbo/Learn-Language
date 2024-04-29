@@ -237,7 +237,7 @@
     padding-bottom: 1.5vw;
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    background-color: #D9E7D1;
+    background-color: #ace58b;
     color: white;
     font-size: 3.5vw;
     font-family: "Kdam Thmor Pro";
@@ -246,6 +246,7 @@
     border-radius: 1.5vw;
     outline: none;
     cursor: pointer;
+    box-shadow: 0px 20px 30px #50bc1156;
 }
 
 @media screen and (max-width: 720px) {
@@ -381,5 +382,25 @@
 @media screen and (max-height: 420px) {
     .start-button {
         font-size: 3vw;
+    }
+}
+
+@keyframes start_test {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes start_test2 {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
     }
 }
