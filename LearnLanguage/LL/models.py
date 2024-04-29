@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class User(AbstractUser):
-    pass
+    level = models.CharField(max_length=100, default="A1")
 
 class Strike(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="strike_user")
