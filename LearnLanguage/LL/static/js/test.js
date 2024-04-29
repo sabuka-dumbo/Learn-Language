@@ -71,3 +71,13 @@ function start_test4() {
         })
     })
 }
+
+function choose_test() {
+    if (window.location.pathname === "/listening_test/") {
+        start_test2();
+    }
+
+    if (window.location.pathname === "/word_test/") {
+        start_test4();
+    }
+}
