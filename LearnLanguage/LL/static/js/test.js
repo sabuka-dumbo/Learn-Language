@@ -2,6 +2,20 @@ if (window.location.pathname === "/listening_test/") {
     start_test();
 }
 
+if (window.location.pathname === "/word_test/") {
+    start_test3();
+}
+
+function choose_test() {
+    if (window.location.pathname === "/listening_test/") {
+        start_test();
+    }
+
+    if (window.location.pathname === "/word_test/") {
+        start_test3();
+    }
+}
+
 function start_test() {
     const start_div = document.getElementById("start-div");
 
@@ -33,14 +47,6 @@ function start_test2() {
     })
 }
 
-
-
-
-
-if (window.location.pathname === "/word_test/") {
-    start_test3();
-}
-
 function start_test3() {
     const start_div = document.getElementById("start-div");
 
@@ -70,14 +76,4 @@ function start_test4() {
             listening_test_div.style.animation = '';
         })
     })
-}
-
-function choose_test() {
-    if (window.location.pathname === "/listening_test/") {
-        start_test2();
-    }
-
-    if (window.location.pathname === "/word_test/") {
-        start_test4();
-    }
 }
