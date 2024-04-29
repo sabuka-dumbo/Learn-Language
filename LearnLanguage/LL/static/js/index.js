@@ -41,7 +41,11 @@ addEventListener("DOMContentLoaded", function() {
     .then(data => {
         let word = data.word;
 
-        question_h1.innerText = question_1 + word + "?";
+        if (word == '') {
+            question_h1.innerText = '';
+        } else {
+            question_h1.innerText = question_1 + word + "?";
+        }
     })
     .catch(error => {
         console.error('Error:', error);
