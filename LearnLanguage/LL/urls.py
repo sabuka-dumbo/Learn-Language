@@ -10,6 +10,7 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('listening_test/', views.listening_test, name="listening_test"),
     path('word_test/', views.word_test, name="word_test"),
+    path('translate_test/', views.translate_test, name="translate_test"),
     path('words/', views.words, name="words"),
 
     ## APIs for js

@@ -76,6 +76,9 @@ def listening_test(request):
 def word_test(request):
     return render(request, "test.html")
 
+def translate_test(request):
+    return render(request, "test.html")
+
 def words(request):
     return render(request, "test.html")
 
