@@ -1,7 +1,9 @@
+const start_button = document.getElementById("start_button");
+
 if (window.location.pathname === "/listening_test/") {
     start_test();
 } else if (window.location.pathname === "/word_test/") {
-    start_test3();
+    start_test();
 }
 
 function start_test() {
@@ -31,6 +33,25 @@ function start_test2() {
 
         listening_test_div.addEventListener("animationend", function() {
             listening_test_div.style.animation = '';
+        })
+    })
+}
+
+function start_test3() {
+    const start_div = document.getElementById("start-div");
+    const word_test_div = document.getElementById("test-variant-2");
+
+    start_div.style.animation = "start_test2 1.5s ease";
+
+    start_div.addEventListener("animationend", function() {
+        start_div.style.animation = '';
+        start_div.style.opacity = "0%";
+
+        word_test_div.style.animation = "start_test 1.5s ease";
+        word_test_div.style.display = "block";
+
+        word_test_div.addEventListener("animationend", function() {
+            word_test_div.style.animation = '';
         })
     })
 }
