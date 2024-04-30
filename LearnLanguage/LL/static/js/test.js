@@ -51,7 +51,7 @@ function start_test3() {
 
 function start_test4() {
     const start_div = document.getElementById("start-div");
-    const word_test_div = document.getElementById("test-variant-2");
+    const word_test_div = document.getElementById("test-variant-3");
 
     start_div.style.animation = "start_test2 1.5s ease";
 
