@@ -1,5 +1,7 @@
 if (window.location.pathname === "/listening_test/") {
     start_test();
+} else if (window.location.pathname === "/word_test/") {
+    start_test3();
 }
 
 function start_test() {
