@@ -1,4 +1,5 @@
 const start_button = document.getElementById("start_button");
+let score = 0;
 
 if (window.location.pathname === "/listening_test/") {
     start_test();
@@ -102,4 +103,20 @@ function start_test6() {
         start_div.style.animation = '';
         start_div.style.opacity = "100%";
     })
+}
+
+function send_test_3() {
+    fetch("/check_test3/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({  }),
+    })
+    .then(response => response.json())
+    .then(data => {
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });  
 }
