@@ -173,7 +173,8 @@ function next_test_variant_3() {
         .then(response => response.json())
         .then(data => {
             score += data.right_perc;
-            test += 1;
+            test_count += 1;
+            console.log(test_count, "  ", score)
         })
         .catch(error => {
             console.error('Error:', error);
