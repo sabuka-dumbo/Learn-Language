@@ -162,6 +162,8 @@ def check_test3(request):
 
             right_perc = count_correct_symbols * 100 / all_symbols
 
+            print(count_correct_symbols, " * 100", " / ", all_symbols)
+
             print(right_perc)
             
         except json.JSONDecodeError as e:
