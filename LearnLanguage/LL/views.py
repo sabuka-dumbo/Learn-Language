@@ -165,4 +165,4 @@ def check_test3(request):
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
         
-    return JsonResponse({})
+    return JsonResponse({"right_perc": right_perc})
