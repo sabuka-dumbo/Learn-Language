@@ -132,8 +132,6 @@ def check_test3(request):
             word5 = data_from_js.get('word_field5')
             main_word = data_from_js.get('main_word')
 
-            for i in word1 
-
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
         
