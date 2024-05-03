@@ -82,9 +82,11 @@ function start_test4() {
     .then(response => response.json())
     .then(data => {
         let word = data.word;
+        const main_word = document.getElementById("main_word");
         const question_in_div = document.getElementById("test-div-question");
 
         question_in_div.innerText = "Write the word '" + word + "':";
+        main_word.value = word;
     })
     .catch(error => {
         console.error('Error:', error);
@@ -123,12 +125,13 @@ function start_test6() {
     })
 }
 
-function send_test_3() {
+function next_test_variant_3() {
     const word_field1 = document.getElementById("word_field1");
     const word_field2 = document.getElementById("word_field2");
     const word_field3 = document.getElementById("word_field3");
     const word_field4 = document.getElementById("word_field4");
     const word_field5 = document.getElementById("word_field5");
+    const main_word = document.getElementById("main_word");
 
     fetch("/check_test3/", {
         method: "POST",
@@ -141,6 +144,7 @@ function send_test_3() {
             "word_field3": word_field3,
             "word_field4": word_field4,
             "word_field5": word_field5,
+            "main_word": main_word,
          }),
     })
     .then(response => response.json())
