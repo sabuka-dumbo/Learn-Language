@@ -186,9 +186,7 @@ function next_test_variant_3() {
         word_field4.value = '';
         word_field5.value = '';
 
-        test_div.addEventListener("animationend", function() {
-            test_div.style.animation = "start_test ease 1s";
-
+        setTimeout(function() {
             fetch("/get_word2/", {
                 method: "POST",
                 headers: {
@@ -208,6 +206,10 @@ function next_test_variant_3() {
             .catch(error => {
                 console.error('Error:', error);
             });
+        }, 1000)
+
+        test_div.addEventListener("animationend", function() {
+            test_div.style.animation = "start_test ease 1s";
 
             test_div.addEventListener("animationend", function() {
                 test_div.style.animation = '';
