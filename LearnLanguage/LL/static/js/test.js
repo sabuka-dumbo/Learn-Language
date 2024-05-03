@@ -176,18 +176,22 @@ function next_test_variant_3() {
         .catch(error => {
             console.error('Error:', error);
         });
+
+        const test_div = document.getElementById("test-variant-3");
+
+        test_div.style.animation = 'start_test2 ease 1s';
+        word_field1.value = '';
+        word_field2.value = '';
+        word_field3.value = '';
+        word_field4.value = '';
+        word_field5.value = '';
+
+        test_div.addEventListener("animationend", function() {
+            test_div.style.animation = "start_test ease 1s";
+
+            test_div.addEventListener("animationend", function() {
+                test_div.style.animation = '';
+            })
+        })
     }
-
-    const test_div = document.getElementById("test-variant-3");
-
-    test_div.style.animation = 'start-test2 ease 1s';
-    word_field1.value = '';
-    word_field2.value = '';
-    word_field3.value = '';
-    word_field4.value = '';
-    word_field5.value = '';
-
-    test_div.addEventListener("animationend", function() {
-        test_div.style.animation = "start-test ease 1s";
-    })
 }
