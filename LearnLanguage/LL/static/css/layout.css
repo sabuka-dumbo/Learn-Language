@@ -570,6 +570,16 @@ body {
     }
 }
 
+@keyframes warning-animation2 {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: -120%;
+    }
+}
+
 @media screen and (max-width: 725px) {
     .navbar-navs {
         width: 40%;

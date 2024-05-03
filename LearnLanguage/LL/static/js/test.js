@@ -136,16 +136,25 @@ function next_test_variant_3() {
     if (word_field1.value == '' || word_field2.value == '' || word_field3.value == '' || word_field4.value == '' || word_field5.value == '') {
         const warning_div = document.getElementById("warning");
         const warning_text = document.getElementById("warning-text");
-
+        
         warning_div.style.display = 'block';
         warning_div.style.animation = 'warning-animation 1s ease';
         warning_text.innerText = "Please fill in all the fields above";
-
+        
+        // Event listener for the first animation end
         warning_div.addEventListener("animationend", function() {
-            setInterval(1000, function() {
-                console.log("s")
-            })
-        })
+            setTimeout(function() {
+                // Set the second animation
+                warning_div.style.animation = 'warning-animation2 0.5s ease';
+        
+                // Event listener for the second animation end
+                warning_div.addEventListener("animationend", function() {
+                    // Reset animation and hide the warning
+                    warning_div.style.animation = '';
+                    warning_div.style.display = "none";
+                }, { once: true }); // Make sure this listener runs only once
+            }, 1500);
+        });
     } else {
         fetch("/check_test3/", {
             method: "POST",
