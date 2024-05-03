@@ -160,7 +160,7 @@ def check_test3(request):
             all_symbols = len(word1) + len(word2) + len(word3) + len(word4) + len(word5)
             count_correct_symbols = count_correct_symbols1 + count_correct_symbols2 + count_correct_symbols3 + count_correct_symbols4 + count_correct_symbols5
 
-
+            
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
         
