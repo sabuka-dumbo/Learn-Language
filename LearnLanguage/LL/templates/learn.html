@@ -32,5 +32,19 @@
         </div>
     </div>
 
+    <div class="test-div">
+        <div class="test-div-part1">
+            <h1 class="test-div-header">Test your spelling skills:</h1>
+
+            <h1 class="test-div-description">Test your word-spelling skills.</h1> 
+
+            <a href="{% url 'listening_test' %}"><button class="test-div-button">Take Test</button></a>
+        </div>
+
+        <div class="test-div-part2">
+            <img src="{% static 'images/audio2.svg' %}" class="test-div-image">
+        </div>
+    </div>
+
     <script src="{% static 'js/learn.js' %}"></script>
 {% endblock %}
