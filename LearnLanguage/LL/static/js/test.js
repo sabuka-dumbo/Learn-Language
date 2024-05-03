@@ -72,21 +72,16 @@ function start_test4() {
         })
     })
 
-    fetch("/get_word/", {
+    fetch("/get_word2/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
-            "word_field1": word_field1,
-            "word_field2": word_field2,
-            "word_field3": word_field3,
-            "word_field4": word_field4,
-            "word_field5": word_field5,
-         }),
+        body: JSON.stringify({ }),
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data.word)
     })
     .catch(error => {
         console.error('Error:', error);
