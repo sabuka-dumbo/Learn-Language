@@ -133,25 +133,29 @@ function next_test_variant_3() {
     const word_field5 = document.getElementById("word_field5");
     const main_word = document.getElementById("main_word");
 
-    fetch("/check_test3/", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-            "word_field1": word_field1.value,
-            "word_field2": word_field2.value,
-            "word_field3": word_field3.value,
-            "word_field4": word_field4.value,
-            "word_field5": word_field5.value,
-            "main_word": main_word.value,
-         }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        score += data.right_perc;
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+    if (word_field1.value == '') {
+        word_field1.placeholder = "Please fill the field!";
+    } else {
+        fetch("/check_test3/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "word_field1": word_field1.value,
+                "word_field2": word_field2.value,
+                "word_field3": word_field3.value,
+                "word_field4": word_field4.value,
+                "word_field5": word_field5.value,
+                "main_word": main_word.value,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            score += data.right_perc;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 }
