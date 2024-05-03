@@ -71,6 +71,26 @@ function start_test4() {
             word_test_div.style.animation = '';
         })
     })
+
+    fetch("/check_test3/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+            "word_field1": word_field1,
+            "word_field2": word_field2,
+            "word_field3": word_field3,
+            "word_field4": word_field4,
+            "word_field5": word_field5,
+         }),
+    })
+    .then(response => response.json())
+    .then(data => {
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 function start_test5() {
