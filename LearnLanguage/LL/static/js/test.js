@@ -193,5 +193,25 @@ function next_test_variant_3() {
                 test_div.style.animation = '';
             })
         })
+
+        fetch("/get_word2/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            let word = data.word;
+            const main_word = document.getElementById("main_word");
+            const question_in_div = document.getElementById("test-div-question");
+    
+            question_in_div.innerText = "Write the word '" + word + "':";
+            main_word.value = word;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 }
