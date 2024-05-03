@@ -146,23 +146,31 @@ def check_test3(request):
             data_from_js = json.loads(request.body.decode('utf-8'))
             main_word = data_from_js.get('main_word')
             main_word_lower = main_word.lower()
-            percentages = {}
+
+            # Initialize score and total correct characters
+            total_correct_characters = 0
+            total_characters = 0
 
             for i in range(1, 6):
                 word_key = f'word_field{i}'
                 word = data_from_js.get(word_key)
-
                 word_lower = word.lower()
 
-                num_matching_characters = sum(1 for x, y in zip(word_lower, main_word_lower) if x == y)
+                # Compare characters of word and main_word
+                for x, y in zip(word_lower, main_word_lower):
+                    if x == y:
+                        total_correct_characters += 1
+                    total_characters += 1
 
-                percentage_correct = (num_matching_characters / max(len(word_lower), len(main_word_lower))) * 100
+            # Calculate percentage score
+            score = (total_correct_characters / total_characters) * 100
 
-                percentages[word_key] = percentage_correct
+            print(f"The percentage score is: {score:.2f}%")
 
-                print(f"The percentage of correct spelling between {word_key} and main_word is: {percentage_correct:.2f}%")
+            # Return the score as a JSON response
+            return JsonResponse({'score': score})
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
-        
+
     return JsonResponse({})
