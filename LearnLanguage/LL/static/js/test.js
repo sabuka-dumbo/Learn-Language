@@ -106,12 +106,24 @@ function start_test6() {
 }
 
 function send_test_3() {
+    const word_field1 = document.getElementById("word_field1");
+    const word_field2 = document.getElementById("word_field2");
+    const word_field3 = document.getElementById("word_field3");
+    const word_field4 = document.getElementById("word_field4");
+    const word_field5 = document.getElementById("word_field5");
+
     fetch("/check_test3/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({  }),
+        body: JSON.stringify({ 
+            "word_field1": word_field1,
+            "word_field2": word_field2,
+            "word_field3": word_field3,
+            "word_field4": word_field4,
+            "word_field5": word_field5,
+         }),
     })
     .then(response => response.json())
     .then(data => {

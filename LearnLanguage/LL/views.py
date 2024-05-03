@@ -125,7 +125,14 @@ def check_test3(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            
+            word1 = data_from_js.get('word_field1')
+            word2 = data_from_js.get('word_field2')
+            word3 = data_from_js.get('word_field3')
+            word4 = data_from_js.get('word_field4')
+            word5 = data_from_js.get('word_field5')
+            main_word = data_from_js.get('main_word')
+
+            for i in word1 
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
