@@ -144,33 +144,25 @@ def check_test3(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            main_word = data_from_js.get('main_word')
-            main_word_lower = main_word.lower()
+            word1 = data_from_js.get('word_field1').lower()
+            word2 = data_from_js.get('word_field2').lower()
+            word3 = data_from_js.get('word_field3').lower()
+            word4 = data_from_js.get('word_field4').lower()
+            word5 = data_from_js.get('word_field5').lower()
+            main_word = data_from_js.get('main_word').lower()
 
-            # Initialize score and total correct characters
-            total_correct_characters = 0
-            total_characters = 0
+            count_correct_symbols1 = sum(1 for x, y in zip(word1, main_word) if x == y)
+            count_correct_symbols2 = sum(1 for x, y in zip(word2, main_word) if x == y)
+            count_correct_symbols3 = sum(1 for x, y in zip(word3, main_word) if x == y)
+            count_correct_symbols4 = sum(1 for x, y in zip(word4, main_word) if x == y)
+            count_correct_symbols5 = sum(1 for x, y in zip(word5, main_word) if x == y)
 
-            for i in range(1, 6):
-                word_key = f'word_field{i}'
-                word = data_from_js.get(word_key)
-                word_lower = word.lower()
+            all_symbols = len(word1) + len(word2) + len(word3) + len(word4) + len(word5)
+            count_correct_symbols = count_correct_symbols1 + count_correct_symbols2 + count_correct_symbols3 + count_correct_symbols4 + count_correct_symbols5
+            print(all_symbols, count_correct_symbols)
 
-                # Compare characters of word and main_word
-                for x, y in zip(word_lower, main_word_lower):
-                    if x == y:
-                        total_correct_characters += 1
-                    total_characters += 1
-
-            # Calculate percentage score
-            score = (total_correct_characters / total_characters) * 100
-
-            print(f"The percentage score is: {score:.2f}%")
-
-            # Return the score as a JSON response
-            return JsonResponse({'score': score})
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
-
+        
     return JsonResponse({})
