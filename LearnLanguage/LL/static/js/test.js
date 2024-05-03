@@ -81,7 +81,10 @@ function start_test4() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data.word)
+        let word = data.word;
+        const question_in_div = document.getElementById("test-div-question");
+
+        question_in_div.innerText = "Write the word '" + word + "':";
     })
     .catch(error => {
         console.error('Error:', error);
