@@ -177,4 +177,6 @@ function next_test_variant_3() {
             console.error('Error:', error);
         });
     }
+
+    
 }
