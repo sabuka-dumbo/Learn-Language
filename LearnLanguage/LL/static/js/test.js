@@ -134,7 +134,6 @@ function next_test_variant_3() {
     const main_word = document.getElementById("main_word");
 
     if (word_field1.value == '') {
-        word_field1.placeholder = "Please fill the field!";
     } else {
         fetch("/check_test3/", {
             method: "POST",
