@@ -144,33 +144,16 @@ def check_test3(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
+            word1 = data_from_js.get('word_field1')
+            word2 = data_from_js.get('word_field2')
+            word3 = data_from_js.get('word_field3')
+            word4 = data_from_js.get('word_field4')
+            word5 = data_from_js.get('word_field5')
             main_word = data_from_js.get('main_word')
-            main_word_lower = main_word.lower()
 
-            # Initialize score and total correct characters
-            total_correct_characters = 0
-            total_characters = 0
-
-            for i in range(1, 6):
-                word_key = f'word_field{i}'
-                word = data_from_js.get(word_key)
-                word_lower = word.lower()
-
-                # Compare characters of word and main_word
-                for x, y in zip(word_lower, main_word_lower):
-                    if x == y:
-                        total_correct_characters += 1
-                    total_characters += 1
-
-            # Calculate percentage score
-            score = (total_correct_characters / total_characters) * 100
-
-            print(f"The percentage score is: {score:.2f}%")
-
-            # Return the score as a JSON response
-            return JsonResponse({'score': score})
+            print(word1, word2, word3)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
-
+        
     return JsonResponse({})
