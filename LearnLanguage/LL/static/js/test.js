@@ -127,96 +127,100 @@ function start_test6() {
 }
 
 function next_test_variant_3() {
-    const word_field1 = document.getElementById("word_field1");
-    const word_field2 = document.getElementById("word_field2");
-    const word_field3 = document.getElementById("word_field3");
-    const word_field4 = document.getElementById("word_field4");
-    const word_field5 = document.getElementById("word_field5");
-    const main_word = document.getElementById("main_word");
-
-    if (word_field1.value == '' || word_field2.value == '' || word_field3.value == '' || word_field4.value == '' || word_field5.value == '') {
-        const warning_div = document.getElementById("warning");
-        const warning_text = document.getElementById("warning-text");
-        
-        warning_div.style.display = 'block';
-        warning_div.style.animation = 'warning-animation 1s ease';
-        warning_text.innerText = "Please fill in all the fields above";
-        
-        warning_div.addEventListener("animationend", function() {
-            warning_div.style.animation = '';
-            warning_div.style.display = "block";
-             
-            setTimeout(function() {
-                warning_div.style.animation = 'warning-animation2 2s ease';
-        
-                warning_div.addEventListener("animationend", function() {
-                    warning_div.style.animation = '';
-                    warning_div.style.display = "none";
-                });
-            }, 1500);
-        });
+    if (test_count == 2) {
+        console.log("end")
     } else {
-        fetch("/check_test3/", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                "word_field1": word_field1.value,
-                "word_field2": word_field2.value,
-                "word_field3": word_field3.value,
-                "word_field4": word_field4.value,
-                "word_field5": word_field5.value,
-                "main_word": main_word.value,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            score += data.right_perc;
-            test_count += 1;
-            console.log(test_count, "  ", score)
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        const word_field1 = document.getElementById("word_field1");
+        const word_field2 = document.getElementById("word_field2");
+        const word_field3 = document.getElementById("word_field3");
+        const word_field4 = document.getElementById("word_field4");
+        const word_field5 = document.getElementById("word_field5");
+        const main_word = document.getElementById("main_word");
 
-        const test_div = document.getElementById("test-variant-3");
-
-        test_div.style.animation = 'start_test2 ease 1s';
-        word_field1.value = '';
-        word_field2.value = '';
-        word_field3.value = '';
-        word_field4.value = '';
-        word_field5.value = '';
-
-        setTimeout(function() {
-            fetch("/get_word2/", {
+        if (word_field1.value == '' || word_field2.value == '' || word_field3.value == '' || word_field4.value == '' || word_field5.value == '') {
+            const warning_div = document.getElementById("warning");
+            const warning_text = document.getElementById("warning-text");
+            
+            warning_div.style.display = 'block';
+            warning_div.style.animation = 'warning-animation 1s ease';
+            warning_text.innerText = "Please fill in all the fields above";
+            
+            warning_div.addEventListener("animationend", function() {
+                warning_div.style.animation = '';
+                warning_div.style.display = "block";
+                
+                setTimeout(function() {
+                    warning_div.style.animation = 'warning-animation2 2s ease';
+            
+                    warning_div.addEventListener("animationend", function() {
+                        warning_div.style.animation = '';
+                        warning_div.style.display = "none";
+                    });
+                }, 1500);
+            });
+        } else {
+            fetch("/check_test3/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ }),
+                body: JSON.stringify({ 
+                    "word_field1": word_field1.value,
+                    "word_field2": word_field2.value,
+                    "word_field3": word_field3.value,
+                    "word_field4": word_field4.value,
+                    "word_field5": word_field5.value,
+                    "main_word": main_word.value,
+                }),
             })
             .then(response => response.json())
             .then(data => {
-                let word = data.word;
-                const main_word = document.getElementById("main_word");
-                const question_in_div = document.getElementById("test-div-question");
-        
-                question_in_div.innerText = "Write the word '" + word + "':";
-                main_word.value = word;
+                score += data.right_perc;
+                test_count += 1;
+                console.log(test_count, "  ", score)
             })
             .catch(error => {
                 console.error('Error:', error);
             });
-        }, 1000)
 
-        test_div.addEventListener("animationend", function() {
-            test_div.style.animation = "start_test ease 1s";
+            const test_div = document.getElementById("test-variant-3");
+
+            test_div.style.animation = 'start_test2 ease 1s';
+            word_field1.value = '';
+            word_field2.value = '';
+            word_field3.value = '';
+            word_field4.value = '';
+            word_field5.value = '';
+
+            setTimeout(function() {
+                fetch("/get_word2/", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    let word = data.word;
+                    const main_word = document.getElementById("main_word");
+                    const question_in_div = document.getElementById("test-div-question");
+            
+                    question_in_div.innerText = "Write the word '" + word + "':";
+                    main_word.value = word;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }, 1000)
 
             test_div.addEventListener("animationend", function() {
-                test_div.style.animation = '';
+                test_div.style.animation = "start_test ease 1s";
+
+                test_div.addEventListener("animationend", function() {
+                    test_div.style.animation = '';
+                })
             })
-        })
+        }
     }
 }
