@@ -141,18 +141,14 @@ function next_test_variant_3() {
         warning_div.style.animation = 'warning-animation 1s ease';
         warning_text.innerText = "Please fill in all the fields above";
         
-        // Event listener for the first animation end
         warning_div.addEventListener("animationend", function() {
             setTimeout(function() {
-                // Set the second animation
                 warning_div.style.animation = 'warning-animation2 0.5s ease';
         
-                // Event listener for the second animation end
                 warning_div.addEventListener("animationend", function() {
-                    // Reset animation and hide the warning
                     warning_div.style.animation = '';
                     warning_div.style.display = "none";
-                }, { once: true }); // Make sure this listener runs only once
+                }, { once: true });
             }, 1500);
         });
     } else {
