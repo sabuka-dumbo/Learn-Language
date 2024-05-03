@@ -1,5 +1,6 @@
 const start_button = document.getElementById("start_button");
 let score = 0;
+let test_count = 0;
 
 if (window.location.pathname === "/listening_test/") {
     start_test();
@@ -172,6 +173,7 @@ function next_test_variant_3() {
         .then(response => response.json())
         .then(data => {
             score += data.right_perc;
+            test += 1;
         })
         .catch(error => {
             console.error('Error:', error);
