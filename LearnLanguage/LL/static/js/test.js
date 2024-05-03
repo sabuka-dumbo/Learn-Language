@@ -144,7 +144,7 @@ function next_test_variant_3() {
             "word_field3": word_field3,
             "word_field4": word_field4,
             "word_field5": word_field5,
-            "main_word": main_word,
+            "main_word": main_word.value,
          }),
     })
     .then(response => response.json())
