@@ -153,5 +153,5 @@ function next_test_variant_3() {
     })
     .catch(error => {
         console.error('Error:', error);
-    });  
+    });
 }
