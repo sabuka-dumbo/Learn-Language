@@ -133,7 +133,8 @@ function next_test_variant_3() {
     const word_field5 = document.getElementById("word_field5");
     const main_word = document.getElementById("main_word");
 
-    if (word_field1.value == '') {
+    if (word_field1.value == '' || word_field2.value == '') {
+        document.getElementById("warning").style.display = "block";
     } else {
         fetch("/check_test3/", {
             method: "POST",

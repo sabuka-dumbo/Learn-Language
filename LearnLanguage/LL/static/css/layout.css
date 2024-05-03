@@ -540,6 +540,8 @@ body {
     height: 80px;
     background-color: #FFBFBF;
     z-index: 501;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }
 
 .warning-text {
@@ -558,6 +560,15 @@ body {
 }
 
 /* profile css */
+@keyframes warning-animation {
+    0% {
+        top: -120%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
 
 @media screen and (max-width: 725px) {
     .navbar-navs {
