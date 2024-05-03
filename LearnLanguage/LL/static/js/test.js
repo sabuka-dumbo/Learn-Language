@@ -149,7 +149,7 @@ function next_test_variant_3() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data.success_percentage)
+        score += data.right_perc;
     })
     .catch(error => {
         console.error('Error:', error);
