@@ -139,16 +139,17 @@ function next_test_variant_3() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-            "word_field1": word_field1,
-            "word_field2": word_field2,
-            "word_field3": word_field3,
-            "word_field4": word_field4,
-            "word_field5": word_field5,
+            "word_field1": word_field1.value,
+            "word_field2": word_field2.value,
+            "word_field3": word_field3.value,
+            "word_field4": word_field4.value,
+            "word_field5": word_field5.value,
             "main_word": main_word.value,
          }),
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data.success_percentage)
     })
     .catch(error => {
         console.error('Error:', error);

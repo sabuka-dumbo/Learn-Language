@@ -144,14 +144,21 @@ def check_test3(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            word1 = data_from_js.get('word_field1')
-            word2 = data_from_js.get('word_field2')
-            word3 = data_from_js.get('word_field3')
-            word4 = data_from_js.get('word_field4')
-            word5 = data_from_js.get('word_field5')
-            main_word = data_from_js.get('main_word')
+            word1 = data_from_js.get('word_field1').lower()
+            word2 = data_from_js.get('word_field2').lower()
+            word3 = data_from_js.get('word_field3').lower()
+            word4 = data_from_js.get('word_field4').lower()
+            word5 = data_from_js.get('word_field5').lower()
+            main_word = data_from_js.get('main_word').lower()
 
-            print(word1, word2, word3)
+            # Now you can compare word1-5 with main_word
+            success_count = 0
+            for word in [word1, word2, word3, word4, word5]:
+                if word == main_word:
+                    success_count += 1
+
+            success_percentage = (success_count / 5) * 100  # Assuming 5 words to compare
+            return JsonResponse({"success_percentage": success_percentage})
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
