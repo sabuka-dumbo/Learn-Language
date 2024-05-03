@@ -134,7 +134,16 @@ function next_test_variant_3() {
     const main_word = document.getElementById("main_word");
 
     if (word_field1.value == '' || word_field2.value == '' || word_field3.value == '' || word_field4.value == '' || word_field5.value == '') {
-        document.getElementById("warning").style.display = "block";
+        const warning_div = document.getElementById("warning");
+        const warning_text = document.getElementById("warning_text");
+
+        warning_div.style.display = 'block';
+        warning_div.style.animation = 'warning-animation 1s ease';
+        warning_text.innerText = "Please fill up all the fields above";
+
+        warning_div.addEventListener("animationend", function() {
+
+        })
     } else {
         fetch("/check_test3/", {
             method: "POST",
