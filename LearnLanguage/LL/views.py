@@ -120,6 +120,25 @@ def get_word(request):
         
     return JsonResponse({"word": random_word})
 
+
+@csrf_exempt
+def get_word2(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            max_word_queryset = Word.objects.filter(user=request.user)
+            max_word_count = max_word_queryset.count()
+            random_word = ''
+
+            if max_word_count > 0:
+                random_word_id = random.randint(0, max_word_count - 1)
+                random_word = max_word_queryset[random_word_id].word
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({"word": random_word})
+
 @csrf_exempt
 def check_test3(request):
     if request.method == "POST":

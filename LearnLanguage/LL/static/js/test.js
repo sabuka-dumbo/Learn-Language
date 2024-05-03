@@ -72,7 +72,7 @@ function start_test4() {
         })
     })
 
-    fetch("/check_test3/", {
+    fetch("/get_word/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
