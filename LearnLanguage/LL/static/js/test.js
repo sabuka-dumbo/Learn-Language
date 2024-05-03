@@ -142,8 +142,9 @@ function next_test_variant_3() {
         warning_text.innerText = "Please fill in all the fields above";
         
         warning_div.addEventListener("animationend", function handler() {
+            warning_div.style.animation = '';
             setTimeout(function() {
-                warning_div.style.animation = 'warning-animation2 0.5s ease';
+                warning_div.style.animation = 'warning-animation2 2s ease';
         
                 warning_div.addEventListener("animationend", function() {
                     warning_div.style.animation = '';
