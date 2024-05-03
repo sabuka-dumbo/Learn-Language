@@ -128,6 +128,29 @@ function start_test6() {
 
 function next_test_variant_3() {
     if (test_count == 2) {
+        fetch("/check_test3/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "word_field1": word_field1.value,
+                "word_field2": word_field2.value,
+                "word_field3": word_field3.value,
+                "word_field4": word_field4.value,
+                "word_field5": word_field5.value,
+                "main_word": main_word.value,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            score += data.right_perc;
+            test_count += 1;
+            console.log(test_count, "  ", score)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
         console.log("end")
     } else {
         const word_field1 = document.getElementById("word_field1");
