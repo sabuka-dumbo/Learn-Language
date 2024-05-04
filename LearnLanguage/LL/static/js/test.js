@@ -161,6 +161,7 @@ function next_test_variant_3() {
             test_div2.addEventListener("animationend", function() {
                 test_div2.style.animation = '';
                 test_div2.style.display = "none";
+                results_header2.innerText = new_score + "/" + test_count * 10 + "P";
 
                 results_div.style.display = "block";
                 results_div.style.animation = "start_test 1s ease";
@@ -168,7 +169,6 @@ function next_test_variant_3() {
                 results_div.addEventListener("animationend", function() {
                     results_div.style.animation = '';
                     results_div.style.display = "block";
-                    results_header2.innerText = new_score + "/100P";
                 })
             })
         })
