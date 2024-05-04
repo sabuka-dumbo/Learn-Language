@@ -74,14 +74,11 @@ function start_test3() {
 function play_sound() {
     let speech = new SpeechSynthesisUtterance();
     speech.text = word;
-
-    window.speechSynthesis.onvoiceschanged = function() {
-        let voices = window.speechSynthesis.getVoices();
-
-        speech.voice = voices.find(voice => voice.lang.startsWith('en') && voice.gender === 'female');
-
-        window.speechSynthesis.speak(speech);
-    };
+    let voices = window.speechSynthesis.getVoices();
+    let selectedVoice = voices.find(voice => voice.gender == 'female');
+    speech.voice = selectedVoice;
+    window.speechSynthesis.speak(speech);
+    console.log(window.speechSynthesis.getVoices());
 }
 
 function start_test4() {
