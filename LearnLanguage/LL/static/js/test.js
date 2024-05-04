@@ -127,7 +127,7 @@ function start_test6() {
 }
 
 function next_test_variant_3() {
-    if (test_count == 9) {
+    if (test_count == 1) {
         fetch("/check_test3/", {
             method: "POST",
             headers: {
