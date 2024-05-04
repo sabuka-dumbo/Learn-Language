@@ -72,7 +72,9 @@ function start_test3() {
 }
 
 function play_sound() {
-    
+    let speech  = new SpeechSynthesisUtterance();
+    speech.text = word;
+    window.speechSynthesis.speak(speech)
 }
 
 function start_test4() {
