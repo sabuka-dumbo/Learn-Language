@@ -27,11 +27,23 @@ function send_word() {
             const new_word_check = document.getElementById("new-word-check");
 
             new_word_div.style.animation = "fade_out 0.5s ease";
-            new_word_div.addEventListener("animationend", function() {
+            new_word_check.style.animation = "fade_in 1s ease";
+            new_word_check.style.display = "block";
+            
+            new_word_div.addEventListener("animationend", function handler() {
                 new_word_div.style.animation = '';
                 new_word_div.style.display = "none";
-                new_word_check.style.animation = "fade_in 1s ease";
-                new_word_check.style.display = "block";
+            
+                setTimeout(function() {
+                    new_word_div.style.animation = "fade_in 0.5s ease";
+                    new_word_div.style.display = "block";
+                    new_word_check.style.animation = "fade_out 0.5s ease";
+            
+                    new_word_check.addEventListener("animationend", function() {
+                        new_word_check.style.animation = '';
+                        new_word_check.style.display = "none";
+                    });
+                }, 1000);
             });
         })
         .catch(error => {
