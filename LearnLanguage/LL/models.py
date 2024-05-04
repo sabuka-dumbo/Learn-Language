@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser 
+from django.utils import timezone
 
 # Create your models here.
 class User(AbstractUser):
@@ -9,7 +10,7 @@ class Strike(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="strike_user")
     day_strike = models.IntegerField()
     count_strikes = models.IntegerField()
-    last_strike = models.DateField()
+    last_strike = models.DateField(default=timezone.now)
 
     def __str__(self):
         return f"{self.user}'s strike: {self.day_strike} day"
