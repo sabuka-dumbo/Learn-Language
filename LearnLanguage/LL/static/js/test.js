@@ -74,6 +74,7 @@ function start_test3() {
 function play_sound() {
     let speech  = new SpeechSynthesisUtterance();
     speech.text = word;
+    speech.voice = window.speechSynthesis.getVoices[2];
     window.speechSynthesis.speak(speech)
 }
 
