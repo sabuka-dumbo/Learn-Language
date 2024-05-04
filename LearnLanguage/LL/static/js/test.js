@@ -76,6 +76,11 @@ function play_sound() {
 
     utterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
     speechSynthesis.speak(utterance);
+
+    const play_sound_icon = document.getElementById("test-div-play");
+    const play_sound_icon2 = document.getElementById("");
+
+    
 }
 
 function start_test4() {
