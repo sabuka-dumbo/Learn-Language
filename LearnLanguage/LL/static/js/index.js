@@ -3,27 +3,41 @@ const radio1 = document.getElementById("radio1");
 const radio2 = document.getElementById("radio2");
 
 function send_word() {
-    let word = true;
+    if (text.value != '') {
+        let word = true;
 
-    if (radio1.checked) {
-        word = true;
-    } else {
-        word = false;
+        if (radio1.checked) {
+            word = true;
+        } else {
+            word = false;
+        }
+
+        fetch("/add_word/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ word: text.value, is_word: word }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            const new_word_div = document.getElementById("new-word");
+            const new_word_textarea = document.getElementById("textarea");
+            const new_word_radio1 = document.getElementById("radio1");
+            const new_word_check = document.getElementById("new-word-check");
+
+            new_word_div.style.animation = "fade_out 0.5s ease";
+            new_word_check.style.animation = "fade_in 0.5s ease";
+
+            new_word_div.addEventListener("animationend", function() {
+                new_word_div.style.animation = '';
+                new_word_div.style.display = "none";
+            })
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
-
-    fetch("/add_word/", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ word: text.value, is_word: word }),
-    })
-    .then(response => response.json())
-    .then(data => {
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
 }
 
 addEventListener("DOMContentLoaded", function() {

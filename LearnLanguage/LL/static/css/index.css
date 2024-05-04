@@ -209,6 +209,16 @@
     color: black;
 }
 
+.new-word-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    height: 20%;
+    color: lightgreen;
+}
+
 .user-info {
     position: relative;
     top: 0px;
@@ -921,3 +931,23 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+@keyframes fade_in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
