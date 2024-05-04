@@ -151,10 +151,10 @@ function next_test_variant_3() {
                 score += data.right_perc;
 
                 console.log("perc:", score)
-                console.log("div 100:", score / 100)
-                console.log("new_score:", Math.ceil(score / 100))
+                console.log("div 100:", score / 10)
+                console.log("new_score:", Math.ceil(score / 10))
                 test_count += 1;
-                new_score = Math.ceil(score / 100)
+                new_score = Math.ceil(score / 10)
 
             test_div2.style.animation = "start_test2 1s ease";
 
