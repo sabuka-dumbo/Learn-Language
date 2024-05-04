@@ -183,6 +183,8 @@ def save_points(request):
                     if strike.day_strike == 10:
                         strike.count_strikes += 1
                         strike.day_strike += 1
+                    elif strike.day_strike < 10:
+                        strike.day_strike += 1
             else:
                 strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0)
 
