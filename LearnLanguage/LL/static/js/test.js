@@ -144,8 +144,8 @@ function next_test_variant_3() {
         })
         .then(response => response.json())
         .then(data => {
-            const results_div = document.getElementById("results_div");
-            const results_header2 = document.getElementById("results_header2");
+            const results_div = document.getElementById("results-div");
+            const results_header2 = document.getElementById("results-header2");
             const test_div2 = document.getElementById("test-variant-3");
 
             score += data.right_perc;
