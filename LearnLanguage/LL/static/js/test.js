@@ -108,7 +108,20 @@ function next_test_variant_1() {
             console.log(score)
             test_count += 1;
             new_score3 = Math.ceil(score / 10)
-            score = new_score3
+
+            fetch("/save_points/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
+            })
+            .then(response => response.json())
+            .then(data => {
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         })
         .catch(error => {
             console.error('Error:', error);
@@ -138,19 +151,6 @@ function next_test_variant_1() {
             })
         }, 1500)
 
-        fetch("/save_points/", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ "points": score, "test_points": test_count * 10 }),
-        })
-        .then(response => response.json())
-        .then(data => {
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
     } else {
         if (textarea.value == '') {
             const warning_div = document.getElementById("warning");
