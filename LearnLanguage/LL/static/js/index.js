@@ -25,14 +25,14 @@ function send_word() {
             const new_word_textarea = document.getElementById("textarea");
             const new_word_radio1 = document.getElementById("radio1");
             const new_word_check = document.getElementById("new-word-check");
-
+            
             new_word_div.style.animation = "fade_out 0.5s ease";
             new_word_check.style.animation = "fade_in 1s ease";
             new_word_check.style.display = "block";
-
+            
             new_word_check.addEventListener("animationend", function() {
                 new_word_check.style.animation = '';
-            })
+            });
             
             new_word_div.addEventListener("animationend", function() {
                 new_word_div.style.animation = '';
@@ -47,11 +47,11 @@ function send_word() {
                         new_word_check.style.animation = '';
                         new_word_check.style.display = "none";
                     });
-
+            
                     new_word_div.addEventListener("animationend", function() {
                         new_word_div.style.animation = '';
                         new_word_div.style.display = "block";
-                    })
+                    });
                 }, 1000);
             });
         })
