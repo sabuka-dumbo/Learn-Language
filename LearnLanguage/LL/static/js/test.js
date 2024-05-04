@@ -80,7 +80,12 @@ function play_sound() {
     const play_sound_icon = document.getElementById("test-div-play");
     const play_sound_icon2 = document.getElementById("test-div-play2");
 
+    play_sound_icon2.style.display = "inline-block";
+    play_sound_icon.style.display = "none";
+
     utterance.onend = function(event) {
+        play_sound_icon.style.display = "inline-block";
+        play_sound_icon2.style.display = "none";
     };
 }
 
