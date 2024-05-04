@@ -78,9 +78,10 @@ function play_sound() {
     speechSynthesis.speak(utterance);
 
     const play_sound_icon = document.getElementById("test-div-play");
-    const play_sound_icon2 = document.getElementById("");
+    const play_sound_icon2 = document.getElementById("test-div-play2");
 
-    
+    utterance.onend = function(event) {
+    };
 }
 
 function start_test4() {
