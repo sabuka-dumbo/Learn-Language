@@ -91,7 +91,7 @@ function play_sound() {
 
 function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
-    if (test_count == 2) {
+    if (test_count == 1) {
         fetch("/check_test1/", {
             method: "POST",
             headers: {
@@ -105,6 +105,7 @@ function next_test_variant_1() {
         .then(response => response.json())
         .then(data => {
             score += data.right_perc;
+            console.log(score)
             test_count += 1;
         })
         .catch(error => {
@@ -117,7 +118,7 @@ function next_test_variant_1() {
 
         test_div1.style.animation = "start_test2 1s ease";
 
-        let new_score2 = Math.ceil(score / 10)
+        let new_score2 = Math.ceil(score)
 
         test_div1.addEventListener("animationend", function() {
             test_div1.style.display = "none";
