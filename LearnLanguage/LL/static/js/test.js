@@ -148,9 +148,13 @@ function next_test_variant_3() {
             const results_header2 = document.getElementById("results-header2");
             const test_div2 = document.getElementById("test-variant-3");
 
-            score += data.right_perc;
-            test_count += 1;
-            new_score = Math.ceil(score / 100)
+                score += data.right_perc;
+
+                console.log("perc:", score)
+                console.log("div 100:", score / 100)
+                console.log("new_score:", Math.ceil(score / 100))
+                test_count += 1;
+                new_score = Math.ceil(score / 100)
 
             test_div2.style.animation = "start_test2 1s ease";
 
