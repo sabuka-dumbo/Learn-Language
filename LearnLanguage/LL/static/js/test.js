@@ -118,7 +118,7 @@ function next_test_variant_1() {
 
         test_div1.style.animation = "start_test2 1s ease";
 
-        let new_score2 = Math.ceil(score / 10)
+        new_score2 = Math.ceil(score / 10);
 
         test_div1.addEventListener("animationend", function() {
             test_div1.style.display = "none";
