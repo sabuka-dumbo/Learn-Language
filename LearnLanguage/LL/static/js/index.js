@@ -29,31 +29,18 @@ function send_word() {
             new_word_div.style.animation = "fade_out 0.5s ease";
             new_word_check.style.animation = "fade_in 1s ease";
             new_word_check.style.display = "block";
-            
-            new_word_check.addEventListener("animationend", function() {
-                new_word_check.style.animation = '';
-            });
-            
+
             new_word_div.addEventListener("animationend", function() {
                 new_word_div.style.animation = '';
                 new_word_div.style.display = "none";
-            
-                setTimeout(function() {
-                    new_word_div.style.animation = "fade_in 0.5s ease";
-                    new_word_div.style.display = "block";
-                    new_word_check.style.animation = "fade_out 0.5s ease";
-            
-                    new_word_check.addEventListener("animationend", function() {
-                        new_word_check.style.animation = '';
-                        new_word_check.style.display = "none";
-                    });
-            
-                    new_word_div.addEventListener("animationend", function() {
-                        new_word_div.style.animation = '';
-                        new_word_div.style.display = "block";
-                    });
-                }, 1000);
-            });
+            })
+
+            new_word_check.addEventListener("animationend", function() {
+                new_word_check.style.animation = '';
+                new_word_check.style.display = "block";
+            })
+
+            setTimeout()
         })
         .catch(error => {
             console.error('Error:', error);
