@@ -44,16 +44,18 @@
 
     <div class="index-part2">
         <div class="new-word" id="new-word">
-            <h1 class="new-word-header">Add this to “To learn list”:</h1>
+            <div class="new-word" id="new_word">
+                <h1 class="new-word-header">Add this to “To learn list”:</h1>
 
-            <textarea name="textarea" id="textarea" class="new-word-textarea" placeholder="I want to learn this in future..."></textarea>
+                <textarea name="textarea" id="textarea" class="new-word-textarea" placeholder="I want to learn this in future..."></textarea>
 
-            <div class="new-word-buttons">
-                <input type="radio" name="wordorphrase" class="radio-input" id="radio1" checked>
-                <h1 class="radio-text">Word</h1>
-                <input type="radio" name="wordorphrase" class="radio-input">
-                <h1 class="radio-text">Phrase</h1>
-                <input type="button" value="Add" class="new-word-submit" onclick="send_word()" id="radio2">
+                <div class="new-word-buttons">
+                    <input type="radio" name="wordorphrase" class="radio-input" id="radio1" checked>
+                    <h1 class="radio-text">Word</h1>
+                    <input type="radio" name="wordorphrase" class="radio-input">
+                    <h1 class="radio-text">Phrase</h1>
+                    <input type="button" value="Add" class="new-word-submit" onclick="send_word()" id="radio2">
+                </div>
             </div>
 
             <svg class="new-word-check" id="new-word-check" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
