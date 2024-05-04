@@ -30,7 +30,7 @@ function send_word() {
             new_word_check.style.animation = "fade_in 1s ease";
             new_word_check.style.display = "block";
             
-            new_word_div.addEventListener("animationend", function handler() {
+            new_word_div.addEventListener("animationend", function() {
                 new_word_div.style.animation = '';
                 new_word_div.style.display = "none";
             
@@ -43,6 +43,11 @@ function send_word() {
                         new_word_check.style.animation = '';
                         new_word_check.style.display = "none";
                     });
+
+                    new_word_div.addEventListener("animationend", function() {
+                        new_word_div.style.animation = '';
+                        new_word_div.style.display = "block";
+                    })
                 }, 1000);
             });
         })
