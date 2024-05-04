@@ -160,17 +160,17 @@ function next_test_variant_1() {
                 test_div1.style.animation = '';
                 test_div1.style.display = "none"
                 textarea2.value = '';
-
-                setTimeout(function() {
-                    test_div1.style.animation = "start_test 1s ease";
-                    test_div1.style.display = "block";
-
-                    test_div1.addEventListener("animationend", function() {
-                        test_div1.style.animation = '';
-                        test_div1.style.display = "block";
-                    })
-                }, 1000)
             })
+
+            setTimeout(function() {
+                test_div1.style.animation = "start_test 1s ease";
+                test_div1.style.display = "block";
+
+                test_div1.addEventListener("animationend", function() {
+                    test_div1.style.animation = '';
+                    test_div1.style.display = "block";
+                })
+            }, 1500)
         }
     }
 }
