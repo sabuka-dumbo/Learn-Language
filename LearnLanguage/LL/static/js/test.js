@@ -89,10 +89,11 @@ function play_sound() {
     };
 }
 
-function next_test_variant_2() {
+function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
 
     if (textarea.value == '') {
+        console.log("s")
         const warning_div = document.getElementById("warning");
         const warning_text = document.getElementById("warning-text");
         
