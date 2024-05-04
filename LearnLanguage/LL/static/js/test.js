@@ -164,7 +164,7 @@ function next_test_variant_3() {
                 results_div.addEventListener("animationend", function() {
                     results_div.style.animation = '';
                     results_div.style.display = "block";
-                    results_header2.innerText = score + "/100%";
+                    results_header2.innerText = new_score + "/100P";
                 })
             })
         })
