@@ -181,7 +181,7 @@ def save_points(request):
                     strike.count_strikes += 1
                     strike.day_strike += 1
             else:
-                strike = Strike.objects.create(User=request.user, day_strike=1, count_strikes=0)
+                strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
