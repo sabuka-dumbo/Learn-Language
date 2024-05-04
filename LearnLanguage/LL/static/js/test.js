@@ -92,7 +92,49 @@ function play_sound() {
 function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
     if (test_count == 2) {
+        fetch("/check_test1/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "word": textarea.value,
+                "main_word": word,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            score += data.right_perc;
+            test_count += 1;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 
+        const test_div1 = document.getElementById("test-variant-1");
+        const results_div2 = document.getElementById("results-div");
+        const results_header2_2 = document.getElementById("results-header2");
+
+        test_div1.style.animation = "start_test2 1s ease";
+
+        let new_score2 = Math.ceil(score / 10)
+
+        test_div1.addEventListener("animationend", function() {
+            test_div1.style.display = "none";
+            test_div1.style.animation = '';
+
+            results_header2_2.innerText = new_score2 + "/" + test_count * 10 + "P";
+        })
+
+        setTimeout(function() {
+            results_div2.style.animation = "start_div 1s ease";
+            results_div2.style.display = "block";
+
+            results_div2.addEventListener("animationend", function() {
+                results_div2.style.animation = '';
+                results_div2.style.display = "block";
+            })
+        }, 1500)
     } else {
         if (textarea.value == '') {
             const warning_div = document.getElementById("warning");
