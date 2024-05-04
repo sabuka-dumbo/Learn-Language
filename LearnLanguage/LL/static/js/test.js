@@ -5,7 +5,8 @@ let test_count = 0;
 if (window.location.pathname === "/listening_test/") {
     start_test();
 } else if (window.location.pathname === "/word_test/") {
-    start_test2();
+    //start_test2();
+    
 } else if (window.location.pathname === "/translate_test/") {
     start_test6();
 }
