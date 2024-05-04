@@ -74,8 +74,18 @@ function start_test3() {
 function play_sound() {
     let speech = new SpeechSynthesisUtterance();
     speech.text = word;
+    
+    // Get all available voices
     let voices = window.speechSynthesis.getVoices();
+    
+    // Find a female voice
+    let selectedVoice = voices.find(voice => voice.name === "Karen"); // Example female voice name
+    
+    // Set the selected voice
     speech.voice = selectedVoice;
+    
+    // Speak
+    window.speechSynthesis.speak(speech);
 }
 
 function start_test4() {
