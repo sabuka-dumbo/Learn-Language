@@ -89,6 +89,14 @@ function play_sound() {
     };
 }
 
+function next_test_variant_2() {
+    const textarea = document.getElementById("test-speech-textarea");
+
+    if (textarea.value == '') {
+        
+    }
+}
+
 function start_test4() {
     const start_div = document.getElementById("start-div2");
     const word_test_div = document.getElementById("test-variant-3");
