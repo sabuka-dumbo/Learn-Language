@@ -72,21 +72,21 @@ function start_test3() {
 }
 
 function play_sound() {
-    let speech = new SpeechSynthesisUtterance();
-    speech.text = word;
-    
-    // Get all available voices
-    let voices = window.speechSynthesis.getVoices();
-    
-    // Find a female voice
-    let selectedVoice = voices.find(voice => voice.name === "Karen"); // Example female voice name
-    
-    // Set the selected voice
-    speech.voice = selectedVoice;
-    
-    // Speak
-    window.speechSynthesis.speak(speech);
-}
+    // Check if speech synthesis is supported by the browser
+    if ('speechSynthesis' in window) {
+      // Create a new instance of SpeechSynthesisUtterance
+      var utterance = new SpeechSynthesisUtterance(word);
+  
+      // Set voice to a clear female voice
+      utterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
+  
+      // Speak the word
+      speechSynthesis.speak(utterance);
+    } else {
+      // Speech synthesis not supported
+      console.log("Sorry, speech synthesis is not supported by your browser.");
+    }
+  }
 
 function start_test4() {
     const start_div = document.getElementById("start-div2");
