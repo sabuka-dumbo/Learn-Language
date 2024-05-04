@@ -18,6 +18,7 @@ class Strike(models.Model):
 class Grades(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="grade_user")
     points = models.IntegerField()
+    total_points = models.IntegerField(default=0)
     date = models.DateField()
 
     def __str__(self):

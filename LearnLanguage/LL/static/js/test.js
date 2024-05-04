@@ -136,6 +136,20 @@ function next_test_variant_1() {
                 results_div2.style.display = "block";
             })
         }, 1500)
+
+        fetch("/save_points/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
+        })
+        .then(response => response.json())
+        .then(data => {
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     } else {
         if (textarea.value == '') {
             const warning_div = document.getElementById("warning");

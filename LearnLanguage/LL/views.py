@@ -189,6 +189,7 @@ def save_points(request):
             else:
                 strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0, last_strike=timezone.now().date())
 
+            Grades.objects.create(user=request.user, total_points=test_points, points=points, date=timezone.now().date)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
