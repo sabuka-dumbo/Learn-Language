@@ -194,3 +194,20 @@ def save_points(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({  })
+
+@csrf_exempt
+def check_test1(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            word1 = data_from_js.get('word').lower()
+            main_word = data_from_js.get('main_word').lower()
+
+            count_correct_symbols = sum(1 for x, y in zip(word1, main_word) if x == y)
+
+            right_perc = count_correct_symbols * 100 / len(main_word)
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({"right_perc": right_perc})

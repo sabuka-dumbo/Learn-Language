@@ -91,29 +91,87 @@ function play_sound() {
 
 function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
+    if (test_count == 9) {
 
-    if (textarea.value == '') {
-        console.log("s")
-        const warning_div = document.getElementById("warning");
-        const warning_text = document.getElementById("warning-text");
-        
-        warning_div.style.display = 'block';
-        warning_div.style.animation = 'warning-animation 1s ease';
-        warning_text.innerText = "Please fill in all the fields above";
-        
-        warning_div.addEventListener("animationend", function() {
-            warning_div.style.animation = '';
-            warning_div.style.display = "block";
+    } else {
+        if (textarea.value == '') {
+            const warning_div = document.getElementById("warning");
+            const warning_text = document.getElementById("warning-text");
             
-            setTimeout(function() {
-                warning_div.style.animation = 'warning-animation2 2s ease';
-        
-                warning_div.addEventListener("animationend", function() {
-                    warning_div.style.animation = '';
-                    warning_div.style.display = "none";
-                });
-            }, 1500);
-        });
+            warning_div.style.display = 'block';
+            warning_div.style.animation = 'warning-animation 1s ease';
+            warning_text.innerText = "Please fill in all the fields above";
+            
+            warning_div.addEventListener("animationend", function() {
+                warning_div.style.animation = '';
+                warning_div.style.display = "block";
+                
+                setTimeout(function() {
+                    warning_div.style.animation = 'warning-animation2 2s ease';
+            
+                    warning_div.addEventListener("animationend", function() {
+                        warning_div.style.animation = '';
+                        warning_div.style.display = "none";
+                    });
+                }, 1500);
+            });
+        } else {
+            fetch("/check_test1/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    "word": textarea.value,
+                    "main_word": word,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                score += data.right_perc;
+                test_count += 1;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            fetch("/get_word2/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                word = data.word;
+                console.log(word)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            const test_div1 = document.getElementById("test-variant-1");
+            const textarea2 = document.getElementById("test-speech-textarea");
+
+            test_div1.style.animation = "start_test2 1s ease";
+            
+            test_div1.addEventListener("animationend", function() {
+                test_div1.style.animation = '';
+                test_div1.style.display = "none"
+                textarea2.value = '';
+
+                setTimeout(function() {
+                    test_div1.style.animation = "start_test 1s ease";
+                    test_div1.style.display = "block";
+
+                    test_div1.addEventListener("animationend", function() {
+                        test_div1.style.animation = '';
+                        test_div1.style.display = "block";
+                    })
+                }, 1000)
+            })
+        }
     }
 }
 
