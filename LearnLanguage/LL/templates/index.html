@@ -24,7 +24,7 @@
 
             {% for i in ""|rjust:10 %}
                 <div class="day-strike">
-                    {% if i < days_of_strike %}
+                    {% if forloop.counter <= days_of_strike %}
                         <div class="strike-check" style="background-color: #8BFC56;"></div>
                         <h1 class="strike-text">Day {{ forloop.counter }}: DONE</h1>
                     {% else %}
