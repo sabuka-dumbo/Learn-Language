@@ -1,6 +1,7 @@
 const start_button = document.getElementById("start_button");
 let score = 0;
 let test_count = 0;
+let word = "";
 
 if (window.location.pathname === "/listening_test/") {
     start_test();
@@ -52,6 +53,26 @@ function start_test3() {
             listening_test_div.style.animation = '';
         })
     })
+    
+    fetch("/get_word2/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        word = data.word;
+        console.log(word)
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function play_sound() {
+    
 }
 
 function start_test4() {

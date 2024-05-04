@@ -310,6 +310,13 @@
     font-weight: bold;
 }
 
+.test-div-playbutton {
+    background-color: #6b63ff00;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 720px) {
     .test-div-img {
         display: none;
