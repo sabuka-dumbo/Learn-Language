@@ -52,13 +52,15 @@
 
             <h1 class="test-div-description">Translate words and gain points.</h1> 
 
-            <a href="{% url 'word_test' %}"><button class="test-div-button">Take Test</button></a>
+            <a href="{% url 'translate_test' %}"><button class="test-div-button">Take Test</button></a>
         </div>
 
         <div class="test-div-part2">
             <img src="{% static 'images/teachers.svg' %}" class="test-div-image">
         </div>
     </div>
+
+    <div style="height: 4vw; width: 1px; position: relative;"></div>
 
     <script src="{% static 'js/learn.js' %}"></script>
 {% endblock %}
