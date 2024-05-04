@@ -175,18 +175,20 @@ def save_points(request):
             points =  data_from_js.get("points")
             test_points = data_from_js.get("test_points")
 
-            if Strike.objects.all().filter(user=request.user).exists():
-                strike = Strike.objects.all().get(user=request.user)
-                if strike.last_strike == timezone.now():
+            if Strike.objects.filter(user=request.user).exists():
+                strike = Strike.objects.get(user=request.user)
+                if strike.last_strike.date() == timezone.now().date():
                     pass
                 else:
                     if strike.day_strike == 10:
                         strike.count_strikes += 1
+                        strike.day_strike = 1
+                    else:
                         strike.day_strike += 1
-                    elif strike.day_strike < 10:
-                        strike.day_strike += 1
+                strike.last_strike = timezone.now()
+                strike.save()
             else:
-                strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0)
+                strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0, last_strike=timezone.now())
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
