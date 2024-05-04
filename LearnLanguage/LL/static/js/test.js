@@ -72,10 +72,15 @@ function start_test3() {
 }
 
 function play_sound() {
-    let speech  = new SpeechSynthesisUtterance();
+    let speech = new SpeechSynthesisUtterance();
     speech.text = word;
-    speech.voice = window.speechSynthesis.getVoices[2];
-    window.speechSynthesis.speak(speech)
+    
+    let voices = window.speechSynthesis.getVoices();
+    let bestFemaleVoice = voices.find(voice => voice.lang.startsWith('en') && voice.gender === 'female');
+    
+    speech.voice = bestFemaleVoice;
+    
+    window.speechSynthesis.speak(speech);
 }
 
 function start_test4() {
