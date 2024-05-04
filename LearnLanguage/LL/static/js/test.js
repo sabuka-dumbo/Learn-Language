@@ -5,8 +5,7 @@ let test_count = 0;
 if (window.location.pathname === "/listening_test/") {
     start_test();
 } else if (window.location.pathname === "/word_test/") {
-    //start_test2();
-    
+    start_test2();
 } else if (window.location.pathname === "/translate_test/") {
     start_test6();
 }
@@ -145,9 +144,14 @@ function next_test_variant_3() {
         })
         .then(response => response.json())
         .then(data => {
+            const results_div = document.getElementById("results_div");
+            const results_header2 = document.getElementById("results_header2");
+
             score += data.right_perc;
             test_count += 1;
             console.log(test_count, "  ", score)
+
+            
         })
         .catch(error => {
             console.error('Error:', error);

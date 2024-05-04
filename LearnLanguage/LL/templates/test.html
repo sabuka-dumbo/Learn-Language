@@ -116,9 +116,11 @@
         <button class="start-button" onclick="start_test5()">Start</button>
     </div>
 
-    <div class="results-div" id="results-div">
+    <div class="results-div" id="results-div" style="display: none;">
         <h1 class="results-header">You got:</h1>
-        <h1 class="results-header2">75/100P</h1>
+        <h1 class="results-header2" id="results-header2">75/100P</h1>
+
+        <a href="{% url 'index' %}" style="text-decoration: none; color: white;"><button class="results-button">Back to homepage</button></a>
     </div>
 
     <script src="{% static 'js/test.js' %}"></script>
