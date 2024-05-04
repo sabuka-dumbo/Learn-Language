@@ -93,7 +93,26 @@ function next_test_variant_2() {
     const textarea = document.getElementById("test-speech-textarea");
 
     if (textarea.value == '') {
+        const warning_div = document.getElementById("warning");
+        const warning_text = document.getElementById("warning-text");
         
+        warning_div.style.display = 'block';
+        warning_div.style.animation = 'warning-animation 1s ease';
+        warning_text.innerText = "Please fill in all the fields above";
+        
+        warning_div.addEventListener("animationend", function() {
+            warning_div.style.animation = '';
+            warning_div.style.display = "block";
+            
+            setTimeout(function() {
+                warning_div.style.animation = 'warning-animation2 2s ease';
+        
+                warning_div.addEventListener("animationend", function() {
+                    warning_div.style.animation = '';
+                    warning_div.style.display = "none";
+                });
+            }, 1500);
+        });
     }
 }
 
