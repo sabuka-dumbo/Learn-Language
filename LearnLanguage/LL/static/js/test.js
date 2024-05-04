@@ -143,7 +143,7 @@ function next_test_variant_1() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
+            body: JSON.stringify({ "points": score, "test_points": test_count * 10 }),
         })
         .then(response => response.json())
         .then(data => {
