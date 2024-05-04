@@ -91,7 +91,7 @@ function play_sound() {
 
 function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
-    if (test_count == 1) {
+    if (test_count == 10) {
         fetch("/check_test1/", {
             method: "POST",
             headers: {
@@ -306,7 +306,7 @@ function start_test6() {
 }
 
 function next_test_variant_3() {
-    if (test_count == 9) {
+    if (test_count == 2) {
         fetch("/check_test3/", {
             method: "POST",
             headers: {
