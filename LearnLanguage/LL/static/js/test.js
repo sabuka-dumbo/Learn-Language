@@ -72,14 +72,10 @@ function start_test3() {
 }
 
 function play_sound() {
-    if ('speechSynthesis' in window) {
-      var utterance = new SpeechSynthesisUtterance(word);
-  
-      utterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
-      speechSynthesis.speak(utterance);
-    } else {
-      console.log("Sorry, speech synthesis is not supported by your browser.");
-    }
+    var utterance = new SpeechSynthesisUtterance(word);
+
+    utterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
+    speechSynthesis.speak(utterance);
 }
 
 function start_test4() {
