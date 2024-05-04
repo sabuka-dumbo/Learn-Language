@@ -107,6 +107,7 @@ function next_test_variant_1() {
             score += data.right_perc;
             console.log(score)
             test_count += 1;
+            new_score3 = Math.ceil(score / 10)
         })
         .catch(error => {
             console.error('Error:', error);
@@ -118,13 +119,12 @@ function next_test_variant_1() {
 
         test_div1.style.animation = "start_test2 1s ease";
 
-        new_score2 = Math.ceil(score / 10);
 
         test_div1.addEventListener("animationend", function() {
             test_div1.style.display = "none";
             test_div1.style.animation = '';
 
-            results_header2_2.innerText = new_score2 + "/" + test_count * 10 + "P";
+            results_header2_2.innerText = new_score3 + "/" + test_count * 10 + "P";
         })
 
         setTimeout(function() {
