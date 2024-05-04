@@ -146,12 +146,27 @@ function next_test_variant_3() {
         .then(data => {
             const results_div = document.getElementById("results_div");
             const results_header2 = document.getElementById("results_header2");
+            const test_div2 = document.getElementById("test-variant-3");
 
             score += data.right_perc;
             test_count += 1;
             console.log(test_count, "  ", score)
 
-            
+            test_div2.style.animation = "start_test2 1s ease";
+
+            test_div2.addEventListener("animationend", function() {
+                test_div2.style.animation = '';
+                test_div2.style.display = "none";
+
+                results_div.style.display = "block";
+                results_div.style.animation = "start_test 1s ease";
+
+                results_div.addEventListener("animationend", function() {
+                    results_div.style.animation = '';
+                    results_div.style.display = "block";
+                    results_header2.innerText = score + "/100%";
+                })
+            })
         })
         .catch(error => {
             console.error('Error:', error);
