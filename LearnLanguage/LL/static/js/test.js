@@ -306,7 +306,7 @@ function start_test6() {
 }
 
 function next_test_variant_3() {
-    if (test_count == 2) {
+    if (test_count == 1) {
         fetch("/check_test3/", {
             method: "POST",
             headers: {
@@ -327,9 +327,9 @@ function next_test_variant_3() {
             const results_header2 = document.getElementById("results-header2");
             const test_div2 = document.getElementById("test-variant-3");
 
-                score += data.right_perc;
-                test_count += 1;
-                new_score = Math.ceil(score / 10)
+            score += data.right_perc;
+            test_count += 1;
+            new_score = Math.ceil(score / 10)
 
             test_div2.style.animation = "start_test2 1s ease";
 
@@ -346,20 +346,20 @@ function next_test_variant_3() {
                     results_div.style.display = "block";
                 })
             })
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
 
-        fetch("/save_points/", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
-        })
-        .then(response => response.json())
-        .then(data => {
+            fetch("/save_points/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
+            })
+            .then(response => response.json())
+            .then(data => {
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         })
         .catch(error => {
             console.error('Error:', error);
