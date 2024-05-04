@@ -171,6 +171,20 @@ function next_test_variant_3() {
         .catch(error => {
             console.error('Error:', error);
         });
+
+        fetch("/save_points/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ "points": Math.ceil(score / 10), "test_points": test_count * 10 }),
+        })
+        .then(response => response.json())
+        .then(data => {
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     } else {
         const word_field1 = document.getElementById("word_field1");
         const word_field2 = document.getElementById("word_field2");

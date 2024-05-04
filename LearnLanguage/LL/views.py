@@ -166,3 +166,18 @@ def check_test3(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({"right_perc": right_perc})
+
+@csrf_exempt
+def save_points(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            points =  data_from_js.get("points")
+            test_points = data_from_js.get("test_points")
+
+            
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({  })
