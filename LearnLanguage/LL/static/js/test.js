@@ -108,6 +108,7 @@ function next_test_variant_1() {
             console.log(score)
             test_count += 1;
             new_score3 = Math.ceil(score / 10)
+            score = new_score3
         })
         .catch(error => {
             console.error('Error:', error);
