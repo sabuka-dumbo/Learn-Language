@@ -91,7 +91,7 @@ function play_sound() {
 
 function next_test_variant_1() {
     const textarea = document.getElementById("test-speech-textarea");
-    if (test_count == 9) {
+    if (test_count == 2) {
 
     } else {
         if (textarea.value == '') {
