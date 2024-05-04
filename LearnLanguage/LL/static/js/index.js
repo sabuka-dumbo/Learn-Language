@@ -33,6 +33,9 @@ function send_word() {
             new_word_div.addEventListener("animationend", function() {
                 new_word_div.style.animation = '';
                 new_word_div.style.display = "none";
+                text.value = '';
+                radio1.checked = true;
+                radio2.checked = false;
             })
 
             new_word_check.addEventListener("animationend", function() {
@@ -40,7 +43,20 @@ function send_word() {
                 new_word_check.style.display = "block";
             })
 
-            setTimeout()
+            setTimeout(function() {
+                new_word_check.style.animation = "fade_out 0.5s ease";
+                new_word_check.addEventListener("animationend", function() {
+                    new_word_check.style.animation = '';
+                    new_word_check.style.display = "none";
+                })
+
+                new_word_div.style.animation = "fade_in 1s ease";
+                new_word_div.style.display = "block";
+                new_word_div.addEventListener("animationend", function() {
+                    new_word_div.style.animation = '';
+                    new_word_div.style.display = "block";
+                })
+            }, 2000)
         })
         .catch(error => {
             console.error('Error:', error);
