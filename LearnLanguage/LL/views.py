@@ -175,7 +175,13 @@ def save_points(request):
             points =  data_from_js.get("points")
             test_points = data_from_js.get("test_points")
 
-            
+            if Strike.objects.all().filter(user=request.user).exists():
+                strike = Strike.objects.all().get(user=request.user)
+                if strike.day_strike == 10:
+                    strike.count_strikes += 1
+                    strike.day_strike += 1
+            else:
+                strike = Strike.objects.create(User=request.user, day_strike=1, count_strikes=0)
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
