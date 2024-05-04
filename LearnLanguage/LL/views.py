@@ -177,9 +177,12 @@ def save_points(request):
 
             if Strike.objects.all().filter(user=request.user).exists():
                 strike = Strike.objects.all().get(user=request.user)
-                if strike.day_strike == 10:
-                    strike.count_strikes += 1
-                    strike.day_strike += 1
+                if strike.last_strike == timezone.now():
+                    pass
+                else:
+                    if strike.day_strike == 10:
+                        strike.count_strikes += 1
+                        strike.day_strike += 1
             else:
                 strike = Strike.objects.create(user=request.user, day_strike=1, count_strikes=0)
 
