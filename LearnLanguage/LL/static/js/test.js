@@ -323,6 +323,35 @@ function start_test6() {
     });
 }
 
+function next_test_variant_2() {
+    const textarea3 = document.getElementById("textarea-variant2"); 
+
+    if (textarea3 == '') {
+        const warning_div = document.getElementById("warning");
+        const warning_text = document.getElementById("warning-text");
+        
+        warning_div.style.display = 'block';
+        warning_div.style.animation = 'warning-animation 1s ease';
+        warning_text.innerText = "Please fill in all the fields above";
+        
+        warning_div.addEventListener("animationend", function() {
+            warning_div.style.animation = '';
+            warning_div.style.display = "block";
+            
+            setTimeout(function() {
+                warning_div.style.animation = 'warning-animation2 2s ease';
+        
+                warning_div.addEventListener("animationend", function() {
+                    warning_div.style.animation = '';
+                    warning_div.style.display = "none";
+                });
+            }, 1500);
+        });
+    } else {
+
+    }
+}
+
 function next_test_variant_3() {
     if (test_count == 4) {
         fetch("/check_test3/", {
