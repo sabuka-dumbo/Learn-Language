@@ -225,6 +225,12 @@ def edit_word(request):
             new_word =  data_from_js.get("new_word")
             new_meaning = data_from_js.get("new_meaning")
 
+            if new_word == '':
+                new_word = old_word
+
+            if new_meaning == '':
+                new_meaning = old_meaning
+
             if Word.objects.all().filter(word=old_word, meaning=old_meaning).exists():
                 word_var = Word.objects.all().get(word=old_word, meaning=old_meaning)
                 word_var.word = new_word
