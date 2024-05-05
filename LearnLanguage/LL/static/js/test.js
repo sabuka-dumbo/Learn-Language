@@ -326,7 +326,7 @@ function start_test6() {
 function next_test_variant_2() {
     const textarea3 = document.getElementById("textarea-variant2"); 
 
-    if (textarea3 == '') {
+    if (textarea3.value == '') {
         const warning_div = document.getElementById("warning");
         const warning_text = document.getElementById("warning-text");
         
@@ -348,7 +348,20 @@ function next_test_variant_2() {
             }, 1500);
         });
     } else {
+        const test_div4 = document.getElementById("test-variant-2");
 
+        test_div4.style.animation = "start_div2 1s ease";
+        
+        test_div4.addEventListener("animationend", function() {
+            test_div4.style.animation = '';
+            test_div4.style.display = "none";
+        })
+
+        setTimeout(function() {
+            test_div4.style.animation = "start_div 1s ease";
+            test_div4.style.display = "block";
+            textarea3.value = '';
+        }, 1500)
     }
 }
 
