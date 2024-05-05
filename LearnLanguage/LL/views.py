@@ -76,7 +76,11 @@ def word_test(request):
     return render(request, "test.html")
 
 def vocabulary(request):
-    return render(request, "vocab.html")
+    words = Word.objects.all().filter(user=request.user)
+
+    return render(request, "vocab.html", {
+        "words": words
+    })
 
 @csrf_exempt
 def add_word(request):
