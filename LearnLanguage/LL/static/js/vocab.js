@@ -11,6 +11,6 @@ function open_edit_div(word, meaning) {
     edit_header.innerHTML = `<b style="color: greenyellow;"> | </b>Edit the word: ${word}`;
 }
 
-edit_back.onclick(function() {
-    
+edit_back.addEventListener("click", function() {
+    edit_div.style.display = "none";
 })
