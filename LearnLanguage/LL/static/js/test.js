@@ -304,7 +304,23 @@ function start_test6() {
         start_div.style.opacity = "100%";
     })
 
-    
+    fetch("/get_word2/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let word = data.word;
+        const question_in_div2 = document.getElementById("test-div-question2");
+
+        question_in_div2.innerText = "Translate the word '" + word + "' in Georgian:";
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 function next_test_variant_3() {
