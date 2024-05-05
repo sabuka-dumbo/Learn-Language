@@ -291,6 +291,20 @@
     margin: 0;
 }
 
+.edit-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+}
+
+.edit-list-name {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 @media screen and (max-width: 720px) {
     .words-list {
         padding-top: 3vw;
