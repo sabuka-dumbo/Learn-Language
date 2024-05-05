@@ -141,6 +141,141 @@
     display: inline-block;
 }
 
+.delete-confimation-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.delete-confimation-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 50%;
+}
+
+.delete-confimation-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: max-content;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background-color: #FFFFFF;
+    border-radius: 1.5vw;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.delete-confimation-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 2vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+}
+
+.delete-confimation-buttons-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    margin-top: 1vw;
+}
+
+.delete-confimation-button1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+    cursor: pointer;
+}
+
+.delete-confimation-button2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    background-color: rgb(154, 255, 3);
+    color: rgb(255, 255, 255);
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.edit-back {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 50%;
+}
+
+.edit-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: max-content;
+    padding-top: 1.5vw;
+    padding-right: 1.5vw;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    background-color: #FFFFFF;
+}
+
 @media screen and (max-width: 720px) {
     .words-list {
         padding-top: 3vw;
