@@ -332,7 +332,7 @@ function next_test_variant_2() {
         
         warning_div.style.display = 'block';
         warning_div.style.animation = 'warning-animation 1s ease';
-        warning_text.innerText = "Please fill in all the fields above";
+        warning_text.innerText = "Please translate the word before submiting the test";
         
         warning_div.addEventListener("animationend", function() {
             warning_div.style.animation = '';
