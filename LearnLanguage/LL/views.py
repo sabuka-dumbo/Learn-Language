@@ -253,7 +253,6 @@ def remove_word(request):
 
             word_var = Word.objects.all().get(pk=word_pk)
             word_var.delete()
-            word_var.save()
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)

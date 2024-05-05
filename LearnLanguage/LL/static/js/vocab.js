@@ -8,6 +8,8 @@ const edit_save = document.getElementById("edit-list-save");
 const remove_confirmation_div = document.getElementById("delete-confimation-div");
 const remove_confirmation_back = document.getElementById("delete-confimation-back");
 const remove_confirmation_header = document.getElementById("delete-confimation-header");
+const warning_div = document.getElementById("warning");
+const warning_text = document.getElementById("warning-text");
 let old_word = "";
 let old_meaning = "";
 let word_pk_for_confirm = 0;
@@ -101,6 +103,7 @@ function save_edit_div() {
 function delete_word(word, pk) {
     remove_confirmation_div.style.display = "block";
     remove_confirmation_header.innerHTML = `<b style="color: red;"> | </b>Do you want to delete the word: ${word}?`;
+    word_pk_for_confirm = pk;
 }
 
 function cancel_confirm_div() {
@@ -124,6 +127,8 @@ function confirm_confirm_div() {
     .then(response => response.json())
     .then(data => {
         let done = data.done;
+
+        remove_confirmation_div.style.display = "none";
 
         if (done == true) {
             warning_div.style.display = 'block';
