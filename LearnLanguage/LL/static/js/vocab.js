@@ -33,7 +33,8 @@ function save_edit_div() {
     
     warning_div.style.display = 'block';
     warning_div.style.animation = 'warning-animation 1s ease';
-    warning_text.innerText = "Please fill in all the fields above";
+    warning_div.style.backgroundColor = "green";
+    warning_text.innerText = "Changes saved succsessfully!";
     
     warning_div.addEventListener("animationend", function() {
         warning_div.style.animation = '';
@@ -45,6 +46,7 @@ function save_edit_div() {
             warning_div.addEventListener("animationend", function() {
                 warning_div.style.animation = '';
                 warning_div.style.display = "none";
+                warning_div.style.backgroundColor = '';
             });
         }, 1500);
     });
