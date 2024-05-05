@@ -11,8 +11,6 @@ function open_edit_div(word, meaning) {
     edit_input.placeholder = word;
     edit_input2.placeholder = meaning;
     edit_header.innerHTML = `<b style="color: greenyellow;"> | </b>Edit the word: ${word}`;
-    edit_cancel.onclick = 'cacel_edit_div()';
-    edit_save.onclick = `save_edit_div(${word}, ${meaning})`;
 }
 
 edit_back.addEventListener("click", function() {
