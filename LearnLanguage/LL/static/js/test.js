@@ -323,68 +323,6 @@ function start_test6() {
     });
 }
 
-function next_test_variant_2() {
-    const textarea3 = document.getElementById("textarea-variant2"); 
-
-    if (textarea3.value == '') {
-        const warning_div = document.getElementById("warning");
-        const warning_text = document.getElementById("warning-text");
-        
-        warning_div.style.display = 'block';
-        warning_div.style.animation = 'warning-animation 1s ease';
-        warning_text.innerText = "Please translate the word before submiting the test";
-        
-        warning_div.addEventListener("animationend", function() {
-            warning_div.style.animation = '';
-            warning_div.style.display = "block";
-            
-            setTimeout(function() {
-                warning_div.style.animation = 'warning-animation2 2s ease';
-        
-                warning_div.addEventListener("animationend", function() {
-                    warning_div.style.animation = '';
-                    warning_div.style.display = "none";
-                });
-            }, 1500);
-        });
-    } else {
-        const test_div4 = document.getElementById("test-variant-2");
-
-        test_div4.style.animation = "start_div2 1s ease";
-        
-        test_div4.addEventListener("animationend", function() {
-            test_div4.style.animation = '';
-            test_div4.style.display = "none";
-        })
-        console.log(word)
-
-        fetch("/check_test2/", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                "word": word_field5.value,
-                "main_word": word,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            score += data.right_perc;
-            test_count += 1;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-
-        setTimeout(function() {
-            test_div4.style.animation = "start_div 1s ease";
-            test_div4.style.display = "block";
-            textarea3.value = '';
-        }, 1500)
-    }
-}
-
 function next_test_variant_3() {
     if (test_count == 4) {
         fetch("/check_test3/", {
