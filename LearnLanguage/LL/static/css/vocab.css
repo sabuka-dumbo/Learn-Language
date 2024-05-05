@@ -68,14 +68,14 @@
 .word-list-list-buttons {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 50%;
+    transform: translate(-50%);
 }
 
 .word-list-list-button1 {
     position: relative;
-    top: 50%;
+    top: -50%;
     right: 0;
-    transform: translateY(-50%);
     width: max-content;
     height: max-content;
     padding: 0;
@@ -96,9 +96,8 @@
 
 .word-list-list-button2 {
     position: relative;
-    top: 50%;
+    top: 0%;
     right: 0;
-    transform: translateY(-50%);
     width: max-content;
     height: max-content;
     padding: 0;
