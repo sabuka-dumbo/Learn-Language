@@ -222,11 +222,16 @@ def check_test2(request):
             translated_word = data_from_js.get('word').lower()
             main_word = data_from_js.get('main_word').lower()
             word_meaning = ""
+            right_perc = 0
 
             if Word.objects.all().filter(word=main_word):
-                word_meaning = Word.objects.all().get(word=main_word).tra
+                word_meaning = Word.objects.all().get(word=main_word).meaning
+
+                count_correct_symbols = sum(1 for x, y in zip(translated_word, word_meaning) if x == y)
+
+                right_perc = count_correct_symbols * 100 / len(word_meaning)
             else:
-                return JsonResponse({"right_perc": 0, "error": True})
+                return JsonResponse({"right_perc": right_perc, "error": True})
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)
