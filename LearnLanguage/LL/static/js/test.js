@@ -357,6 +357,25 @@ function next_test_variant_2() {
             test_div4.style.display = "none";
         })
 
+        fetch("/check_test3/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "word": word_field5.value,
+                "main_word": main_word.value,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            score += data.right_perc;
+            test_count += 1;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
         setTimeout(function() {
             test_div4.style.animation = "start_div 1s ease";
             test_div4.style.display = "block";
