@@ -25,6 +25,31 @@
     font-weight: bold;
 }
 
+.word-list-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    margin-top: 1vw;
+    background-color: aliceblue;
+}
+
+.word-list-list-word {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    font-size: 1.8vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: black;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (max-width: 720px) {
     .words-list {
         padding-top: 3vw;
