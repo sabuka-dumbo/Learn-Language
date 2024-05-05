@@ -303,6 +303,8 @@ function start_test6() {
         start_div.style.animation = '';
         start_div.style.opacity = "100%";
     })
+
+    
 }
 
 function next_test_variant_3() {
