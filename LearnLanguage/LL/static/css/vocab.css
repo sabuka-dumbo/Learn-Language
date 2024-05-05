@@ -93,6 +93,7 @@
     outline: none;
     border: none;
     display: inline-block;
+    cursor: pointer;
 }
 
 .word-list-list-button2 {
@@ -117,6 +118,7 @@
     outline: none;
     border: none;
     display: inline-block;
+    cursor: pointer;
 }
 
 .word-list-list-translation {
@@ -353,6 +355,7 @@
     font-size: 1.5vw;
     font-family: "Kdam Thmor Pro";
     font-weight: bolder;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 720px) {

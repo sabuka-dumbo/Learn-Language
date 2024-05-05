@@ -5,24 +5,29 @@ const edit_input = document.getElementById("edit-list-input");
 const edit_input2 = document.getElementById("edit-list-input2");
 const edit_cancel = document.getElementById("edit-list-cancel");
 const edit_save = document.getElementById("edit-list-save");
+let word = "";
+let meaning = "";
 
 function open_edit_div(word, meaning) {
     edit_div.style.display = "block";
     edit_input.placeholder = word;
     edit_input2.placeholder = meaning;
     edit_header.innerHTML = `<b style="color: greenyellow;"> | </b>Edit the word: ${word}`;
+    word = word;
+    meaning = meaning;
 }
 
 edit_back.addEventListener("click", function() {
     edit_div.style.display = "none";
 })
 
-function cancel_edit_div(word, meaning) {
+function cancel_edit_div() {
     edit_div.style.display = "none";
 }
 
-function save_edit_div(word, meaning) {
+function save_edit_div() {
     edit_div.style.display = "none";
+    
     const warning_div = document.getElementById("warning");
     const warning_text = document.getElementById("warning-text");
     
@@ -43,4 +48,6 @@ function save_edit_div(word, meaning) {
             });
         }, 1500);
     });
+
+    
 }
