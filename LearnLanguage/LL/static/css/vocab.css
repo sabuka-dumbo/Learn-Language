@@ -332,6 +332,29 @@
     padding-right: 0.5vw;
 }
 
+.edit-button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    outline: none;
+    background-color: greenyellow;
+    color: white;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bolder;
+}
+
 @media screen and (max-width: 720px) {
     .words-list {
         padding-top: 3vw;
