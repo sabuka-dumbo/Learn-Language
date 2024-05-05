@@ -31,8 +31,7 @@
     left: 0;
     width: 100%;
     height: max-content;
-    margin-top: 1vw;
-    background-color: aliceblue;
+    margin-top: 1.5vw;
 }
 
 .word-list-list-word {
@@ -48,6 +47,7 @@
     display: inline-block;
     padding: 0;
     margin: 0;
+    max-width: 50%;
 }
 
 .word-list-list-word2 {
@@ -92,6 +92,7 @@
     padding-bottom: 0.2vw;
     outline: none;
     border: none;
+    display: inline-block;
 }
 
 .word-list-list-button2 {
@@ -107,7 +108,7 @@
     font-family: "Itim";
     font-weight: bold;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(117, 117, 117);
     border-radius: 0.8vw;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
@@ -115,6 +116,29 @@
     padding-bottom: 0.2vw;
     outline: none;
     border: none;
+    display: inline-block;
+}
+
+.word-list-list-ago {
+    position: relative;
+    top: 0%;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: normal;
+    color: rgb(129, 129, 129);
+    border-radius: 0.8vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    outline: none;
+    border: none;
+    display: inline-block;
 }
 
 @media screen and (max-width: 720px) {
@@ -126,6 +150,26 @@
     .words-list-header {
         font-size: 4vw;
     }
+
+    .word-list-list-word {
+        font-size: 3.5vw;
+    }
+
+    .word-list-list-word2 {
+        font-size: 2.5vw;
+    }
+
+    .word-list-list-button1 {
+        font-size: 4vw;
+    }
+
+    .word-list-list-button2 {
+        font-size: 4vw;
+    }
+
+    .word-list-list-ago {
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -136,5 +180,25 @@
 
     .words-list-header {
         font-size: 6vw;
+    }
+
+    .word-list-list-word {
+        font-size: 4.5vw;
+    }
+
+    .word-list-list-word2 {
+        font-size: 2.5vw;
+    }
+
+    .word-list-list-button1 {
+        font-size: 5.5vw;
+    }
+
+    .word-list-list-button2 {
+        font-size: 5.5vw;
+    }
+
+    .word-list-list-ago {
+        display: none;
     }
 }
