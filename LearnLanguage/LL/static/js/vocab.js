@@ -5,8 +5,8 @@ const edit_input = document.getElementById("edit-list-input");
 const edit_input2 = document.getElementById("edit-list-input2");
 const edit_cancel = document.getElementById("edit-list-cancel");
 const edit_save = document.getElementById("edit-list-save");
-let word = "";
-let meaning = "";
+let old_word = "";
+let old_meaning = "";
 
 function open_edit_div(word, meaning) {
     edit_div.style.display = "block";
