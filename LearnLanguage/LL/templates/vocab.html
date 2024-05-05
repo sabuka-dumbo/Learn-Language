@@ -28,7 +28,7 @@
                 <div class="word-list-list-buttons">
                     <h1 class="word-list-list-translation">{{ word.meaning }}</h1>
 
-                    <button class="word-list-list-button2">Edit</button>
+                    <button class="word-list-list-button2" onclick="open_edit_div(`{{word.word}}`, `{{word.meaning}}`)">Edit</button>
                     <button class="word-list-list-button1">Delete</button>
                 </div>
             </div>
@@ -47,23 +47,23 @@
         </div>
     </div>
 
-    <div class="edit-div" style="display: none;">
+    <div class="edit-div" style="display: none;" id="edit-div">
         <div class="edit-back"></div>
         <div class="edit-front">
-            <h1 class="edit-header"><b style="color: greenyellow;"> | </b>Edit the word: "word here"</h1>
+            <h1 class="edit-header" id="edit-header"><b style="color: greenyellow;"> | </b>Edit the word: "word here"</h1>
 
             <div class="edit-list">
                 <h1 class="edit-list-name">Edit word:</h1>
-                <input type="text" placeholder="Word here" id="" class="edit-list-input">
+                <input type="text" placeholder="Word here" id="edit-list-input" class="edit-list-input">
             </div>
 
             <div class="edit-list">
                 <h1 class="edit-list-name">Edit translation:</h1>
-                <input type="text" placeholder="Word here" id="" class="edit-list-input">
+                <input type="text" placeholder="Word here" id="edit-list-input2" class="edit-list-input">
             </div>
 
             <button class="edit-button" style="background-color: red;">Cancel Changes</button>
-            <button class="edit-button" style="margin-left: 1vw;">Save Changes</button>
+            <button class="edit-button" style="margin-left: 1vw;" onclick="">Save Changes</button>
         </div>
     </div>
 
