@@ -214,3 +214,26 @@ def check_test1(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({"right_perc": right_perc})
+
+@csrf_exempt
+def edit_word(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            old_word =  data_from_js.get("old_word")
+            old_meaning = data_from_js.get("old_meaning")
+            new_word =  data_from_js.get("new_word")
+            new_meaning = data_from_js.get("new_meaning")
+
+            if Word.objects.all().filter(word=old_word, meaning=old_meaning).exists():
+                word_var = Word.objects.all().get(word=old_word, meaning=old_meaning)
+                word_var.word = new_word
+                word_var.meaning = new_meaning
+                word_var.save()
+            else:
+                return JsonResponse({ "done": False })
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({ "done": True })
