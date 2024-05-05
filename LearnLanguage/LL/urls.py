@@ -19,4 +19,5 @@ urlpatterns = [
     path('check_test1/', views.check_test1, name="check_test1"),
     path('save_points/', views.save_points, name="save_points"),
     path('edit_word/', views.edit_word, name="edit_word"),
+    path('remove_word/', views.remove_word, name="remove_word"),
 ]

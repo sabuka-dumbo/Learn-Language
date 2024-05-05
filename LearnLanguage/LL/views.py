@@ -231,8 +231,6 @@ def edit_word(request):
             if new_meaning == '':
                 new_meaning = old_meaning
 
-            print(old_word, old_meaning)
-
             if Word.objects.all().filter(word=old_word, meaning=old_meaning).exists():
                 word_var = Word.objects.all().get(word=old_word, meaning=old_meaning)
                 word_var.word = new_word
@@ -240,6 +238,22 @@ def edit_word(request):
                 word_var.save()
             else:
                 return JsonResponse({ "done": False })
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({ "done": True })
+
+@csrf_exempt
+def remove_word(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            word_pk = data_from_js.get("pk")
+
+            word_var = Word.objects.all().get(pk=word_pk)
+            word_var.delete()
+            word_var.save()
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)

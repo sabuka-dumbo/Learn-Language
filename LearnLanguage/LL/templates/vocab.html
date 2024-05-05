@@ -29,20 +29,20 @@
                     <h1 class="word-list-list-translation">{{ word.meaning }}</h1>
 
                     <button class="word-list-list-button2" onclick="open_edit_div(`{{word.word}}`, `{{word.meaning}}`)">Edit</button>
-                    <button class="word-list-list-button1">Delete</button>
+                    <button class="word-list-list-button1" onclick="delete_word(`{{ word.word }}`, `{{word.pk}}`)">Delete</button>
                 </div>
             </div>
         {% endfor %}
     </div>
 
-    <div class="delete-confimation-div" style="display: none;">
-        <div class="delete-confimation-back"></div>
+    <div class="delete-confimation-div" id="delete-confimation-div" style="display: none;">
+        <div class="delete-confimation-back" id="delete-confimation-back"></div>
         <div class="delete-confimation-front">
-            <h1 class="delete-confimation-header"><b style="color: red;"> | </b>Do you want to delete the word: "word here"?</h1>
+            <h1 class="delete-confimation-header" id="delete-confimation-header"><b style="color: red;"> | </b>Do you want to delete the word: "word here"?</h1>
 
             <div class="delete-confimation-buttons-div">
-                <button class="delete-confimation-button1">Cancel</button>
-                <button class="delete-confimation-button2">Confirm</button>
+                <button class="delete-confimation-button1" onclick="cancel_confirm_div()">Cancel</button>
+                <button class="delete-confimation-button2" onclick="confirm_confirm_div()">Confirm</button>
             </div>
         </div>
     </div>
