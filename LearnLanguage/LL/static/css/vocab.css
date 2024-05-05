@@ -244,7 +244,7 @@
 }
 
 .edit-div {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -269,11 +269,12 @@
     transform: translate(-50%, -50%);
     width: 45%;
     height: max-content;
-    padding-top: 1.5vw;
-    padding-right: 1.5vw;
+    padding-top: 2vw;
+    padding-right: 2vw;
     padding-left: 2.5%;
     padding-right: 2.5%;
     background-color: #FFFFFF;
+    border-radius: 1.5vw;
 }
 
 @media screen and (max-width: 720px) {
