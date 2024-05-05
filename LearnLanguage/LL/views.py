@@ -219,12 +219,12 @@ def check_test2(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
-            translated_word = data_from_js.get('word').lower()
+            translated_word = data_from_js.get('word')
             main_word = data_from_js.get('main_word')
             word_meaning = ""
             right_perc = 0
 
-            if Word.objects.all().filter(word=main_word):
+            if Word.objects.all().filter(word=main_word).exists():
                 word_meaning = Word.objects.all().get(word=main_word).meaning
 
                 count_correct_symbols = sum(1 for x, y in zip(translated_word, word_meaning) if x == y)
