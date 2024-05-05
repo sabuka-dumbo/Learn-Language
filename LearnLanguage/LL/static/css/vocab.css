@@ -68,13 +68,13 @@
 .word-list-list-buttons {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translate(-50%);
+    top: 0%;
+    height: 100%;
 }
 
 .word-list-list-button1 {
     position: relative;
-    top: -50%;
+    top: 0%;
     right: 0;
     width: max-content;
     height: max-content;
