@@ -213,3 +213,21 @@ def check_test1(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({"right_perc": right_perc})
+
+@csrf_exempt
+def check_test2(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+            translated_word = data_from_js.get('word').lower()
+            main_word = data_from_js.get('main_word').lower()
+
+            if Word.objects.all().filter(word=main_word):
+                pass
+            else:
+                return JsonResponse({"right_perc": 0, "error": True})
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({"right_perc": right_perc})

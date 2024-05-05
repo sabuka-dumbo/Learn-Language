@@ -357,7 +357,7 @@ function next_test_variant_2() {
             test_div4.style.display = "none";
         })
 
-        fetch("/check_test3/", {
+        fetch("/check_test2/", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
