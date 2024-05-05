@@ -230,6 +230,7 @@ def check_test2(request):
                 count_correct_symbols = sum(1 for x, y in zip(translated_word, word_meaning) if x == y)
 
                 right_perc = count_correct_symbols * 100 / len(word_meaning)
+                print(right_perc)
             else:
                 return JsonResponse({"right_perc": right_perc, "error": True})
 
