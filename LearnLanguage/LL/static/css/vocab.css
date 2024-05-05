@@ -303,6 +303,33 @@
     position: relative;
     top: 0;
     left: 0;
+    width: max-content;
+    height: max-content;
+    font-size: 1.5vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+
+.edit-list-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: max-content;
+    font-size: 1.4vw;
+    font-family: "Kdam Thmor Pro";
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    background-color: gainsboro;
+    border: none;
+    outline: none;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }
 
 @media screen and (max-width: 720px) {
