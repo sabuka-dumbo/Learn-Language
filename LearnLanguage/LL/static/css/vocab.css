@@ -24,3 +24,25 @@
     font-family: "Kdam Thmor Pro";
     font-weight: bold;
 }
+
+@media screen and (max-width: 720px) {
+    .words-list {
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+
+    .words-list-header {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .words-list {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+
+    .words-list-header {
+        font-size: 6vw;
+    }
+}
