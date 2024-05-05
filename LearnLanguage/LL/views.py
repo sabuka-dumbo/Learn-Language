@@ -231,6 +231,8 @@ def edit_word(request):
             if new_meaning == '':
                 new_meaning = old_meaning
 
+            print(old_word, old_meaning)
+
             if Word.objects.all().filter(word=old_word, meaning=old_meaning).exists():
                 word_var = Word.objects.all().get(word=old_word, meaning=old_meaning)
                 word_var.word = new_word

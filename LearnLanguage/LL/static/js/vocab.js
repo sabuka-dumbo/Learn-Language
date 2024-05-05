@@ -58,7 +58,7 @@ function save_edit_div() {
         },
         body: JSON.stringify({ 
             "old_word": word,
-            "old_meaning": old_meaning,
+            "old_meaning": meaning,
             "new_word": edit_input.value,
             "new_meaning": edit_input2.value,
         }),
