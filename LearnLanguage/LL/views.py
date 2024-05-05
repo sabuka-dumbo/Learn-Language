@@ -221,14 +221,13 @@ def check_test2(request):
             data_from_js = json.loads(request.body.decode('utf-8'))
             translated_word = data_from_js.get('word')
             main_word = data_from_js.get('main_word')
+            print(main_word)
             word_meaning = ""
             right_perc = 0
 
             if Word.objects.all().filter(word=main_word).exists():
                 word_meaning = Word.objects.all().get(word=main_word).meaning
-
                 count_correct_symbols = sum(1 for x, y in zip(translated_word, word_meaning) if x == y)
-
                 right_perc = count_correct_symbols * 100 / len(word_meaning)
                 print(right_perc)
             else:

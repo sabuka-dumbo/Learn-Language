@@ -313,7 +313,7 @@ function start_test6() {
     })
     .then(response => response.json())
     .then(data => {
-        let word = data.word;
+        word = data.word;
         const question_in_div2 = document.getElementById("test-div-question2");
 
         question_in_div2.innerText = "Translate the word '" + word + "' in Georgian:";
@@ -356,6 +356,7 @@ function next_test_variant_2() {
             test_div4.style.animation = '';
             test_div4.style.display = "none";
         })
+        console.log(word)
 
         fetch("/check_test2/", {
             method: "POST",
@@ -364,7 +365,7 @@ function next_test_variant_2() {
             },
             body: JSON.stringify({ 
                 "word": word_field5.value,
-                "main_word": main_word.value,
+                "main_word": word,
             }),
         })
         .then(response => response.json())
